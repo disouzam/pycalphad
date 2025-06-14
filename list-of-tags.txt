@@ -1,0 +1,94 @@
+Tags and its commit SHAs:
+
+0bb7ba935c12c95a31672b522442c5aede284f1d refs/tags/0.1^{}
+3b27ea334eb3e269939de5c2dd545ca341197a26 refs/tags/0.1.1^{}
+5de01f79ede5ac73b7bc015198aff0a586bb4023 refs/tags/0.1.1.post1^{}
+d3f1f3a584bf1ab37b7b8ae6248febf5eec8b56d refs/tags/0.2^{}
+e7a5ddafeb198250b8e7f52c6012307d575b3a20 refs/tags/0.2.1^{}
+b5a10c52ca529fc9956dc6504b0c499b1c513893 refs/tags/0.2.1.post1^{}
+f82a5dee1bd62a6270fd39bf158b6a1953c6194f refs/tags/0.2.2^{}
+c998130a888cf6e6e4a9003a4836a5777eaa5054 refs/tags/0.2.3^{}
+7285312b9601293ff79aa6db1ef59a2e7a31f225 refs/tags/0.2.3.post1^{}
+0ee6777ea0cc423a5d75f52aaf6ac9dac2d28434 refs/tags/0.2.3.post2^{}
+d80fdaa4c6d4f914c6b5d85467afe3811881ea14 refs/tags/0.2.4^{}
+81929ade84629fe6109b71f7602e6ed69625de80 refs/tags/0.2.5^{}
+12c8590e0cc8fc8b9d12bfc8443fc556ff5b72ae refs/tags/0.3^{}
+746eb19335d7f32c0132ed9a0ff6a3288dee1cc0 refs/tags/0.3.1^{}
+5f863cde02894eb982bc07ed013df6497a5a0950 refs/tags/0.3.2^{}
+30770e42ae08ce5cc46c6d6c4af19e9947066f00 refs/tags/0.3.3^{}
+bf12824acdb6ff8c9b942a89a5e52ea9951f6d29 refs/tags/0.3.4^{}
+4fbfbd7e684c35808d894e068f60a2c517cd04d1 refs/tags/0.3.5^{}
+0c0d588d8cf7b1a645dbe359e1977c0984fa82eb refs/tags/0.3.6^{}
+cdbd1637caf7d0c290253c233cb6172b4f56d454 refs/tags/0.4^{}
+43bc73d4ccea66b7cf4bcc411bffad93924e972a refs/tags/0.4.1^{}
+be6568fb0692d3b1f177e42dc55bdadb16cf99ba refs/tags/0.4.2^{}
+224904a9e9a12f480a8c825ac99b1d48bc3b3563 refs/tags/0.5^{}
+fba1cb095f0c1aa7ca74778f3454176011ef57f3 refs/tags/0.5.1^{}
+55417f6eab2a85f9d9b99e0b2ab6195277eda956 refs/tags/0.5.2^{}
+3db479ff3fa8b8754d069d88ea828a05819ebc2b refs/tags/0.6^{}
+1943b244bd879002a02d8a92705a6ebc9236ef38 refs/tags/0.7^{}
+34d3cd0b6ddc964a4ab765f0111f5ef81bc32a6a refs/tags/0.7.1^{}
+cd04bd5372a0aa3ab8c3f8289d29f397c2a24646 refs/tags/0.7.1.post1^{}
+4e32bc98e77e7caf5359bad7dd0dcbbdfee39036 refs/tags/0.7.1.post2^{}
+7986fea09d6c51ccaa7c4f84c27765d1c9ed486c refs/tags/0.8^{}
+d3ec4e800583c26ec3c678b0b141b6ab8210128d refs/tags/0.8.1^{}
+ac380f5013ccfd8f4329f9b3fe49d50a8a44f5e3 refs/tags/0.8.1.post1^{}
+de4c7396582d7051c925da9a8cce194346e047b2 refs/tags/0.8.2^{}
+47425a5132388ef43c38b746306129dfbbfa075c refs/tags/0.8.3^{}
+f4825cacd743b49577f02a01fac6ce1d44db4f9a refs/tags/0.8.4^{}
+c627e5bee3f6ffaafca7549eca5480287b7a78e5 refs/tags/0.8.5^{}
+
+
+Tag messages:
+
+0.1             Initial release
+0.1.1           PyPI release
+0.1.1.post1     0.1.1 with GPG signature
+0.10.0          REL: 0.10.0
+0.10.1          REL: 0.10.1
+0.10.2          REL: 0.10.2
+0.10.3          REL: 0.10.3
+0.10.4.post1    REL: 0.10.4.post1
+0.10.5          REL: 0.10.5
+0.11.0          REL: 0.11.0
+0.2             Version 0.2
+0.2.1           Version 0.2.1
+0.2.1.post1     Version 0.2.1.post1
+0.2.2           Version 0.2.2
+0.2.3           Version 0.2.3
+0.2.3.post1     Version 0.2.3.post1
+0.2.3.post2     Version 0.2.3.post2
+0.2.4           Version 0.2.4
+0.2.5           Version 0.2.5
+0.3             Version 0.3
+0.3.1           Version 0.3.1
+0.3.2           Version 0.3.2
+0.3.3           Version 0.3.3
+0.3.4           Version 0.3.4
+0.3.5           Version 0.3.5
+0.3.6           Version 0.3.6
+0.4             Version 0.4
+0.4.1           Version 0.4.1
+0.4.2           Version 0.4.2
+0.5             Version 0.5
+0.5.1           Version 0.5.1
+0.5.2           Version 0.5.2
+0.5.2.post1     BLD: MANIFEST.in: Fix path to recursive include of Cython files
+0.6             Version 0.6
+0.6.1           DOC: Changes: 0.6.1 changelog
+0.7             Version 0.7
+0.7.1           Version 0.7.1
+0.7.1.post1     Version 0.7.1.post1
+0.7.1.post2     Version 0.7.1.post2
+0.8             Version 0.8
+0.8.1           Version 0.8.1
+0.8.1.post1     Version 0.8.1.post1
+0.8.2           Version 0.8.2
+0.8.3           Version 0.8.3
+0.8.4           Version 0.8.4
+0.8.5           Version 0.8.5
+0.9.0           REL: 0.9.0
+0.9.1           REL: 0.9.1
+0.9.2           REL: 0.9.2
+10.0.4          REL: 0.10.4
+test_if_allowed BLD: MANIFEST.in: Fix path to recursive include of Cython files
