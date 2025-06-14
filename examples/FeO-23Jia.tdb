@@ -1,0 +1,319 @@
+$
+$ Database for Fe-O from Y. Jiang et al. 2023.
+$
+$ Y. Jiang, Y. He, W. Zheng, J. Zhang, D. Zhang, X. Lu,
+$ J. Nucl. Mater., 574, 154180(2023).
+$
+$ Dataset created 2023.07.17 by Bengt Hallstedt.
+$
+$ Modified liquid interaction from 91Sun/95Kow.
+$
+$ The phase diagram is very close to 91Sun/95Kow.
+$
+$ ------------------------------------------------------------------------------
+ TEMP-LIM 298.15 6000.00 !
+$
+$ELEMENT NAME  REF. STATE               ATOMIC MASS H298-H0    S298    !
+$
+ ELEMENT /-   ELECTRON_GAS                0.0          0.0      0.0    ! 
+ ELEMENT VA   VACUUM                      0.0          0.0      0.0    ! 
+ ELEMENT FE   BCC_A2                     55.847     4489.0     27.2797 ! 
+ ELEMENT O    1/2_MOLE_O2(G)             15.999     4341.0    102.52   ! 
+$ ------------------------------------------------------------------------------
+$ Species
+$
+ SPECIE  FE+2                               FE1/+2 !
+ SPECIE  FE+3                               FE1/+3 !
+ SPECIE  FE2                                FE2 !
+ SPECIE  FE2O3                              FE2O3 !
+ SPECIE  FEO                                FE1O1 !
+ SPECIE  FEO1.5                             FE1O1.5 !
+ SPECIE  FEO2                               FE1O2 !
+ SPECIE  O-2                                O/-2 !
+ SPECIE  O2                                 O2 !
+ SPECIE  O3                                 O3 !
+$ ------------------------------------------------------------------------------
+$ Phase definitions
+$
+ PHASE LIQUID:L % 1 1 !
+ CONST LIQUID:L : FE FEO FEO1.5 : !
+$
+$ Fcc (cF4, Fm-3m) and MeX (cF8, Fm-3m)
+$
+ PHASE FCC_A1 %A 2 1 1 !
+ CONST FCC_A1 : FE : O VA% : !
+$
+$ Bcc (cI2, Im-3m)
+$
+ PHASE BCC_A2 %B 2 1 3 !
+ CONST BCC_A2 : FE : O VA% : !
+$
+$ Hcp (hP2, P6_3/mmc) and Me2X (NiAs-type, hP4, P6_3/mmc, B8_1)
+$
+ PHASE HCP_A3 %A 2 1 0.5 !
+ CONST HCP_A3 : FE : VA : !
+$
+$ Prototype alpha-Al2O3 (hR10, R-3c)
+$ This is Fe2O3 (Hematite)
+$
+ PHASE CORUNDUM_D51:I %A 2 2 3 !
+ CONST CORUNDUM_D51:I : FE+3 : O-2 : !
+$
+$ Prototype NaCl (cF8, Fm-3m)
+$ This is FeO (Wuestite)
+$
+ PHASE HALITE_B1:I % 2 1 1 !
+ CONST HALITE_B1:I : FE+2% FE+3 VA : O-2 : !
+$
+$ Prototype Al2MgO4 (cF56, Fd-3m)
+$ This is Fe3O4 (Magnetite)
+$
+ PHASE SPINEL_H11:I %A 4 1 2 2 4 !
+ CONST SPINEL_H11:I : FE+2% FE+3 : FE+2 FE+3% VA : FE+2 VA% : O-2 : !
+$
+ PHASE GAS:G % 1 1 !
+ CONST GAS:G : FE FE2 FEO FEO2 O O2% O3 : !
+$
+ PHASE O2GAS % 1 1 !
+ CONST O2GAS : O2 : !
+$ ------------------------------------------------------------------------------
+$ Defaults
+$
+ DEFINE-SYSTEM-DEFAULT ELEMENT 2 !
+ DEFAULT-COM DEFINE_SYSTEM_ELEMENT VA /- !
+ DEFAULT_COM REJECT_PHASE GAS !
+ TYPE-DEF % SEQ * !
+ TYPE-DEF A GES AMEND_PHASE_DESCRIPTION @ MAGNETIC -3 0.28 !
+ TYPE-DEF B GES AMEND_PHASE_DESCRIPTION @ MAGNETIC -1 0.4 !
+ FUNCTION ZERO      298.15  0;                                         6000 N !
+ FUNCTION UN_ASS    298.15  0;                                         6000 N !
+ FUNCTION R         298.15  +8.31451;                                  6000 N !
+ FUNCTION RTLNP     298.15  +8.31451*T*LN(1E-05*P);                    6000 N !
+$ ------------------------------------------------------------------------------
+$ Element data
+$ ------------------------------------------------------------------------------
+$ Fe
+$
+$ ORTHORHOMBIC_A20 and TETRAGONAL_U added im unary 4.1
+$
+ PAR  G(BCC_A2,FE:VA),,                 +GHSERFE;,,                   N 91Din !
+ PAR  TC(BCC_A2,FE:VA),,                 1043.00;,,                   N 91Din !
+ PAR  BM(BCC_A2,FE:VA),,                    2.22;,,                   N 91Din !
+ PAR  G(FCC_A1,FE:VA),,                 +GFCCFE;,,                    N 91Din !
+ PAR  TC(FCC_A1,FE:VA),,                 -201.00;,,                   N 91Din !
+ PAR  BM(FCC_A1,FE:VA),,                   -2.10;,,                   N 91Din !
+ PAR  G(HCP_A3,FE:VA),,                 +GHCPFE;,,                    N 91Din !
+$PAR  G(CBCC_A12,FE:VA),,               +GHSERFE+4745;,,              N 91Din !
+$PAR  G(CUB_A13,FE:VA),,                +GHSERFE+3745;,,              N 91Din !
+$PAR  G(ORTHORHOMBIC_A20,FE),,          +GHSERFE+5000;,,              N 99SGUN !
+$PAR  G(TETRAGONAL_U,FE),,              +GHSERFE+5000;,,              N 99SGUN !
+ PAR  G(LIQUID,FE),,                    +GLIQFE;,,                    N 91Din !
+$
+ PAR  G(GAS,FE),,                       +F10039T+RTLNP;,,             N 97SUB !
+ PAR  G(GAS,FE2),,                      +F10090T+RTLNP;,,             N 97SUB !
+$
+ FUNCTION GHSERFE   298.15  +1225.7+124.134*T-23.5143*T*LN(T)
+       -0.00439752*T**2-5.8927E-08*T**3+77359*T**(-1);
+      1811.00  Y  -25383.581+299.31255*T-46*T*LN(T)+2.29603E+31*T**(-9);
+      6000.00  N !
+ FUNCTION GFCCFE    298.15  -1462.4+8.282*T-1.15*T*LN(T)
+       +6.4E-04*T**2+GHSERFE;
+      1811.00  Y  -1713.815+0.940009*T+GHSERFE+4.9251E+30*T**(-9);
+      6000.00  N !
+ FUNCTION GHCPFE    298.15  -3705.78+12.591*T-1.15*T*LN(T)
+       +6.4E-04*T**2+GHSERFE;
+      1811.00  Y  -3957.195+5.249009*T+GHSERFE+4.9251E+30*T**(-9);
+      6000.00  N !
+ FUNCTION GLIQFE    298.15  +12040.17-6.55843*T+GHSERFE-3.67516E-21*T**7;
+      1811.00  Y  -10838.83+291.302*T-46*T*LN(T);
+      6000.00  N !
+$ Fe(g)
+ FUNCTION F10039T   298.15  +404205.713+35.7374159*T-32.857*T*LN(T)
+       +0.00911365*T**2-1.35405833E-06*T**3+109770*T**(-1);
+       900.00  Y  +412790.047-53.8374237*T-19.843*T*LN(T)
+       +6.96E-05*T**2-1.30683333E-07*T**3-976410*T**(-1);
+      2400.00  Y  +409046.151-49.3274618*T-20.125*T*LN(T)
+       -5.6655E-04*T**2-5.29033333E-08*T**3+887590*T**(-1);
+      5500.00  Y  +511845.843-358.371229*T+16.811*T*LN(T)
+       -0.00616325*T**2+1.00678333E-07*T**3-48193220*T**(-1);
+     10000.00  N !
+$ Fe2(g)
+ FUNCTION F10090T   298.15  +704549.823+89.2549323*T-50.743*T*LN(T)
+       +0.00803125*T**2-2.18098667E-06*T**3+169270*T**(-1);
+       800.00  Y  +717674.096-87.8134515*T-23.957*T*LN(T)
+       -0.0157846*T**2+1.723485E-06*T**3-1006505*T**(-1);
+      1700.00  Y  +655211.274+352.671354*T-83.82001*T*LN(T)
+       +0.0095931*T**2-2.85336667E-07*T**3+11147285*T**(-1);
+      4500.00  Y  +780963.168-41.3623277*T-36.245*T*LN(T)
+       +0.00155795*T**2-3.05716667E-08*T**3-51729450*T**(-1);
+      6000.00  N !
+$ ------------------------------------------------------------------------------
+$ O
+$
+$ GHSEROO modified in unary 3.0
+$
+ PAR  G(O2GAS,O2),,                     +2*GHSEROO+RTLNP;,,           N 91Din !
+$
+ PAR  G(GAS,O),,                        +F12575T+RTLNP;,,             N 94SUB !
+ PAR  G(GAS,O2),,                       +2*GHSEROO+RTLNP;,,           N 91Din !
+ PAR  G(GAS,O3),,                       +F13204T+RTLNP;,,             N 94SUB !
+$
+$PAR  G(LIQUID,O),,                     +GHSEROO-2648.9+31.44*T;,,    N 91Din !
+$
+ PAR  G(HALITE_B1,VA:O-2),,             +ZERO;,,                      N 91Sun !
+$
+ FUNCTION GSOLOO    298.15  +GHSEROO+65*T;                             6000 N !
+$ 1/2 O2(g)
+ FUNCTION GHSEROO   298.15  -3480.87-25.503038*T-11.1355*T*LN(T)
+       -0.005098875*T**2+6.61845833E-07*T**3-38365*T**(-1);
+      1000.00  Y  -6568.763+12.659879*T-16.8138*T*LN(T)
+       -5.957975E-04*T**2+6.781E-09*T**3+262905*T**(-1);
+      3300.00  Y  -13986.728+31.259624*T-18.9536*T*LN(T)
+       -4.25243E-04*T**2+1.0721E-08*T**3+4383200*T**(-1);
+      6000.00  N !
+$ O(g)
+ FUNCTION F12575T   298.15  +243206.494-20.8612587*T-21.01555*T*LN(T)
+       +1.2687055E-04*T**2-1.23131283E-08*T**3-42897.09*T**(-1);
+      2950.00  Y  +252301.423-52.0847285*T-17.21188*T*LN(T)
+       -5.413565E-04*T**2+7.64520667E-09*T**3-3973170.5*T**(-1);
+      6000.00  N !
+$ O3(g)
+ FUNCTION F13204T   298.15  +130696.944-37.9096651*T-27.58118*T*LN(T)
+     -0.02763076*T**2+4.60539333E-06*T**3+99530.45*T**(-1);
+     700.00  Y  +114760.623+176.626736*T-60.10286*T*LN(T)
+     +0.00206456*T**2-5.17486667E-07*T**3+1572175*T**(-1);
+    1300.00  Y  +49468.3958+710.094819*T-134.3696*T*LN(T)
+     +0.039707355*T**2-4.10457667E-06*T**3+12362250*T**(-1);
+    2100.00  Y  +866367.075-3566.80563*T+421.2001*T*LN(T)
+     -0.1284109*T**2+5.44768833E-06*T**3-2.1304835E+08*T**(-1);
+    2800.00  Y  +409416.384-1950.70834*T+223.4437*T*LN(T)
+     -0.0922361*T**2+4.306855E-06*T**3-21589870*T**(-1);
+    3500.00  Y  -1866338.6+6101.13383*T-764.8435*T*LN(T)
+     +0.09852775*T**2-2.59784667E-06*T**3+9.610855E+08*T**(-1);
+    4900.00  Y  +97590.0432+890.79836*T-149.9608*T*LN(T)
+     +0.01283575*T**2-3.555105E-07*T**3-2.1699975E+08*T**(-1);
+    6000.00  N !
+$ ------------------------------------------------------------------------------
+$ Binary system
+$
+$ Y. Jiang, Y. He, W. Zheng, J. Zhang, D. Zhang, X. Lu,
+$ J. Nucl. Mater., 574, 154180(2023).
+$
+$ Checked against paper. Checked at 6000 K.
+$
+$ Modified liquid interaction from 91Sun/95Kow.
+$
+$ The phase diagram is very close to 91Sun/95Kow.
+$
+ PAR  G(LIQUID,FEO),,                   +GWUSTITE
+             +34008-20.969*T;,,                                       N 95Kow !
+ PAR  G(LIQUID,FEO1.5),,                +0.5*GFE2O3S
+             +39712-20.007*T;,,                                       N 95Kow !
+ PAR  L(LIQUID,FE,FEO;0),,              +128265.9-29.998*T;,,         N 23Jia !
+ PAR  L(LIQUID,FE,FEO;1),,              +25974.5-12.334*T;,,          N 23Jia !
+ PAR  L(LIQUID,FE,FEO1.5;0),,           +81541.2;,,                   N 95Kow !
+ PAR  L(LIQUID,FEO,FEO1.5;0),,          -13353.8;,,                   N 95Kow !
+ PAR  L(LIQUID,FEO,FEO1.5;1),,          +6707.07;,,                   N 95Kow !
+$
+ PAR  G(FCC_A1,FE:O),,                  +GFCCFE+GSOLOO;,,             N 95Kow !
+ PAR  L(FCC_A1,FE:O,VA;0),,             -168758+19.17*T;,,            N 95Kow !
+$
+ PAR  G(BCC_A2,FE:O),,                  +GHSERFE+3*GSOLOO;,,          N 95Kow !
+ PAR  L(BCC_A2,FE:O,VA;0),,             -517549+71.83*T;,,            N 95Kow !
+$
+ PAR  G(CORUNDUM_D51,FE+3:O-2),,        +GFE2O3S;,,                   N 91Sun !
+ PAR  TC(CORUNDUM_D51,FE+3:O-2),,       -2867;,,                      N 91Sun !
+ PAR  BM(CORUNDUM_D51,FE+3:O-2),,         -25.1;,,                    N 91Sun !
+$
+ PAR  G(HALITE_B1,FE+2:O-2),,           +GWUSTITE;,,                  N 91Sun !
+ PAR  G(HALITE_B1,FE+3:O-2),,           +1.25*AWUSTITE
+             +1.25*GWUSTITE;,,                                        N 91Sun !
+ PAR  L(HALITE_B1,FE+2,FE+3:O-2;0),,    -12324;,,                     N 91Sun !
+ PAR  L(HALITE_B1,FE+2,FE+3:O-2;1),,    +20070;,,                     N 91Sun !
+$
+ PAR  G(SPINEL_H11,FE+2:FE+2:FE+2:O-2),,  +9*GFE3O4+DFE3O4;,,         N 91Sun !
+ PAR  TC(SPINEL_H11,FE+2:FE+2:FE+2:O-2),,  +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+2:FE+2:FE+2:O-2),,   +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+3:FE+2:FE+2:O-2),,  +9*GFE3O4+DFE3O4-BFE3O4;,,  N 91Sun !
+ PAR  TC(SPINEL_H11,FE+3:FE+2:FE+2:O-2),,  +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+3:FE+2:FE+2:O-2),,   +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+2:FE+3:FE+2:O-2),,  +9*GFE3O4+DFE3O4-BFE3O4;,,  N 91Sun !
+ PAR  TC(SPINEL_H11,FE+2:FE+3:FE+2:O-2),,  +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+2:FE+3:FE+2:O-2),,   +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+3:FE+3:FE+2:O-2),,  +9*GFE3O4+DFE3O4
+             -2*BFE3O4;,,                                             N 91Sun !
+ PAR  TC(SPINEL_H11,FE+3:FE+3:FE+2:O-2),,  +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+3:FE+3:FE+2:O-2),,   +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+2:VA:FE+2:O-2),,    +7*GFE3O4+DFE3O4+CFE3O4
+             -BFE3O4;,,                                               N 91Sun !
+ PAR  TC(SPINEL_H11,FE+2:VA:FE+2:O-2),,    +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+2:VA:FE+2:O-2),,     +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+3:VA:FE+2:O-2),,    +7*GFE3O4+DFE3O4+CFE3O4
+             -2*BFE3O4;,,                                             N 91Sun !
+ PAR  TC(SPINEL_H11,FE+3:VA:FE+2:O-2),,    +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+3:VA:FE+2:O-2),,     +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+2:FE+2:VA:O-2),,    +7*GFE3O4+BFE3O4;,,         N 91Sun !
+ PAR  TC(SPINEL_H11,FE+2:FE+2:VA:O-2),,    +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+2:FE+2:VA:O-2),,     +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+3:FE+2:VA:O-2),,    +7*GFE3O4;,,                N 91Sun !
+ PAR  TC(SPINEL_H11,FE+3:FE+2:VA:O-2),,    +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+3:FE+2:VA:O-2),,     +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+2:FE+3:VA:O-2),,    +7*GFE3O4;,,                N 91Sun !
+ PAR  TC(SPINEL_H11,FE+2:FE+3:VA:O-2),,    +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+2:FE+3:VA:O-2),,     +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+3:FE+3:VA:O-2),,    +7*GFE3O4-BFE3O4;,,         N 91Sun !
+ PAR  TC(SPINEL_H11,FE+3:FE+3:VA:O-2),,    +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+3:FE+3:VA:O-2),,     +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+2:VA:VA:O-2),,      +5*GFE3O4+CFE3O4;,,         N 91Sun !
+ PAR  TC(SPINEL_H11,FE+2:VA:VA:O-2),,      +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+2:VA:VA:O-2),,       +44.54;,,                 N 91Sun !
+ PAR  G(SPINEL_H11,FE+3:VA:VA:O-2),,      +5*GFE3O4+CFE3O4-BFE3O4;,,  N 91Sun !
+ PAR  TC(SPINEL_H11,FE+3:VA:VA:O-2),,      +848;,,                    N 91Sun !
+ PAR  BM(SPINEL_H11,FE+3:VA:VA:O-2),,       +44.54;,,                 N 91Sun !
+$
+ PAR  G(GAS,FEO),,                      +F9962T+RTLNP;,,              N 97SUB !
+ PAR  G(GAS,FEO2),,                     +F9967T+RTLNP;,,              N 97SUB !
+$
+ FUNCTION GFE2O3S   298.15  -858683+827.946*T-137.0089*T*LN(T)
+       +1453810*T**(-1);
+      3000.00  N !
+ FUNCTION GWUSTITE  298.15  -279318+252.848*T-46.12826*T*LN(T)
+       -0.0057402984*T**2;
+      3000.00  N !
+ FUNCTION AWUSTITE  298.15  -55384+27.888*T;                           3000 N !
+ FUNCTION GFE3O4    298.15  -161731+144.873*T-24.9879*T*LN(T)
+       -0.0011952256*T**2+206520*T**(-1);
+      3000.00  N !
+ FUNCTION DFE3O4    298.15  +402520-30.529*T;                          3000 N !
+ FUNCTION BFE3O4    298.15  +46826-27.266*T;                           3000 N !
+ FUNCTION CFE3O4    298.15  +120730-20.102*T;                          3000 N !
+$ FeO(g)
+ FUNCTION F9962T    298.15  +246332.42+80.492905*T-47.385*T*LN(T)
+       +0.0060176*T**2-7.77001667E-07*T**3+229200*T**(-1);
+      1300.00  Y  +254438.155+9.44818702*T-37.338*T*LN(T)
+       +2.03E-04*T**2-1.24958333E-07*T**3-1074850*T**(-1);
+      4300.00  Y  +459171.603-610.333833*T+37.167*T*LN(T)
+       -0.011972*T**2+2.51343333E-07*T**3-1.0780185E+08*T**(-1);
+      6000.00  N !
+$ FeO2(g)
+ FUNCTION F9967T    298.15  +58475.2385-2.02034537*T-37.569*T*LN(T)
+       -0.01894785*T**2+3.36232667E-06*T**3+205940*T**(-1);
+       700.00  Y  +48666.2152+131.130136*T-57.802*T*LN(T)
+       -7.83E-05*T**2+2.57666667E-09*T**3+1111465*T**(-1);
+      6000.00  N !
+$ ------------------------------------------------------------------------------
+$
+$
+ LIST-OF-REFERENCE
+ NUMBER  SOURCE
+  Null   'Unknown source'
+  Same   'Same or similar interaction as in the corresponding stable phase'
+  REFLAV 'Laves phase convention: G(LAVES,X:X)=+3*GHSERXX+15000'
+  91Din  'A.T. Dinsdale, Calphad, 15, 317-425(1991).'
+  91Sun  'B. Sundman, J. Phase Equilib., 12, 127-40(1991); Fe-O'
+  95Kow  'M. Kowalski, P.J. Spencer, Calphad, 19, 229-43(1995); Fe-O'
+  97SUB  'SGTE substance database, version 1997'
+  99SGUN 'SGTE unary database V.4.1, 1999.'
+  23Jia  'Y. Jiang, Y. He, W. Zheng, J. Zhang, D. Zhang, X. Lu,
+          J. Nucl. Mater., 574, 154180(2023); Fe-O'
+!
