@@ -12,3 +12,4 @@ pytest-cov
 sphinx
 nbsphinx-link
 docutils<0.21 # workaround for https://github.com/vidartf/nbsphinx-link/issues/22
+ipykernel
