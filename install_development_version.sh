@@ -27,3 +27,6 @@ source .venv/Scripts/activate
 python -m pip install -U pip setuptools
 python -m pip install -U -r requirements-dev.txt
 python -m pip install -U --no-build-isolation --editable .
+
+
+set +o xtrace
