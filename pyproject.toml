@@ -108,6 +108,9 @@ filterwarnings = [
     "ignore:The type definition character*:UserWarning",
     "ignore:__array__ implementation doesn't accept a copy keyword, so passing copy=False failed.", # https://github.com/pydata/xarray/issues/9400
 ]
+addopts = """
+--cov-report html:pycalphad/tests/reports/coverage-html
+"""
 
 [tool.coverage.paths]
 # The first path is the path to the modules to report coverage against.
