@@ -13,16 +13,16 @@ if [ ! -f requirements-dev.txt ]; then
 fi
 
 # Create a virtual environment and install the development version of pycalphad
-if [ -d .venv ]; then
-    echo "Warning: .venv directory already exists. Reusing existing virtual environment."
+if [ -d .venv-win ]; then
+    echo "Warning: venv-win directory already exists. Reusing existing virtual environment."
 else
     echo "Creating a new virtual environment in .venv"
-    python -m venv .venv
-    echo "*" > .venv/.gitignore
+    python -m venv .venv-win
+    echo "*" > .venv-win/.gitignore
 fi
 
 # Activate the virtual environment and install dependencies
-source .venv/Scripts/activate
+source .venv-win/Scripts/activate
 
 python -m pip install -U pip setuptools
 python -m pip install -U -r requirements-dev.txt
