@@ -14,9 +14,9 @@ fi
 
 # Create a virtual environment and install the development version of pycalphad
 if [ -d .venv-win ]; then
-    echo "Warning: venv-win directory already exists. Reusing existing virtual environment."
+    echo "Warning: .venv-win directory already exists. Reusing existing virtual environment."
 else
-    echo "Creating a new virtual environment in .venv"
+    echo "Creating a new virtual environment in .venv-win"
     python -m venv .venv-win
     echo "*" > .venv-win/.gitignore
 fi
