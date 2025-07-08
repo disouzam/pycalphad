@@ -26,7 +26,7 @@ source .venv-ubuntu/bin/activate
 
 python3 -m pip install -U pip setuptools
 python3 -m pip install -U -r requirements-dev.txt
-# python3 -m pip install -U --no-build-isolation --editable .
+python3 -m pip install -U --no-build-isolation --editable .
 
 
 set +o xtrace
