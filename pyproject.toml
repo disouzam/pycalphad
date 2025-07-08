@@ -1,3 +1,10 @@
+[project]
+# version = "0.0.1"  # Remove any existing version parameter.
+dynamic = ["version"]
+name = "pycalphad"
+description = "Python package for CALPHAD calculations"
+readme = "README.md"
+
 [build-system]
 requires = [
     "Cython",
