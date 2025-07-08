@@ -60,7 +60,9 @@ debug = true
 also_copy=[
     "pycalphad",
     "pycalphad/tests",
-    "setup.py"
+    "setup.py",
+    "README.rst",
+    "LICENSE.txt"
 ]
 
 # '[tool.setuptools.scm]\n' needs to be the last line because
