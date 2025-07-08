@@ -4,7 +4,6 @@ requires = [
     "numpy>=2; python_version>='3.10'",
     "scipy",
     "setuptools",
-    "setuptools_scm[toml]>=6.0",
     "wheel",
 ]
 build-backend = "setuptools.build_meta"
@@ -47,11 +46,16 @@ omit = [
 [tool.coverage.report]
 ignore_errors = true # workaround for https://github.com/cython/cython/issues/5581
 
-# '[tool.setuptools.scm]\n' needs to be the last line because
-# we do an append operation in the deploy.yaml GitHub Actions workflow
-[tool.setuptools_scm]
-
 [tool.mutmut]
 paths_to_mutate = [ "pycalphad/models" ]
 tests_dir = [ "pycalphad/tests" ]
 debug = true
+also_copy=[
+    "pycalphad",
+    "pycalphad/tests",
+    "setup.py"
+]
+
+# '[tool.setuptools.scm]\n' needs to be the last line because
+# we do an append operation in the deploy.yaml GitHub Actions workflow
+[tool.setuptools_scm]
