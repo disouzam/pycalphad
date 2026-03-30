@@ -223,6 +223,7 @@ class Database(object): #pylint: disable=R0902
         else:
             # It's not file-like, so it's probably a filename
             need_to_close = True
+            # TODO: a try-except block and a specific exception error could be added here
             fd = open(fname, mode='r')
         try:
             dbf = Database()
