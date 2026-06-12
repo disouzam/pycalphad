@@ -58,7 +58,7 @@ Homepage = "https://pycalphad.org/"
 
 [dependency-groups]
 dev = [
-    "cosmic-ray>=8.4.6",
+    "cosmic-ray",
     "Cython",
     "docutils<0.21", # workaround for https://github.com/vidartf/nbsphinx-link/issues/22
     "furo>=2021.11.16",  # docs theme
@@ -77,6 +77,9 @@ dev = [
     "sphinx-autobuild>=2025.8.25",
     "wheel",
 ]
+
+[tool.uv.sources]
+cosmic-ray = { path = "../cosmic-ray", editable = true }
 
 [tool.setuptools]
 # Do not include pycalphad._dev here as it should not be distributed
