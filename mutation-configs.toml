@@ -2,7 +2,7 @@
 module-path = "pycalphad"
 timeout = 30.0
 excluded-modules = []
-test-command = "uv run python -m pytest pycalphad"
+test-command = "uv run python -m pytest tests"
 
 [cosmic-ray.distributor]
 name = "local"
