@@ -2,7 +2,7 @@
 The test_model module contains unit tests for the Model object.
 """
 from pycalphad import Database, Model, variables as v, equilibrium
-from pycalphad.tests.fixtures import select_database, load_database
+from tests.fixtures import select_database, load_database
 from pycalphad.core.errors import DofError
 from symengine import Piecewise
 import numpy as np

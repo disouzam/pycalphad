@@ -14,7 +14,7 @@ from pycalphad.core.constants import MIN_SITE_FRACTION
 from pycalphad.core.polytope import sample
 from pycalphad.core.utils import instantiate_models
 from pycalphad import ConditionError
-from pycalphad.tests.fixtures import select_database, load_database
+from tests.fixtures import select_database, load_database
 
 
 @select_database("alcrni.tdb")

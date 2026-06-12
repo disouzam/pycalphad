@@ -6,8 +6,8 @@ import pytest
 from importlib.resources import files
 from pycalphad import Database, Model
 from pycalphad.core.utils import filter_phases, unpack_species, instantiate_models, generate_symmetric_group
-import pycalphad.tests.databases
-from pycalphad.tests.fixtures import select_database, load_database
+import tests.databases
+from tests.fixtures import select_database, load_database
 
 
 @select_database("alcocrni.tdb")
@@ -15,8 +15,8 @@ def test_filter_phases_removes_disordered_phases_from_order_disorder(load_databa
     """Databases with order-disorder models should have the disordered phases be filtered if candidate_phases kwarg is not passed to filter_phases.
     If candidate_phases kwarg is passed, disordered phases just are filtered if respective ordered phases are inactive"""
     dbf = load_database()
-    ALNIPT_DBF = Database(str(files(pycalphad.tests.databases).joinpath("alnipt.tdb")))
-    ALCRNI_DBF = Database(str(files(pycalphad.tests.databases).joinpath("alcrni.tdb")))
+    ALNIPT_DBF = Database(str(files(tests.databases).joinpath("alnipt.tdb")))
+    ALCRNI_DBF = Database(str(files(tests.databases).joinpath("alcrni.tdb")))
     all_phases = set(ALNIPT_DBF.phases.keys())
     filtered_phases = set(filter_phases(ALNIPT_DBF, unpack_species(ALNIPT_DBF, ['AL', 'NI', 'PT', 'VA'])))
     assert all_phases.difference(filtered_phases) == {'FCC_A1'}

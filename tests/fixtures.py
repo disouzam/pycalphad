@@ -1,7 +1,7 @@
 from importlib.resources import files
 import pytest
 import numpy as np
-import pycalphad.tests.databases
+import tests.databases
 from pycalphad.io.database import Database
 from pycalphad.core.solver import Solver, SolverResult
 
@@ -10,7 +10,7 @@ def load_database(request):
     """
     Helper fixture to load a database (parameterized by the value of `request`).
     """
-    db = Database(files(pycalphad.tests.databases).joinpath(request.param))
+    db = Database(files(tests.databases).joinpath(request.param))
     def _load_database():
         return db
     return _load_database
