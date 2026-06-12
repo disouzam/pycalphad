@@ -17,6 +17,9 @@ find . -type f \
   ! -path "./worker2/*" \
   -exec cp -v --parents {} worker1/ \;
 pushd worker1
+git add .
+sed -i 's|\.\./cosmic-ray|../../cosmic-ray|g' pyproject.toml
+SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYCALPHAD=0.11.2 uv sync
 popd
 
 mkdir worker2
@@ -35,4 +38,7 @@ find . -type f \
   ! -path "./worker2/*" \
   -exec cp -v --parents {} worker2/ \;
 pushd worker2
+git add .
+sed -i 's|\.\./cosmic-ray|../../cosmic-ray|g' pyproject.toml
+SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYCALPHAD=0.11.2 uv sync
 popd
