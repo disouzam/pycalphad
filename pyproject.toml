@@ -93,14 +93,14 @@ packages = [
     "pycalphad.plot.binary",
     "pycalphad.plot",
     "pycalphad.property_framework",
-    "pycalphad.tests.databases",
-    "pycalphad.tests",
+    "tests.databases",
+    "tests",
     "pycalphad",
 ]
 
 [tool.setuptools.package-data]
 "pycalphad.core" = ["*.pxd"]
-"pycalphad.tests.databases" = ["*"]
+"tests.databases" = ["*"]
 
 [tool.pytest.ini_options]
 markers = [
@@ -113,7 +113,7 @@ filterwarnings = [
     "ignore:__array__ implementation doesn't accept a copy keyword, so passing copy=False failed.", # https://github.com/pydata/xarray/issues/9400
 ]
 addopts = """
---cov-report html:pycalphad/tests/reports/coverage-html
+--cov-report html:tests/reports/coverage-html
 """
 
 [tool.coverage.paths]
@@ -135,7 +135,7 @@ source_pkgs = [
 ]
 omit = [
     "pycalphad/core/*.pxd", # workaround for https://github.com/nedbat/coveragepy/issues/972
-    "*/pycalphad/tests/*", # don't include tests in coverage
+    "*/tests/*", # don't include tests in coverage
     "stringsource",
     "*/numpy/*",  # fix for Cython.Coverage.Plugin did not provide a file reporter for numpy/__init__.cython-30.pxd
 ]

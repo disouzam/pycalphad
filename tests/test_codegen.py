@@ -10,7 +10,7 @@ from symengine import zoo
 from pycalphad import Database, Model, variables as v
 from pycalphad.codegen.phase_record_factory import PhaseRecordFactory
 from pycalphad.codegen.sympydiff_utils import build_functions, build_constraint_functions
-from pycalphad.tests.fixtures import select_database, load_database
+from tests.fixtures import select_database, load_database
 
 
 @select_database("alnipt.tdb")

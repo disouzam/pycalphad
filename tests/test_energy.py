@@ -6,7 +6,7 @@ correct abstract syntax tree for the energy.
 import pytest
 from symengine import S
 from pycalphad import Database, Model, ReferenceState
-from pycalphad.tests.fixtures import select_database, load_database
+from tests.fixtures import select_database, load_database
 from pycalphad.core.errors import DofError
 import pycalphad.variables as v
 import numpy as np

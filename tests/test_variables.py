@@ -4,7 +4,7 @@ Test variables module.
 import copy
 import numpy as np
 from pycalphad import variables as v
-from pycalphad.tests.fixtures import select_database, load_database
+from tests.fixtures import select_database, load_database
 
 
 def test_species_parse_unicode_strings():
