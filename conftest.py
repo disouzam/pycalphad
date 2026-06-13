@@ -1,6 +1,6 @@
 """Test session configuration and compatibility shims."""
-
 from __future__ import annotations
+import datetime
 
 
 def pytest_configure(config):
@@ -9,7 +9,10 @@ def pytest_configure(config):
     `pytest-reporter-html1` passes `writer="html5"` to docutils convenience
     functions, but newer docutils requires `writer_name="html5"`.
     """
-    _ = config
+    local_config = config
+    now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    report_name = f"report_{now}.html"
+    local_config.option.report[0] = report_name
 
     try:
         import pytest_reporter_html1.plugin as reporter_plugin
@@ -23,4 +26,5 @@ def pytest_configure(config):
             kwargs["writer_name"] = kwargs.pop("writer")
         return docutils_publish_parts(*args, **kwargs)
 
-    reporter_plugin.publish_parts = _publish_parts_compat
+    return_value = _publish_parts_compat
+    reporter_plugin.publish_parts = return_value
