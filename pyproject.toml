@@ -70,11 +70,12 @@ dev = [
     "nbsphinx-link",
     "numpy>=2",
     "pytest-cov",
+    "pytest-reporter-html1>=0.9.4",
     "scipy",
     "setuptools_scm[toml]>=6.0",
     "setuptools",
-    "sphinx<9",
     "sphinx-autobuild>=2025.8.25",
+    "sphinx<9",
     "wheel",
 ]
 
