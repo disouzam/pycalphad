@@ -24,14 +24,20 @@ for i in $(seq 1 "$NUM_WORKERS"); do
     ! -path "./docs/*" \
     ! -path "./examples/*" \
     ! -path "./mutation_testing/*" \
+    ! -path "./pycalphad.egg-info/*" \
     ! -path "./tests/reports/*" \
     ! -path "./worker*/*" \
     -exec cp -v --parents {} "$worker_dir"/ \;
   pushd "$worker_dir"
   git add .
-  sed -i 's|\.\./cosmic-ray|../../cosmic-ray|g' pyproject.toml
-  SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYCALPHAD=0.11.2 uv sync
+  # sed -i 's|\.\./cosmic-ray|../../cosmic-ray|g' pyproject.toml
+  # SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYCALPHAD=0.11.2 uv sync
   port=$((9000 + i))
-  echo "uv run cosmic-ray --verbosity INFO http-worker --port $port" > launch-worker-"$i".sh
+  launch_script="launch-worker-${i}.sh"
+  echo "pushd .." > $launch_script
+  echo ". .venv/Scripts/activate" >> $launch_script
+  echo "pushd worker${i}" >> $launch_script
+  echo "cosmic-ray --verbosity DEBUG http-worker --port $port" >> $launch_script
+  echo "popd" >> $launch_script
   popd
 done
