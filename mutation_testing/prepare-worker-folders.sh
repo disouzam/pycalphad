@@ -23,6 +23,7 @@ for i in $(seq 1 "$NUM_WORKERS"); do
     ! -path "./automation/*" \
     ! -path "./docs/*" \
     ! -path "./examples/*" \
+    ! -path "./mutation_testing/*" \
     ! -path "./tests/reports/*" \
     ! -path "./worker*/*" \
     -exec cp -v --parents {} "$worker_dir"/ \;
