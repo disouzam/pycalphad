@@ -80,6 +80,19 @@
                 "kind": "none",
                 "isDefault": false
             }
+        },
+        {
+            "label": "Reinstall cosmic-ray (local package)",
+            "type": "shell",
+            "command": "uv sync --reinstall-package cosmic-ray",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            }
         }
     ]
 }
