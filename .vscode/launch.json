@@ -41,6 +41,22 @@
             "justMyCode": false,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/worker1",
+        },
+        {
+            "name": "Debug pytest execution",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "tests",
+                "--template=html1/index.html",
+                "--report=report.html",
+                "-s"
+            ],
+            "justMyCode": false,
+            "stopOnEntry": true,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
         }
     ]
 }
