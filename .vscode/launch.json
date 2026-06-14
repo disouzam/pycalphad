@@ -9,6 +9,8 @@
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
+            "justMyCode": true,
+            "stopOnEntry": false,
             "console": "integratedTerminal",
             "cwd": "${fileDirname}",
         },
@@ -23,6 +25,7 @@
                 "mutation_testing/cosmic-ray-02-workers.sqlite"
             ],
             "justMyCode": false,
+            "stopOnEntry": false,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
         },
@@ -39,6 +42,7 @@
                 "9001"
             ],
             "justMyCode": false,
+            "stopOnEntry": false,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/worker1",
         },
@@ -54,7 +58,7 @@
                 "-s"
             ],
             "justMyCode": false,
-            "stopOnEntry": true,
+            "stopOnEntry": false,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
         }
