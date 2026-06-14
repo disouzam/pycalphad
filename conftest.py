@@ -13,9 +13,8 @@ def pytest_configure(config):
     now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     report_name = local_config.option.report[0]
     prefix=report_name[:-5]
-    job_id = "be9e5dd7047e4fa0ac0515e88256a560"
     extension = report_name[-5:]
-    report_name_with_time_stamp = f"{prefix}_{job_id}_{now}{extension}"
+    report_name_with_time_stamp = f"{prefix}_{now}{extension}"
     local_config.option.report[0] = report_name_with_time_stamp
 
     try:
