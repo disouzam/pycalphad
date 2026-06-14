@@ -19,6 +19,7 @@ for i in $(seq 1 "$NUM_WORKERS"); do
     ! -path "./.pytest_cache/*" \
     ! -path "./.venv/*" \
     ! -path "./.vscode/*" \
+    ! -path "./__pycache__/*" \
     ! -path "./*/__pycache__/*" \
     ! -path "./automation/*" \
     ! -path "./docs/*" \
