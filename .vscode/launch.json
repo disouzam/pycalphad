@@ -15,7 +15,7 @@
             "cwd": "${fileDirname}",
         },
         {
-            "name": "Debug Cosmic-Ray execution",
+            "name": "Debug Cosmic-Ray execution - Http distributors",
             "type": "debugpy",
             "request": "launch",
             "module": "cosmic_ray.cli",
@@ -45,6 +45,21 @@
             "stopOnEntry": false,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/worker1",
+        },
+        {
+            "name": "Debug Cosmic-Ray execution - Local distributor",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "cosmic_ray.cli",
+            "args": [
+                "exec",
+                "mutation_testing/cosmic-ray-base-config.toml",
+                "mutation_testing/cosmic-ray-for-local-distributor.sqlite"
+            ],
+            "justMyCode": true,
+            "stopOnEntry": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
         },
         {
             "name": "Debug pytest execution with reports",
