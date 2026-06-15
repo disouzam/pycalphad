@@ -53,7 +53,7 @@
             "module": "cosmic_ray.cli",
             "args": [
                 "exec",
-                "mutation_testing/cosmic-ray-base-config.toml",
+                "mutation_testing/cosmic-ray-local-distributor.toml",
                 "mutation_testing/cosmic-ray-for-local-distributor.sqlite"
             ],
             "justMyCode": false,
