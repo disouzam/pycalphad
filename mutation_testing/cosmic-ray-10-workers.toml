@@ -13,6 +13,7 @@ worker-urls = [
     "http://localhost:9002",
     "http://localhost:9003",
     "http://localhost:9004",
+    "http://localhost:9005",
     "http://localhost:9006",
     "http://localhost:9006",
     "http://localhost:9007",
