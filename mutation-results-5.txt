@@ -1,0 +1,537 @@
+[job-id] 70076786a7f040c58d5fb3e24e77ab9a
+pycalphad\mapping\strategy\ternary_strategy.py core/ReplaceBinaryOperator_Mul_LShift 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] b44c6cc4d83043a2be26a11810866e06
+pycalphad\mapping\strategy\ternary_strategy.py core/ReplaceComparisonOperator_Eq_LtE 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 658323496817453ab0f5dca6df979ae1
+pycalphad\mapping\strategy\ternary_strategy.py core/ReplaceComparisonOperator_Gt_Lt 1
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] ba9f83ffaf6f4cbfb0ae62bf08040060
+pycalphad\mapping\strategy\ternary_strategy.py core/ReplaceComparisonOperator_Gt_LtE 2
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] cc4e580d2d1e46e5b18f6fe6619d21ec
+pycalphad\mapping\strategy\ternary_strategy.py core/ReplaceUnaryOperator_USub_Invert 4
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] fff384e7edfe4fdeacc41c594c111038
+pycalphad\model.py core/ReplaceBinaryOperator_Add_Mod 22
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] ebb2ac80a6984ffe8ec7219a35b696ca
+pycalphad\model.py core/ReplaceBinaryOperator_Add_Pow 39
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 4f7b4594f6fc47219978dc54b53a1ada
+pycalphad\model.py core/ReplaceBinaryOperator_Add_LShift 15
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a26385ac57c745d39d4c672fcfade674
+pycalphad\model.py core/ReplaceBinaryOperator_Sub_Pow 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 1412d5ebf3124770925bb1123618ec53
+pycalphad\model.py core/ReplaceBinaryOperator_Sub_RShift 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] facf4927d48f428aba3067fcc9dea0f3
+pycalphad\model.py core/ReplaceBinaryOperator_Sub_BitAnd 13
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 189d89713d494135b1d7eec6751219c9
+pycalphad\model.py core/ReplaceBinaryOperator_Mul_Add 44
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 648cfe57f87146f38488ddcc055218fb
+pycalphad\model.py core/ReplaceBinaryOperator_Mul_Mod 6
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 1f95b729d8c54275a05f97f4580bd436
+pycalphad\model.py core/ReplaceBinaryOperator_Mul_Mod 45
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 066b6753f3604f5791d6e6ea9f681e55
+pycalphad\model.py core/ReplaceBinaryOperator_Mul_Pow 45
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 8a67120a3dee48b2bb9c497f71789838
+pycalphad\model.py core/ReplaceBinaryOperator_Mul_LShift 55
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a0f665596778431fb0a8b4e08dfdcc10
+pycalphad\model.py core/ReplaceBinaryOperator_Mul_LShift 61
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 1baf4b111ad64b98a9201a2b049f243a
+pycalphad\model.py core/ReplaceBinaryOperator_Mul_BitOr 48
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 6561275da26b407fa3c1022f1363fde4
+pycalphad\model.py core/ReplaceBinaryOperator_Mul_BitXor 58
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 01fa889a2bd442d498b2786c7dd5da60
+pycalphad\model.py core/ReplaceBinaryOperator_Div_Mul 60
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 367b90e02b5c444f92e821ea16b6b987
+pycalphad\model.py core/ReplaceBinaryOperator_Pow_Mod 11
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c62e7393e42e42c1a93018e024c55e8f
+pycalphad\model.py core/ReplaceBinaryOperator_BitAnd_Mul 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] cecd21d22ea54d2a95dd28d8ccc924d0
+pycalphad\model.py core/ReplaceBinaryOperator_BitAnd_Pow 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 97ee306bd59147308afd4287bc2ac2d3
+pycalphad\model.py core/ReplaceBinaryOperator_BitAnd_RShift 26
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] d374dcb3bbda4dd1961f05b4520e850f
+pycalphad\model.py core/ReplaceBinaryOperator_BitAnd_BitOr 16
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c49644a5a04948418cabfaf006c5f19b
+pycalphad\model.py core/ReplaceComparisonOperator_Eq_NotEq 34
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c515ca1afa3443c2bf695e46842b3b46
+pycalphad\model.py core/ReplaceComparisonOperator_Eq_IsNot 40
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] fdb1e8d40bc640379fdbb203ef4a27eb
+pycalphad\model.py core/ReplaceComparisonOperator_Gt_Eq 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 92d1f05510ce470d9ed5ecb1b9fb8e64
+pycalphad\model.py core/ReplaceUnaryOperator_USub_Invert 30
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 39e6ec139a3945339fc0ee2d3e34f78f
+pycalphad\model.py core/ReplaceAndWithOr 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 66886f7fd9bf4ec89d38964061fed369
+pycalphad\model.py core/NumberReplacer 70
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 3f0c37d5cff640e39a94fb4b15450ae9
+pycalphad\model.py core/NumberReplacer 137
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 585eeb0d78c440638449e0b1140f28a2
+pycalphad\model.py core/NumberReplacer 276
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 00abc669c3894f3396ccb2ae86cd5c8a
+pycalphad\model.py core/NumberReplacer 329
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 94a08840e96d4dd2904e47d478c6e4ee
+pycalphad\model.py core/NumberReplacer 441
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 2bc0f2af3fe544a39b77786e298f578f
+pycalphad\model.py core/RemoveDecorator 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 25118d99885740828baf7a83f038fdfd
+pycalphad\model.py core/ZeroIterationForLoop 22
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 1d42c79c17334d82bbfd3d5643f0f7c1
+pycalphad\plot\eqplot.py core/ReplaceUnaryOperator_USub_Not 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 3d77cf90f6dd46758076cd187f15f9b9
+pycalphad\plot\binary\map.py core/ReplaceBinaryOperator_Sub_Mod 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a5bef54e77a942c9a920ee657b07536f
+pycalphad\core\utils.py core/ReplaceComparisonOperator_Gt_Lt 3
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 0f89f0e1dd184c5fa3df6fd8c1b65597
+pycalphad\mapping\strategy\binary_strategy.py core/ReplaceBinaryOperator_Div_BitOr 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 8ea1eab519d74f1e9b4c51bf9ca31c3b
+pycalphad\mapping\strategy\binary_strategy.py core/ReplaceComparisonOperator_Eq_Lt 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 764ab8f8f47d4060aee9d562f6d38ede
+pycalphad\mapping\strategy\binary_strategy.py core/ReplaceComparisonOperator_Eq_LtE 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 89c8c1b839b147b3aef23480f3cf4e7f
+pycalphad\mapping\strategy\binary_strategy.py core/ReplaceComparisonOperator_Eq_Gt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 3ddd46cb751546e6ba134bbb67644b0b
+pycalphad\mapping\strategy\binary_strategy.py core/AddNot 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 4cb3d00414dd4f0eb3d3b98524578a6b
+pycalphad\core\polytope.py core/ReplaceBinaryOperator_Sub_Add 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 9a6d1e2ede334279813dbd4d2d98b22b
+pycalphad\mapping\strategy\step_strategy.py core/ReplaceBinaryOperator_Div_Mul 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] d1d15def31f94bcb890f9f224a0105d7
+pycalphad\mapping\strategy\step_strategy.py core/ReplaceComparisonOperator_Eq_Lt 4
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 0d51022bb66f4ce689491f06eb7676d7
+pycalphad\property_framework\tzero.py core/ReplaceBinaryOperator_Add_RShift 2
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 5b798128324a43fb94a516e06d894e7f
+pycalphad\property_framework\tzero.py core/ReplaceBinaryOperator_Div_FloorDiv 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 6445301ba0ea4143a2568ff80b5ba81a
+pycalphad\property_framework\tzero.py core/ReplaceBinaryOperator_Pow_Sub 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] ae9234a0203a48a896b9b2bb6be74193
+pycalphad\plot\triangular.py core/ReplaceBinaryOperator_Add_LShift 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] d0c4168ba7944dce9b4d2f234d5868db
+pycalphad\plot\triangular.py core/ReplaceBinaryOperator_Div_BitXor 1
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 776d4dd15ac1427cbf195c67e6217f40
+pycalphad\plot\triangular.py core/NumberReplacer 24
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] eba745d970da4434b9a72c380ba6c8bc
+pycalphad\plot\triangular.py core/NumberReplacer 52
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 04bb04f95f204f48b48993327fb4b1b7
+pycalphad\core\calculate.py core/ReplaceBinaryOperator_Add_Mul 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 987cdb0473fb4a4dbbaca4e395c3cfd0
+pycalphad\core\calculate.py core/ReplaceBinaryOperator_Sub_BitOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 0e541849eb7c4503adb50bec01d3d6cf
+pycalphad\core\calculate.py core/ReplaceComparisonOperator_Eq_Lt 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 02bc8d0acea4473bb0967db25d87f4ca
+pycalphad\core\calculate.py core/ReplaceComparisonOperator_Gt_Eq 8
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] a7b30c9920d0481eabf49af311bdfa84
+pycalphad\core\calculate.py core/ReplaceUnaryOperator_USub_Not 29
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 1244d254015241688f10243925504352
+pycalphad\core\calculate.py core/AddNot 26
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 9f69e71951b940cdbe9b493bb4c2d5ad
+pycalphad\core\calculate.py core/NumberReplacer 141
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] ed194e61c95d4a5ab5e8c05451bda772
+pycalphad\core\calculate.py core/ZeroIterationForLoop 5
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] d85e60bb24cb44509f0d2a91316646a9
+pycalphad\io\database.py core/ReplaceBinaryOperator_Add_BitXor 2
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] dcd4a4cb61794718aa18a9b46a183808
+pycalphad\io\database.py core/NumberReplacer 6
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 5ddebc30f1634de1b515a7e3f006e1d1
+pycalphad\core\solver.py core/ReplaceBinaryOperator_Sub_Pow 2
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 7eeaf5cc15a546c59df02d63c86afbe8
+pycalphad\core\solver.py core/ReplaceBinaryOperator_Sub_LShift 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] f25fe22aa6834859b9a200db18e7abea
+pycalphad\core\solver.py core/ReplaceAndWithOr 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 002936b060f04816894aaa8006f7b37e
+pycalphad\mapping\plotting.py core/ReplaceBinaryOperator_Mul_Pow 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c6a100a6f6a64f66a7c307dcc2d63911
+pycalphad\mapping\plotting.py core/ReplaceComparisonOperator_Is_IsNot 10
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 0f715031fdbb4399b2d92dd831747391
+pycalphad\mapping\plotting.py core/NumberReplacer 10
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 094bedd71b024885bc8afeb838315fb0
+pycalphad\core\light_dataset.py core/ReplaceOrWithAnd 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 90ccb59f28c449918d5e593d6b7826d0
+pycalphad\mapping\strategy\isopleth_strategy.py core/ReplaceComparisonOperator_Eq_Lt 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 799e6d87abcf480ba504947d07eecb55
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Add_Pow 13
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 3b9fb0f2216a466282767e146062adc5
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Add_Pow 27
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 9a6122e449da41688264b6b5859e1662
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Add_Pow 34
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 1d74d93d12224705803aebfb110830bb
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Add_LShift 27
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] fed79b0895dc4ebdb79f70ea1f57ae2b
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Add_BitOr 25
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 96722209bc8b4472839ed021416d47eb
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Add_BitAnd 23
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e23698721b4344baa3bffc0a842a6153
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Add_BitXor 31
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 233884f6aea74deabb8356176304a01b
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Mul_Sub 38
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 62dd36ca8be24d19930deba6f929dc52
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Mul_Sub 62
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 2fefadf6449f43beaea71a4c6ba9a579
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Mul_Div 50
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] ace55b2ea0e44774a6cd03389b992de0
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Mul_RShift 64
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] cac54d41cc0a421e9fe3b07f7347730a
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Mul_BitXor 3
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 2153db41e9bb42e6ba5e41b27cf94859
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Div_Mul 27
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 828d5d661f77477696044f9470cec514
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Div_Pow 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 2fe030001b3f499d97d5806bf58540a1
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Div_Pow 14
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] de65fcdbcd8443c699c11c142f80a21d
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Div_LShift 38
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a930f7441e82466f92ba70ed5627062b
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_Div_BitAnd 30
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 2776f5e200fb45b3af5981818e544e48
+pycalphad\models\model_mqmqa.py core/ReplaceBinaryOperator_BitAnd_Mod 7
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 6fc66c696f54493bbaeb3f863581d5e2
+pycalphad\models\model_mqmqa.py core/ReplaceComparisonOperator_Eq_NotEq 28
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 4be67a0d0a034682a455477c7ee56399
+pycalphad\models\model_mqmqa.py core/ReplaceComparisonOperator_Eq_LtE 51
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] af1a8485ad6b4cdabb075808ad1341c6
+pycalphad\models\model_mqmqa.py core/ReplaceComparisonOperator_Eq_Gt 8
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c747d2e27dbd43859daf6963acad794e
+pycalphad\models\model_mqmqa.py core/ReplaceComparisonOperator_Eq_Is 60
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] aa760a76d54d467eadbf6dc6646f8b69
+pycalphad\models\model_mqmqa.py core/ReplaceComparisonOperator_Eq_IsNot 46
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] da6c4f90f89e442eaf3c847eb9e22fdc
+pycalphad\models\model_mqmqa.py core/AddNot 46
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] d81f3a0b157c4c5cb0111711a4ad730c
+pycalphad\models\model_mqmqa.py core/NumberReplacer 120
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 9b8adb4195fb4008b96377cb1fe9130a
+pycalphad\models\model_mqmqa.py core/NumberReplacer 121
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c022fb02c66a4f208f898a6d6757b8b9
+pycalphad\models\model_mqmqa.py core/ZeroIterationForLoop 46
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] fb1465a0d816410f989a6cfce79fa753
+pycalphad\core\halton.py core/NumberReplacer 244
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] dbe70dcb3e8540b79ef9485936fe2629
+pycalphad\core\halton.py core/NumberReplacer 419
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 208391f9818349a7b4aa2d58eb88d7c6
+pycalphad\core\halton.py core/NumberReplacer 608
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] fc2da23aff064953a3b759b7f29bc9f7
+pycalphad\core\halton.py core/NumberReplacer 692
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a3a58b8adc5f4a35867b5e7b0a50262a
+pycalphad\core\halton.py core/NumberReplacer 732
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e5312ed3a72c40fdb901dae8338cb28f
+pycalphad\core\halton.py core/NumberReplacer 797
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 6219ea54b6b34d4cabc9fc1295e49d17
+pycalphad\core\halton.py core/NumberReplacer 977
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] b392f19029104070b0240c72e69f5606
+pycalphad\core\lower_convex_hull.py core/ReplaceComparisonOperator_NotEq_Gt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 14534e6862f748e7a10ab1f27f8e9da0
+pycalphad\mapping\zpf_equilibrium.py core/ReplaceBinaryOperator_Mul_BitOr 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 274c412a1ebf4a86a8cee8dfdf261d2d
+pycalphad\mapping\zpf_equilibrium.py core/ReplaceComparisonOperator_NotEq_Eq 1
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 5acfccf3dcca4937b1ce0f5b89ccd6b3
+pycalphad\mapping\zpf_equilibrium.py core/NumberReplacer 40
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 2ae12dee0ef94d2a85cd2604431ae09e
+pycalphad\mapping\strategy\strategy_base.py core/ReplaceBinaryOperator_Add_BitAnd 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] ceab20ec371d4e7b973d587f4b74126b
+pycalphad\mapping\strategy\strategy_base.py core/ReplaceBinaryOperator_Sub_LShift 10
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] bc8f0dfe90dc4be58e08607ccd37cb87
+pycalphad\mapping\strategy\strategy_base.py core/ReplaceBinaryOperator_Mul_Sub 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 232ac65d6c8a47c9b8724c4474bd2d67
+pycalphad\mapping\strategy\strategy_base.py core/ReplaceUnaryOperator_USub_Not 15
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a46ba8083a2443d59cb33cf0fd31afae
+pycalphad\codegen\phase_record_factory.py core/ReplaceComparisonOperator_NotEq_Eq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] f8f43796afe643be97cbcd89fc017d06
+pycalphad\codegen\sympydiff_utils.py core/ReplaceBinaryOperator_Add_BitOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 060a761a0f84485e8d2296c58282a8bf
+pycalphad\core\starting_point.py core/ReplaceBinaryOperator_Add_Div 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 44a83644e9874dacaa57aed463319270
+pycalphad\core\starting_point.py core/ReplaceBinaryOperator_Add_Pow 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] f63813b54fae4393a2c50dfcb560c890
+pycalphad\core\starting_point.py core/ReplaceBinaryOperator_Add_BitOr 12
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 509b4826d896403995673c54be5e8192
+pycalphad\core\starting_point.py core/ReplaceComparisonOperator_IsNot_Is 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] b0a9e9daee2248d5825e34c5ba7de336
+pycalphad\property_framework\metaproperties.py core/ReplaceBinaryOperator_Add_Mul 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 7b40799825164376a7254a3372939814
+pycalphad\property_framework\metaproperties.py core/ReplaceBinaryOperator_Add_BitXor 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 10990c7e7b4d4180810af0311cccd66c
+pycalphad\property_framework\metaproperties.py core/ReplaceBinaryOperator_Sub_Div 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 7b856246b5f7458083016e17d0290986
+pycalphad\property_framework\metaproperties.py core/ReplaceUnaryOperator_USub_Not 2
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] e8701564392d45258c9934ffffb31e27
+pycalphad\io\cs_dat.py core/ReplaceBinaryOperator_Div_Sub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 80711048604442aaa825cfcfd6039bb3
+pycalphad\io\cs_dat.py core/ReplaceBinaryOperator_Pow_FloorDiv 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 14255980429e41bf875d272f2b953516
+pycalphad\io\cs_dat.py core/ReplaceUnaryOperator_USub_Invert 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 6ff98ab01f3c453081545adfb0ba574e
+pycalphad\io\cs_dat.py core/AddNot 12
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] dc9e5058981042399ce52ce5d29fb169
+pycalphad\io\cs_dat.py core/NumberReplacer 185
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 4ba27b9c88b74588bedd42bc49ab4344
+pycalphad\io\cs_dat.py core/ZeroIterationForLoop 23
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 88e4c74295e1480fa207575017d3b453
+pycalphad\mapping\utils.py core/ReplaceBinaryOperator_Add_Mod 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] f7ae1a16969a41298547e2f22fdb405c
+pycalphad\mapping\utils.py core/ReplaceBinaryOperator_Sub_FloorDiv 2
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 009378f9b3a4486fba3b45c0baf5e8aa
+pycalphad\mapping\utils.py core/ReplaceBinaryOperator_Div_BitOr 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 4fd5a3968b0942208e6e03f994b6d45f
+pycalphad\variables.py core/ReplaceBinaryOperator_Add_LShift 31
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 0bc7409866fa4fbd9e7ab192ed74a1d9
+pycalphad\variables.py core/ReplaceBinaryOperator_Add_BitAnd 29
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 6acb0e14d01e452f809ad9118d1506cc
+pycalphad\variables.py core/AddNot 61
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 4bf919dbb9f04037aa91d09c2d82b868
+pycalphad\variables.py core/NumberReplacer 54
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 04e8775825994dfcabc362f671bc5b4d
+pycalphad\variables.py core/NumberReplacer 139
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 780257bab836408da27a90ba662b1674
+pycalphad\property_framework\units.py core/ReplaceComparisonOperator_Eq_Gt 1
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] bb943ce59a7d4f2b96df9d600c3921e1
+pycalphad\property_framework\computed_property.py core/ReplaceBinaryOperator_Add_LShift 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c706856db17f4e9083c4174f920ffaf7
+pycalphad\property_framework\computed_property.py core/ReplaceComparisonOperator_Eq_GtE 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 0d3cddf78388439d83ff3e071fcbb500
+pycalphad\property_framework\computed_property.py core/ReplaceComparisonOperator_Eq_IsNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 6df14cef04654ec78d7c9b36153eb5dd
+pycalphad\mapping\zpf_checks.py core/ReplaceBinaryOperator_Mul_Mod 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 032101191f064594973640ed77746d3c
+pycalphad\core\workspace.py core/ReplaceComparisonOperator_Eq_GtE 8
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 2d69132853664cf8aa7d3d04c43d2903
+pycalphad\core\workspace.py core/ReplaceComparisonOperator_Eq_IsNot 7
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 7f434f09e0fb45c9a00c12c67bd77422
+pycalphad\core\workspace.py core/ReplaceComparisonOperator_Lt_GtE 1
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 92e961a9ffd1480998658b857dd52115
+pycalphad\core\constraints.py core/ReplaceBinaryOperator_Sub_BitOr 0
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 0bea394ae7c44ef0987a2290a893d941
+pycalphad\mapping\primitives.py core/ReplaceBinaryOperator_Add_Mod 24
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 635a2ae175624c4ba72f1ce763240e24
+pycalphad\mapping\primitives.py core/ReplaceBinaryOperator_Add_RShift 19
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] ec3237d26c9340b6bb509084eddf7191
+pycalphad\mapping\primitives.py core/ReplaceComparisonOperator_Eq_IsNot 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] f6f67f16349842619ada2a17b8d45ed6
+pycalphad\mapping\primitives.py core/ReplaceComparisonOperator_Eq_IsNot 6
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 4f81c5d43df54a9d900e1195712edb24
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_FloorDiv 49
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 3f2bbdf69113474aa8093d106ee383eb
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_FloorDiv 58
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 71266464c7a946a2811b9af9b261bdf9
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_Mod 79
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e5f300854c324f8287087594dd4a7b7b
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_Pow 32
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 812fa1c5e1ac41149c916a7be9fe4f0c
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_Pow 94
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 8d9d6983a32d4259b6339421583b8d5b
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_RShift 16
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 6013771d41bb4b66b2f34d833a92703d
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_RShift 42
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 1fb3cbdf859e4507a8541816605fcf99
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_LShift 12
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 21f93fba007641db9caf764a418d6c31
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_BitOr 65
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 1077fdb285d34159b5cdd3c49b75f110
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_BitAnd 100
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] fd5252e3945f4174bf48739083ddc646
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Add_BitXor 31
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] d2ba22eb9a9c4341a1d469774cab2d7f
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_Mul_BitXor 6
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] ec37e095ffe64aee93a8da8ff3ce2f6a
+pycalphad\io\tdb.py core/ReplaceBinaryOperator_BitOr_Mod 11
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 27034540dfe94b7193177e54f56202ca
+pycalphad\io\tdb.py core/ReplaceComparisonOperator_Eq_NotEq 14
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] fc516f95dafb4d48b599f608d12188c2
+pycalphad\io\tdb.py core/ReplaceComparisonOperator_Eq_Gt 20
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 369a8cf5cd194dddac1a9496ac8574d7
+pycalphad\io\tdb.py core/ReplaceComparisonOperator_Eq_GtE 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 781dcc02f9c1409583e148f61200f5a5
+pycalphad\io\tdb.py core/ReplaceComparisonOperator_Eq_IsNot 29
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 64d662f74f55426bb9aff61fce51566a
+pycalphad\io\tdb.py core/ReplaceComparisonOperator_NotEq_Gt 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 30d63856b119461faa75b246e95d84f0
+pycalphad\io\tdb.py core/ReplaceComparisonOperator_Gt_Eq 17
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a57bc829e9964ee9ad8c7128f3c1276a
+pycalphad\io\tdb.py core/AddNot 56
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 5b370128aeaa460eb9c8f59d8d210256
+pycalphad\io\tdb.py core/AddNot 75
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 286427fe2f924234a3452e03b45036e2
+pycalphad\io\tdb.py core/AddNot 78
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 75fe117bfc8e4a7f85e2214438393ecd
+pycalphad\io\tdb.py core/NumberReplacer 39
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 877abfb231e041bd90352911d89b9f4a
+pycalphad\io\tdb.py core/NumberReplacer 186
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] d8719020bb36419993a3a5cb83b4099c
+pycalphad\io\tdb.py core/NumberReplacer 195
+worker outcome: WorkerOutcome.ABNORMAL, test outcome: None
+[job-id] 8037c69bd0884b5c818b4378c0fff119
+pycalphad\io\tdb.py core/NumberReplacer 312
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+total jobs: 26038
+complete: 178 (0.68%)
+surviving mutants: 0 (0.00%)
