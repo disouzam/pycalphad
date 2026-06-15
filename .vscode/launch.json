@@ -56,8 +56,8 @@
                 "mutation_testing/cosmic-ray-base-config.toml",
                 "mutation_testing/cosmic-ray-for-local-distributor.sqlite"
             ],
-            "justMyCode": true,
-            "stopOnEntry": false,
+            "justMyCode": false,
+            "stopOnEntry": true,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
         },
