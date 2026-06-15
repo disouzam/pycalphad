@@ -6,3 +6,61 @@ test-command = "uv run python -m pytest tests"
 
 [cosmic-ray.distributor]
 name = "local"
+
+[cosmic-ray.filters.operators-filter]
+exclude-operators = [
+    # Based on https://github.com/sixty-north/cosmic-ray/issues/593#issuecomment-4253359387
+    # you would think this one would be good, but it mostly ends up changing
+    # initial variable values, which rarely matter all that much as they
+    # get immediately overwritten later.
+    "core/NumberReplacer",
+
+    # there are effectively duplicates of a few real core ones:
+    # 1. core/ReplaceComparisonOperator_Gt_Lt
+    # 2. core/ReplaceComparisonOperator_Lt_Gt
+    # 3. core/ReplaceComparisonOperator_NotEq_Eq
+    # 4. core/ReplaceComparisonOperator_Eq_NotEq
+    "core/ReplaceComparisonOperator_Gte_LtE",
+    "core/ReplaceComparisonOperator_Gte_NotEq",
+    "core/ReplaceComparisonOperator_Gte_Eq",
+    "core/ReplaceComparisonOperator_Gte_Is",
+    "core/ReplaceComparisonOperator_Gte_IsNot",
+    "core/ReplaceComparisonOperator_Gt_GtE",
+    "core/ReplaceComparisonOperator_Gt_LtE",
+    "core/ReplaceComparisonOperator_Gt_NotEq",
+    "core/ReplaceComparisonOperator_Gt_Eq",
+    "core/ReplaceComparisonOperator_Gt_Is",
+    "core/ReplaceComparisonOperator_Gt_IsNot",
+    "core/ReplaceComparisonOperator_Lt_LtE",
+    "core/ReplaceComparisonOperator_Lt_NotEq",
+    "core/ReplaceComparisonOperator_Lt_Eq",
+    "core/ReplaceComparisonOperator_Lt_Is",
+    "core/ReplaceComparisonOperator_Lt_IsNot",
+    "core/ReplaceComparisonOperator_Lte_LtE",
+    "core/ReplaceComparisonOperator_Lte_NotEq",
+    "core/ReplaceComparisonOperator_Lte_Eq",
+    "core/ReplaceComparisonOperator_Lte_Is",
+    "core/ReplaceComparisonOperator_Lte_IsNot",
+    "core/ReplaceComparisonOperator_NotEq_Is",
+    "core/ReplaceComparisonOperator_NotEq_IsNot",
+    "core/ReplaceComparisonOperator_NotEq_GtE",
+    "core/ReplaceComparisonOperator_NotEq_Gt",
+    "core/ReplaceComparisonOperator_NotEq_LtE",
+    "core/ReplaceComparisonOperator_NotEq_Lt",
+    "core/ReplaceComparisonOperator_Eq_GtE",
+    "core/ReplaceComparisonOperator_Eq_Gt",
+    "core/ReplaceComparisonOperator_Eq_IsNot",
+    "core/ReplaceComparisonOperator_Eq_Lt",
+    "core/ReplaceComparisonOperator_Eq_LtE",
+    "core/ReplaceComparisonOperator_Eq_Is",
+    # these are basically duplicate of a few real core ones too
+    # basically just rely on changing sub/add/mul/div
+    "core/ReplaceBinaryOperator_.*_BitXor",
+    "core/ReplaceBinaryOperator_.*_BitAnd",
+    "core/ReplaceBinaryOperator_.*_BitOr",
+    "core/ReplaceBinaryOperator_.*_LShift",
+    "core/ReplaceBinaryOperator_.*_RShift",
+    "core/ReplaceBinaryOperator_.*_Pow",
+    "core/ReplaceBinaryOperator_.*_Mod",
+    "core/ReplaceBinaryOperator_.*_FloorDiv"
+]
