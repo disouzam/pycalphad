@@ -1,3 +1,4 @@
 #!/bin/bash
-uv run cr-report mutation_testing/cosmic-ray-02-workers.sqlite
+directory="mutation_testing/02_workers"
+uv run cr-report ${directory}/cosmic-ray-02-workers.sqlite
 echo $(date)
