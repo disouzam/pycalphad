@@ -89,6 +89,17 @@
             "stopOnEntry": false,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
+        },
+        {
+            "name": "Debug programmatically pytest execution via run_pytest_and_capture.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "run_pytest_and_capture.py",
+            "args": [],
+            "justMyCode": false,
+            "stopOnEntry": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
         }
     ]
 }
