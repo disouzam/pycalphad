@@ -100,6 +100,22 @@
             "stopOnEntry": false,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
-        }
+        },
+        {
+            "name": "Debug programmatically pytest execution via run_pytest_and_capture.py - With Args",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "run_pytest_and_capture.py",
+            "args": [
+                "tests",
+                "--template=html1/index.html",
+                "--report=report.html",
+                "-s"
+            ],
+            "justMyCode": false,
+            "stopOnEntry": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+        },
     ]
 }
