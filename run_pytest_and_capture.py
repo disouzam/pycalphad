@@ -45,12 +45,12 @@ def main():
     buffer = io.StringIO()
 
     # Load pytest ini_options from pyproject.toml
-    ini_options = load_pytest_ini_options()
+    # ini_options = load_pytest_ini_options()
 
     # Show what we loaded
-    print("Loaded pytest ini_options from pyproject.toml:")
-    for key, value in ini_options.items():
-        print(f"  {key} = {value}")
+    # print("Loaded pytest ini_options from pyproject.toml:")
+    # for key, value in ini_options.items():
+    #     print(f"  {key} = {value}")
 
     # Pytest will still load addopts from pyproject.toml
 
