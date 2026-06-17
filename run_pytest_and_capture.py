@@ -29,6 +29,15 @@ def load_pytest_ini_options():
         .get("ini_options", {})
     )
 
+# This object will receive pytest's config
+class ConfigCapturePlugin:
+    def __init__(self):
+        self.config = None
+
+    def pytest_configure(self, config):
+        # pytest has fully loaded config here
+        self.config = config
+
 def main():
     """
     Runs pytest programmatically, capturing the full terminal output
@@ -43,6 +52,7 @@ def main():
     including addopts and testpaths.
     """
     buffer = io.StringIO()
+    plugin = ConfigCapturePlugin()
 
     # Load pytest ini_options from pyproject.toml
     # ini_options = load_pytest_ini_options()
@@ -64,15 +74,17 @@ def main():
     buffer.write(f"=== Pytest session started at {start_timestamp} ===\n")
 
     with redirect_stdout(buffer), redirect_stderr(buffer):
-        exit_code = pytest.main(pytest_args)
+        exit_code = pytest.main(pytest_args, plugins=[plugin])
 
     # Write end timestamp
     buffer.write(f"=== Pytest session ended at {timestamp()} ===\n")
     buffer.write(f"Exit code: {exit_code}\n")
 
     # Save everything
+    config = plugin.config
+    job_id = config.getoption("--job-id")
     output = buffer.getvalue()
-    file_name = f"pytest_session_output_{start_timestamp}.txt"
+    file_name = f"pytest_session_output_{job_id}_{start_timestamp}.txt"
     with open(file_name, "w", encoding="utf-8") as f:
         f.write(output)
 
