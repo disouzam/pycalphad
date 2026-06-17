@@ -72,11 +72,12 @@ def main():
 
     # Save everything
     output = buffer.getvalue()
-    with open("pytest_session_output.txt", "w", encoding="utf-8") as f:
+    file_name = f"pytest_session_output_{start_timestamp}.txt"
+    with open(file_name, "w", encoding="utf-8") as f:
         f.write(output)
 
     print(f"Pytest finished with exit code {exit_code}")
-    print("Full session output saved to pytest_session_output.txt")
+    print(f"Full session output saved to {file_name}")
 
 
 if __name__ == "__main__":
