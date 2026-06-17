@@ -2,7 +2,7 @@
 module-path = "pycalphad"
 timeout = 15
 excluded-modules = []
-test-command = "uv run python -m pytest tests --template=html1/index.html --report=report.html -s"
+test-command = "uv run python run_pytest_and_capture.py -x --template=html1/index.html --report=report.html -s tests"
 
 [cosmic-ray.distributor]
 name = "http"
