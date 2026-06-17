@@ -8,7 +8,7 @@ import tomllib
 
 
 def timestamp():
-    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    return datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
 def load_pytest_ini_options():
     """
@@ -57,8 +57,11 @@ def main():
     # Treat command-line args passed to this script as pytest args
     pytest_args = sys.argv[1:]
 
+    start_timestamp = timestamp()
+    pytest_args.append(f"--start-timestamp={start_timestamp}")
+
     # Write start timestamp
-    buffer.write(f"=== Pytest session started at {timestamp()} ===\n")
+    buffer.write(f"=== Pytest session started at {start_timestamp} ===\n")
 
     with redirect_stdout(buffer), redirect_stderr(buffer):
         exit_code = pytest.main(pytest_args)
