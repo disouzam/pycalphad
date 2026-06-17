@@ -52,9 +52,10 @@
             "request": "launch",
             "module": "cosmic_ray.cli",
             "args": [
+                "--verbosity=DEBUG",
                 "exec",
-                "mutation_testing/local_distributor/cosmic_ray.toml",
-                "mutation_testing/local_distributor/cosmic_ray.sqlite"
+                "mutation_testing/Local_distributor/cosmic_ray.toml",
+                "mutation_testing/Local_distributor/cosmic_ray.sqlite"
             ],
             "justMyCode": false,
             "stopOnEntry": true,
