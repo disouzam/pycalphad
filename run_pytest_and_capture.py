@@ -78,6 +78,7 @@ def main():
 
     print(f"Pytest finished with exit code {exit_code}")
     print(f"Full session output saved to {file_name}")
+    sys.exit(exit_code)
 
 
 if __name__ == "__main__":
