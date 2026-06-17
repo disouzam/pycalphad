@@ -1,4 +1,5 @@
 import io
+import sys
 from contextlib import redirect_stdout, redirect_stderr
 from pathlib import Path
 from datetime import datetime
@@ -41,7 +42,6 @@ def main():
       - tox.ini
     including addopts and testpaths.
     """
-
     buffer = io.StringIO()
 
     # Load pytest ini_options from pyproject.toml
@@ -53,7 +53,9 @@ def main():
         print(f"  {key} = {value}")
 
     # Pytest will still load addopts from pyproject.toml
-    pytest_args = []
+
+    # Treat command-line args passed to this script as pytest args
+    pytest_args = sys.argv[1:]
 
     # Write start timestamp
     buffer.write(f"=== Pytest session started at {timestamp()} ===\n")
