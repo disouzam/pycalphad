@@ -56,13 +56,13 @@ def main():
     pytest_args = []
 
     # Write start timestamp
-    buffer.write(f"=== Pytest session started at {timestamp()} ===\n\n")
+    buffer.write(f"=== Pytest session started at {timestamp()} ===\n")
 
     with redirect_stdout(buffer), redirect_stderr(buffer):
         exit_code = pytest.main(pytest_args)
 
     # Write end timestamp
-    buffer.write(f"\n=== Pytest session ended at {timestamp()} ===\n")
+    buffer.write(f"=== Pytest session ended at {timestamp()} ===\n")
     buffer.write(f"Exit code: {exit_code}\n")
 
     # Save everything
