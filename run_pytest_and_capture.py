@@ -84,7 +84,11 @@ def main():
     config = plugin.config
     job_id = config.getoption("--job-id")
     output = buffer.getvalue()
-    file_name = f"pytest_session_output_{job_id}_{start_timestamp}.txt"
+
+    if job_id is None:
+        file_name = f"pytest_session_output_{start_timestamp}.txt"
+    else:
+        file_name = f"pytest_session_output_{job_id}_{start_timestamp}.txt"
     with open(file_name, "w", encoding="utf-8") as f:
         f.write(output)
 
