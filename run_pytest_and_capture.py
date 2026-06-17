@@ -1,13 +1,32 @@
 import io
-import sys
-import pytest
-from datetime import datetime
 from contextlib import redirect_stdout, redirect_stderr
+from pathlib import Path
+from datetime import datetime
+import pytest
+import tomllib
 
 
 def timestamp():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+def load_pytest_ini_options():
+    """
+    Reads [tool.pytest.ini_options] from pyproject.toml
+    and returns it as a dict.
+    """
+    pyproject = Path("pyproject.toml")
+    if not pyproject.exists():
+        return {}
+
+    with pyproject.open("rb") as f:
+        data = tomllib.load(f)
+
+    return (
+        data
+        .get("tool", {})
+        .get("pytest", {})
+        .get("ini_options", {})
+    )
 
 def main():
     """
@@ -24,6 +43,14 @@ def main():
     """
 
     buffer = io.StringIO()
+
+    # Load pytest ini_options from pyproject.toml
+    ini_options = load_pytest_ini_options()
+
+    # Show what we loaded
+    print("Loaded pytest ini_options from pyproject.toml:")
+    for key, value in ini_options.items():
+        print(f"  {key} = {value}")
 
     # Pytest will still load addopts from pyproject.toml
     pytest_args = []
