@@ -2,6 +2,14 @@
 from __future__ import annotations
 import datetime
 
+def pytest_addoption(parser):
+    parser.addoption(
+        "--start-timestamp",
+        action="store",
+        default=None,
+        help="Time stamp at which pytest execution started"
+    )
+
 
 def pytest_configure(config):
     """Patch reporter/docutils compatibility for report template rendering.
@@ -10,12 +18,15 @@ def pytest_configure(config):
     functions, but newer docutils requires `writer_name="html5"`.
     """
     local_config = config
-    now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+    start_timestamp = config.getoption("--start-timestamp")
+    print(f"Start time stamp passed as argument: {start_timestamp}")
+
     if len(local_config.option.report) >0:
         report_name = local_config.option.report[0]
         prefix=report_name[:-5]
         extension = report_name[-5:]
-        report_name_with_time_stamp = f"{prefix}_{now}{extension}"
+        report_name_with_time_stamp = f"{prefix}_{start_timestamp}{extension}"
         local_config.option.report[0] = report_name_with_time_stamp
 
     try:
