@@ -27,7 +27,6 @@ def pytest_configure(config):
     local_config = config
 
     start_timestamp = config.getoption("--start-timestamp")
-    print(f"Start time stamp passed as argument: {start_timestamp}")
 
     if len(local_config.option.report) >0:
         report_name = local_config.option.report[0]
