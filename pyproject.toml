@@ -76,7 +76,7 @@ dev = [
 ]
 
 [tool.uv.sources]
-cosmic-ray = { path = "../cosmic-ray", editable = true }
+cosmic-ray = { path = "../cosmic-ray-pycalphad", editable = true }
 
 [tool.setuptools]
 # Do not include pycalphad._dev here as it should not be distributed
