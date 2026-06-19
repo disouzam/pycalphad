@@ -5,19 +5,4 @@ excluded-modules = []
 test-command = "uv run python run_pytest_and_capture.py -x --template=html1/index.html --report=report.html -s tests"
 
 [cosmic-ray.distributor]
-name = "http"
-
-[cosmic-ray.distributor.http]
-worker-urls = [
-    "http://localhost:9001",
-    "http://localhost:9002",
-    "http://localhost:9003",
-    "http://localhost:9004",
-    "http://localhost:9005",
-    "http://localhost:9006",
-    "http://localhost:9006",
-    "http://localhost:9007",
-    "http://localhost:9008",
-    "http://localhost:9009",
-    "http://localhost:9010"
-]
+name = "local"
