@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 High Throughput Analysis
 ========================
 
@@ -10,15 +9,3 @@ Here you will see examples of mid-sized calculations that can be performed using
    1_HighThroughputCalculations
    2_UsingCalculationResults
    3_ScreeningPhaseStability
-||||||| 7b0e956dc
-=======
-High Throughput Analysis
-========================
-
-.. toctree::
-   :maxdepth: 2
-
-   1_HighThroughputCalculations
-   2_UsingCalculationResults
-   3_ScreeningPhaseStability
->>>>>>> develop
