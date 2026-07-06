@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Metastability and Reference States
 ==================================
 
@@ -10,3 +11,16 @@ Here you will see examples of how to work with metastable phases and reference s
    2_Metastability
    3_PlotActivity
    4_LegacyReferenceState
+||||||| 7b0e956dc
+=======
+Metastability and Reference States
+==================================
+
+.. toctree::
+   :maxdepth: 2
+
+   1_ReferenceStateExamples
+   2_Metastability
+   3_PlotActivity
+   4_LegacyReferenceState
+>>>>>>> develop

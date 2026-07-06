@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Computing Properties
 ====================
 
@@ -12,3 +13,18 @@ In this section, we will cover different examples of computing properties using 
    4_EquilibriumWithOrdering
    5_ViscosityModel
    6_LegacyEnergySurface
+||||||| 7b0e956dc
+=======
+Computing Properties
+====================
+
+.. toctree::
+   :maxdepth: 2
+
+   1_PhaseCompositions
+   2_GibbsAtConcentration
+   3_CementiteAnalysis
+   4_EquilibriumWithOrdering
+   5_ViscosityModel
+   6_LegacyEnergySurface
+>>>>>>> develop

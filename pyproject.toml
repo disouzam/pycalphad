@@ -41,8 +41,11 @@ dependencies = [
     "numpy>=1.13",
     "pint",
     "pyparsing>=3.0",
+    "pytest-cov",
+    "pytest",
     "runtype",
     "scipy",
+    "setuptools_scm[toml]>=6.0",
     "symengine>=0.9.2,<0.14",
     "tinydb>=3.8",
     "typing_extensions",
@@ -55,7 +58,6 @@ Homepage = "https://pycalphad.org/"
 
 [dependency-groups]
 dev = [
-    "cosmic-ray",
     "Cython",
     "docutils<0.21", # workaround for https://github.com/vidartf/nbsphinx-link/issues/22
     "furo>=2021.11.16",  # docs theme
@@ -65,18 +67,15 @@ dev = [
     "nb-clean>=4.0.1",
     "nbconvert>=7.17.1",
     "nbsphinx-link",
-    "pytest",
+    "numpy>=2",
     "pytest-cov",
-    "pytest-reporter-html1>=0.9.4",
+    "scipy",
     "setuptools_scm[toml]>=6.0",
     "setuptools",
-    "sphinx-autobuild>=2025.8.25",
     "sphinx<9",
+    "sphinx-autobuild>=2025.8.25",
     "wheel",
 ]
-
-[tool.uv.sources]
-cosmic-ray = { path = "../cosmic-ray-pycalphad", editable = true }
 
 [tool.setuptools]
 # Do not include pycalphad._dev here as it should not be distributed
@@ -90,27 +89,25 @@ packages = [
     "pycalphad.plot.binary",
     "pycalphad.plot",
     "pycalphad.property_framework",
-    "tests.databases",
-    "tests",
+    "pycalphad.tests.databases",
+    "pycalphad.tests",
     "pycalphad",
 ]
 
 [tool.setuptools.package-data]
 "pycalphad.core" = ["*.pxd"]
-"tests.databases" = ["*"]
+"pycalphad.tests.databases" = ["*"]
 
 [tool.pytest.ini_options]
 markers = [
     "solver: mark for tests that verify the correctness of the solver",
 ]
+norecursedirs = ["pycalphad/_dev"]
 filterwarnings = [
     "error",
     "ignore:The type definition character*:UserWarning",
     "ignore:__array__ implementation doesn't accept a copy keyword, so passing copy=False failed.", # https://github.com/pydata/xarray/issues/9400
 ]
-addopts = """
---cov-report html:tests/reports/coverage-html
-"""
 
 [tool.coverage.paths]
 # The first path is the path to the modules to report coverage against.
@@ -131,7 +128,7 @@ source_pkgs = [
 ]
 omit = [
     "pycalphad/core/*.pxd", # workaround for https://github.com/nedbat/coveragepy/issues/972
-    "*/tests/*", # don't include tests in coverage
+    "*/pycalphad/tests/*", # don't include tests in coverage
     "stringsource",
     "*/numpy/*",  # fix for Cython.Coverage.Plugin did not provide a file reporter for numpy/__init__.cython-30.pxd
 ]
