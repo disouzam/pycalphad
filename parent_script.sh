@@ -8,6 +8,8 @@ bash child_script_2.sh &
 pid2=$!
 echo "Child script 2 started with PID $pid2"
 
+wait $pid1
+
 sleep 10
 
 echo "Stopping child script 1..."
