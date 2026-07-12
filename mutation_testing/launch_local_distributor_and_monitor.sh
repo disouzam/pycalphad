@@ -11,22 +11,22 @@ distributor_pid=""
 while true; do
 
     if [[ -n "${distributor_pid}" ]]; then
-        echo "Local distributor is already running with PID: ${distributor_pid}."
+        echo -e "\nLocal distributor is already running with PID: ${distributor_pid}."
     else
         source mutation_testing/Local_distributor/launch.sh &
         distributor_pid=$!
-        echo "Local distributor PID: ${distributor_pid}"
+        echo -e "\nLocal distributor PID: ${distributor_pid}"
     fi
 
     source mutation_testing/check_status_periodically.sh "$1" --single-check &
     monitor_pid=$!
-    echo "Monitor PID: ${monitor_pid}"
+    echo -e "\nMonitor PID: ${monitor_pid}"
 
     trap 'cleanup "${distributor_pid}" "${monitor_pid}"' INT TERM EXIT
 
     wait "${monitor_pid}"
     monitor_rc=$?
-    echo "Monitor return code: ${monitor_rc}"
+    echo -e "\nMonitor return code: ${monitor_rc}"
 
     if [ "${monitor_rc}" -eq 1 ]; then
         echo -e "\n#######################################################################"
