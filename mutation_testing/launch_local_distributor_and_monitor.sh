@@ -9,11 +9,12 @@ cleanup() {
 
 distributor_pid=""
 python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
-while [[ "$python_files_changed" -lt 2 ]]; do
+while [ $python_files_changed -lt 2 ]; do
 
-    if [[ -n "${distributor_pid}" ]]; then
+    if [ -n "${distributor_pid}" ]; then
         echo -e "\n\e[33mLocal distributor is already running with PID: ${distributor_pid}.\e[0m"
     else
+        echo -e "\n\e[33mStarting local distributor...\e[0m"
         bash mutation_testing/Local_distributor/launch.sh &
         distributor_pid=$!
         echo -e "\nLocal distributor PID: ${distributor_pid}"
@@ -29,13 +30,13 @@ while [[ "$python_files_changed" -lt 2 ]]; do
     monitor_rc=$?
     echo -e "\nMonitor return code: ${monitor_rc}"
 
-    if [ "${monitor_rc}" -eq 1 ]; then
+    if [ $monitor_rc -eq 1 ]; then
         kill "${distributor_pid}" 2>/dev/null
         git restore .
         echo -e "\n\n\e[31m#######################################################################"
         echo "Monitor detected no progress. Stopping the local distributor."
         python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
-        if [[ "${python_files_changed}" -gt 0 ]]; then
+        if [ $python_files_changed -gt 0 ]; then
             echo "There are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
         fi
         echo "There are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
@@ -46,7 +47,7 @@ while [[ "$python_files_changed" -lt 2 ]]; do
         git restore .
         python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
 
-        if [[ "${python_files_changed}" -gt 0 ]]; then
+        if [ $python_files_changed -gt 0 ]; then
             echo -e "\n\n\e[31m#######################################################################"
             echo "There are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
             echo -e "#######################################################################\e[0m\n\n"
@@ -55,7 +56,7 @@ while [[ "$python_files_changed" -lt 2 ]]; do
         fi
     fi
 
-    if [ "${monitor_rc}" -eq 2 ]; then
+    if [ $monitor_rc -eq 2 ]; then
         echo -e "\n\n\e[31m#######################################################################"
         echo "Monitor detected more than one modified Python file at a given time."
         echo -e "#######################################################################\e[0m\n\n"
@@ -64,7 +65,7 @@ while [[ "$python_files_changed" -lt 2 ]]; do
     fi
 done
 
-if [ "$python_files_changed" -lt 2 ]; then
+if [ $python_files_changed -lt 2 ]; then
     echo -e "\n\n\e[31m#######################################################################"
     echo "Monitor detected more than one modified Python file at a given time."
     echo -e "#######################################################################\e[0m\n\n"
