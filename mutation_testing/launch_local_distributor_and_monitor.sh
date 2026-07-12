@@ -29,14 +29,17 @@ while true; do
     echo -e "\nMonitor return code: ${monitor_rc}"
 
     if [ "${monitor_rc}" -eq 1 ]; then
+        kill "${distributor_pid}" 2>/dev/null
+        git restore .
         echo -e "\n\n\e[31m#######################################################################"
         echo "Monitor detected no progress. Stopping the local distributor."
+        python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+        echo "There are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
         echo -e "#######################################################################\e[0m\n\n"
-        kill "${distributor_pid}" 2>/dev/null
         distributor_pid=""
         trap - INT TERM EXIT
         printf '\a'
-        git restore "*.py"
+        git restore .
         python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
 
         if [[ "${python_files_changed}" -gt 0 ]]; then
