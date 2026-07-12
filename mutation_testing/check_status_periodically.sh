@@ -54,9 +54,10 @@ while true; do
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
     for ((i=current_interval; i>0; i--)); do
         if [[ "$single_check" == "true" ]]; then
-            echo
+            echo "Next check in $i... - Mutants completed (last check): ${current_complete} / Previously: ${prev_complete}"
+        else
+            printf "\rNext check in %3ds..." "$i"
         fi
-        printf "\rNext check in %3ds..." "$i"
         sleep 1
     done
     prev_complete="$current_complete"
