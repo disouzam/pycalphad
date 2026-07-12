@@ -11,7 +11,7 @@ distributor_pid=""
 while true; do
 
     if [[ -n "${distributor_pid}" ]]; then
-        echo -e "\nLocal distributor is already running with PID: ${distributor_pid}."
+        echo -e "\n\e[33mLocal distributor is already running with PID: ${distributor_pid}.\e[0m"
     else
         source mutation_testing/Local_distributor/launch.sh &
         distributor_pid=$!
@@ -29,9 +29,9 @@ while true; do
     echo -e "\nMonitor return code: ${monitor_rc}"
 
     if [ "${monitor_rc}" -eq 1 ]; then
-        echo -e "\n#######################################################################"
+        echo -e "\n\n\e[31m#######################################################################"
         echo "Monitor detected no progress. Stopping the local distributor."
-        echo -e "\n#######################################################################"
+        echo -e "#######################################################################\e[0m\n\n"
         kill "${distributor_pid}" 2>/dev/null
         distributor_pid=""
         trap - INT TERM EXIT
@@ -40,9 +40,10 @@ while true; do
         python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
 
         if [[ "${python_files_changed}" -gt 0 ]]; then
-            echo -e "\n#######################################################################"
+            echo -e "\n\n\e[31m#######################################################################"
             echo "There are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
-            echo -e "\n#######################################################################"
+            echo -e "#######################################################################\e[0m\n\n"
+            printf '\a'
             exit 1
         fi
     fi
