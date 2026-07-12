@@ -39,7 +39,6 @@ while [ $python_files_changed -lt 2 ]; do
         if [ $python_files_changed -gt 0 ]; then
             echo "There are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
         fi
-        echo "There are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
         echo -e "#######################################################################\e[0m\n\n"
         distributor_pid=""
         trap - INT TERM EXIT
