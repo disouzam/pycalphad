@@ -50,6 +50,15 @@ while true; do
     git dw
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
     for ((i=current_interval; i>0; i--)); do
+        python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+        if [[ "$python_files_changed" -gt 1 ]]; then
+            echo -e "\n\n\e[31m#######################################################################"
+            echo "There are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
+            echo -e "#######################################################################\e[0m\n\n"
+            printf '\a'
+            exit 2
+        fi
+
         if [[ "$single_check" == "true" && "$prev_complete" != "" ]]; then
             echo -e "Next check in \e[33m${i}\e[0m seconds... Mutants checked: \e[33m${current_complete}\e[0m / Previous number of mutants checked: \e[33m${prev_complete}\e[0m"
         elif [[ "$single_check" == "true" && "$prev_complete" == "" ]]; then
