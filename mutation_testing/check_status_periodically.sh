@@ -48,9 +48,6 @@ while true; do
     fi
     echo -e "\n$(git add "*.lock" && git add "*.sqlite" && git add "report*.html" && git add "pytest*.txt" && git add "*.sh" && git st | tail -n10 | grep modified:)\n"
     git dw
-    if [[ "$prev_complete" != "" && "$single_check" == "true" ]]; then
-        exit 0
-    fi
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
     for ((i=current_interval; i>0; i--)); do
         if [[ "$single_check" == "true" && "$prev_complete" != "" ]]; then
@@ -62,6 +59,9 @@ while true; do
         fi
         sleep 1
     done
+    if [[ "$prev_complete" != "" && "$single_check" == "true" ]]; then
+        exit 0
+    fi
     prev_complete="$current_complete"
     echo
 done
