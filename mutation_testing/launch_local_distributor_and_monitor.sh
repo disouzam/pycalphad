@@ -8,7 +8,8 @@ cleanup() {
 }
 
 distributor_pid=""
-while true; do
+python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+while [[ "$python_files_changed" -lt 2 ]]; do
 
     if [[ -n "${distributor_pid}" ]]; then
         echo -e "\n\e[33mLocal distributor is already running with PID: ${distributor_pid}.\e[0m"
@@ -60,3 +61,9 @@ while true; do
     fi
 done
 
+if [ "$python_files_changed" -lt 2 ]; then
+    echo -e "\n\n\e[32m#######################################################################"
+    echo "Monitor detected more than one modified Python file at a given time."
+    echo -e "#######################################################################\e[0m\n\n"
+    exit 1
+fi
