@@ -1,11 +1,19 @@
 #!/bin/bash
 
 # This script checks the status of mutation testing at a configurable interval (default: 90 seconds).
-interval_seconds="${1:-90}"
-if ! [[ "$interval_seconds" =~ ^[0-9]+$ ]] || [[ "$interval_seconds" -le 0 ]]; then
-    echo "Usage: $0 [interval_seconds]"
-    exit 1
-fi
+interval_seconds="90"
+single_check="false"
+for arg in "$@"; do
+    if [[ "$arg" == "--single-check" ]]; then
+        single_check="true"
+    elif [[ "$arg" =~ ^[0-9]+$ ]] && [[ "$arg" -gt 0 ]]; then
+        interval_seconds="$arg"
+    else
+        echo "Usage: $0 [interval_seconds] [--single-check]"
+        exit 1
+    fi
+done
+
 
 prev_complete=""
 stopped_at=""
@@ -21,6 +29,10 @@ while true; do
     if [[ -n "$prev_complete" && -n "$current_complete" && "$current_complete" == "$prev_complete" ]]; then
         if [[ -z "$stopped_at" ]]; then
             stopped_at="$(date '+%Y-%m-%d %H:%M:%S')"
+
+            if [[ "$single_check" == "true" ]]; then
+                exit 1
+            fi
         fi
         printf '\a'
         current_interval=$((current_interval / 2))
@@ -33,13 +45,16 @@ while true; do
         stopped_at=""
         current_interval="$interval_seconds"
     fi
-    prev_complete="$current_complete"
     echo -e "\n$(git add "*.lock" && git add "*.sqlite" && git add "report*.html" && git add "pytest*.txt" && git add "*.sh" && git st | tail -n10 | grep modified:)\n"
     git dw
+    if [[ -n "$prev_complete" && "$single_check" == "true" ]]; then
+        exit 0
+    fi
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
     for ((i=current_interval; i>0; i--)); do
         printf "\rNext check in %3ds..." "$i"
         sleep 1
     done
+    prev_complete="$current_complete"
     echo
 done
