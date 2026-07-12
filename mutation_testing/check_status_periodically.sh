@@ -48,13 +48,15 @@ while true; do
     fi
     echo -e "\n$(git add "*.lock" && git add "*.sqlite" && git add "report*.html" && git add "pytest*.txt" && git add "*.sh" && git st | tail -n10 | grep modified:)\n"
     git dw
-    if [[ -n "$prev_complete" && "$single_check" == "true" ]]; then
+    if [[ "$prev_complete" != "" && "$single_check" == "true" ]]; then
         exit 0
     fi
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
     for ((i=current_interval; i>0; i--)); do
-        if [[ "$single_check" == "true" ]]; then
+        if [[ "$single_check" == "true" && "$prev_complete" != "" ]]; then
             echo "Next check in $i... - Mutants completed (last check): ${current_complete} / Previously: ${prev_complete}"
+        elif [[ "$single_check" == "true" && "$prev_complete" == "" ]]; then
+            echo "Next check in $i... - Mutants completed (last check): ${current_complete}"
         else
             printf "\rNext check in %3ds..." "$i"
         fi
