@@ -5,8 +5,13 @@ function stop_distributor() {
     if [ -n "${distributor_pid}" ]; then
         echo -e "\n\e[33mStopping local distributor with PID: ${distributor_pid}...\e[0m"
         kill -SIGTERM -- "-${distributor_pid}" 2>/dev/null || true
+        sleep 3
         kill -SIGKILL -- "-${distributor_pid}" 2>/dev/null || true
+        sleep 3
+        kill -9 "${distributor_pid}" 2>/dev/null || true
+        sleep 3
         wait "${distributor_pid}" 2>/dev/null || true
+        git restore .
     fi
 }
 
@@ -15,7 +20,11 @@ function stop_monitor() {
     if [ -n "${monitor_pid}" ]; then
         echo -e "\n\e[33mStopping monitor with PID: ${monitor_pid}...\e[0m"
         kill -SIGTERM -- "-${monitor_pid}" 2>/dev/null || true
+        sleep 3
         kill -SIGKILL -- "-${monitor_pid}" 2>/dev/null || true
+        sleep 3
+        kill -9 "${monitor_pid}" 2>/dev/null || true
+        sleep 3
         wait "${monitor_pid}" 2>/dev/null || true
     fi
 }
@@ -29,6 +38,16 @@ function cleanup() {
     exit 1
 }
 
+function get_working_tree_status() {
+    local file_extension="$1"
+    status_filtered="<$(git status -s | grep ${file_extension} | head -n 1)>"
+    working_tree_status="${status_filtered:2:1}"
+    echo $working_tree_status
+}
+
+current_pid=$(echo $$)
+echo -e "\n\e[32mCurrent script PID: ${current_pid}\e[0m"
+
 distributor_pid=""
 python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
 while [ $python_files_changed -lt 2 ]; do
@@ -36,6 +55,15 @@ while [ $python_files_changed -lt 2 ]; do
     if [ -n "${distributor_pid}" ]; then
         echo -e "\n\e[33mLocal distributor is already running with PID: ${distributor_pid}.\e[0m"
     else
+        git restore .
+        sqlite_status=$(get_working_tree_status sqlite)
+        python_status=$(get_working_tree_status py)
+
+        if [ "$sqlite_status" != "" ] || [ "$python_status" != "" ]; then
+            echo -e "\n\e[33mCan't start local distributor. There are uncommitted changes in the working tree.\e[0m"
+            exit 4
+        fi
+
         echo -e "\n\e[32mStarting local distributor...\e[0m"
         bash mutation_testing/Local_distributor/launch.sh &
         distributor_pid=$!
@@ -50,10 +78,12 @@ while [ $python_files_changed -lt 2 ]; do
 
     wait "${monitor_pid}"
     monitor_rc=$?
-    echo -e "\n\e[33mMonitor return code: ${monitor_rc}\e[0m"
+    echo -e "\n\e[33mMonitor ${monitor_pid} return code: ${monitor_rc}\e[0m"
 
     if [ $monitor_rc -eq 1 ]; then
         stop_distributor "${distributor_pid}"
+        echo -e "Waiting for 5 seconds before restoring the git state...(at entry)"
+        sleep 5
         git restore .
         echo -e "\n\n\e[31m#######################################################################"
         echo -e "\nMonitor return code 1"
@@ -68,6 +98,8 @@ while [ $python_files_changed -lt 2 ]; do
         distributor_pid=""
         trap - SIGINT SIGTERM EXIT
         printf '\a'
+        echo -e "Waiting for 5 seconds before restoring the git state... (in the middle)"
+        sleep 5
         git restore .
         python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
 
@@ -77,7 +109,6 @@ while [ $python_files_changed -lt 2 ]; do
             echo -e "#######################################################################\e[0m\n\n"
             printf '\a'
             echo "Distributor PID: ${distributor_pid}"
-            echo "Monitor PID: ${monitor_pid}"
             exit 1
         fi
     fi
@@ -88,7 +119,7 @@ while [ $python_files_changed -lt 2 ]; do
         echo -e "\nMonitor detected more than one modified Python file at a given time."
         echo -e "#######################################################################\e[0m\n\n"
         stop_distributor "${distributor_pid}"
-        exit 1
+        exit 2
     fi
 done
 
@@ -97,5 +128,5 @@ if [ $python_files_changed -ge 2 ]; then
     echo -e "\nLeft the main loop because there are more than 2 modified Python files."
     echo -e "\nMonitor detected more than one modified Python file at a given time."
     echo -e "#######################################################################\e[0m\n\n"
-    exit 1
+    exit 3
 fi
