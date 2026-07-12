@@ -1,8 +1,14 @@
 #!/bin/bash
 
-python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
-while [ $python_files_changed -lt 2 ]; do
-    echo "Waiting for at least 2 modified Python files. Currently, there are ${python_files_changed} modified Python files."
-    python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
-    sleep 1
-done
+function get_working_tree_status() {
+    local file_extension="$1"
+    status_filtered="<$(git status -s | grep ${file_extension} | head -n 1)>"
+    working_tree_status="${status_filtered:2:1}"
+    echo $working_tree_status
+}
+
+result_1=$(get_working_tree_status sqlite)
+result_2=$(get_working_tree_status sh)
+
+echo "\"$result_1\""
+echo "\"$result_2\""
