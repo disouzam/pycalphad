@@ -25,7 +25,8 @@ while true; do
         printf '\a'
         current_interval=$((current_interval / 2))
         if [[ "$current_interval" -lt 1 ]]; then
-            current_interval=1
+            echo -e "\e[31mInterval has reached the minimum of 1s. Resetting to default interval of ${interval_seconds}s.\e[0m"
+            current_interval=$interval_seconds
         fi
         echo -e "\e[31mReducing interval to \e[0m${current_interval}s \e[33m(stopped at: ${stopped_at})\e[0m"
     else
@@ -33,7 +34,7 @@ while true; do
         current_interval="$interval_seconds"
     fi
     prev_complete="$current_complete"
-    echo -e "\n$(git add "*.sqlite" && git add "report*.html" && git add "pytest*.txt" && git add "*.sh" && git st | tail -n10 | grep modified:)\n"
+    echo -e "\n$(git add "*.lock" && git add "*.sqlite" && git add "report*.html" && git add "pytest*.txt" && git add "*.sh" && git st | tail -n10 | grep modified:)\n"
     git dw
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
     for ((i=current_interval; i>0; i--)); do
