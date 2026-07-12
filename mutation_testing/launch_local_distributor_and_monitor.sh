@@ -50,5 +50,13 @@ while true; do
             exit 1
         fi
     fi
+
+    if [ "${monitor_rc}" -eq 2 ]; then
+        echo -e "\n\n\e[32m#######################################################################"
+        echo "Monitor detected more than one modified Python file at a given time."
+        echo -e "#######################################################################\e[0m\n\n"
+        kill "${distributor_pid}" 2>/dev/null
+        exit 1
+    fi
 done
 
