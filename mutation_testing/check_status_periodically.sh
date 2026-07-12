@@ -31,6 +31,7 @@ while true; do
             stopped_at="$(date '+%Y-%m-%d %H:%M:%S')"
 
             if [[ "$single_check" == "true" ]]; then
+                printf '\a'
                 exit 1
             fi
         fi
@@ -52,6 +53,9 @@ while true; do
     fi
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
     for ((i=current_interval; i>0; i--)); do
+        if [[ "$single_check" == "true" ]]; then
+            echo
+        fi
         printf "\rNext check in %3ds..." "$i"
         sleep 1
     done
