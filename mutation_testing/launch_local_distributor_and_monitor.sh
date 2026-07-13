@@ -65,7 +65,8 @@ while [ $python_files_changed -lt 2 ]; do
         fi
 
         echo -e "\n\e[32mStarting local distributor...\e[0m"
-        bash mutation_testing/Local_distributor/launch.sh &
+        directory="mutation_testing/Local_distributor"
+        uv run cosmic-ray --verbosity=DEBUG exec ${directory}/cosmic_ray.toml ${directory}/cosmic_ray.sqlite &
         distributor_pid=$!
         echo -e "\n\e[32mLocal distributor PID: ${distributor_pid}\e[0m"
     fi
