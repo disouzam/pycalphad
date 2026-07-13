@@ -12,6 +12,11 @@ function stop_distributor() {
         sleep 3
         wait "${distributor_pid}" 2>/dev/null || true
         git restore .
+        sleep 3
+        git restore .
+        rm -rf '.git/index.lock'
+        git restore .
+        sleep 3
     fi
 }
 
