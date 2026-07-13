@@ -51,7 +51,7 @@ function get_parent_chain() {
 }
 
 function get_active_processes() {
-    mapfile -t -s 1 active_processes < <(ps -f)
+    mapfile -t -s 1 active_processes < <(echo $(ps -f))
     echo "${active_processes[@]}"
 }
 
