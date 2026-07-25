@@ -5,5 +5,17 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "gitlens.autolinks": [
+        {
+            "prefix": "#",
+            "url": "https://github.com/pycalphad/pycalphad/issues/{num}",
+            "title": "GitHub Issues"
+        },
+        {
+            "prefix": "#",
+            "url": "https://github.com/pycalphad/pycalphad/pull/<num>",
+            "title": "GitHub Pull Requests"
+        }
+    ]
 }
