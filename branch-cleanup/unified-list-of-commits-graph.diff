@@ -1,0 +1,462 @@
+* 3ca28c412 (fork/script-to-get-child-pids, script-to-get-child-pids) Fixing installation of Cosmic Ray - potential errors introduced during rebases / merges
+* 3a97bf403 Partial update of local distributor with 25678 mutants already checked, with 7716 surviving mutants
+* 0dd09e1c6 Partial update of local distributor with 25583 mutants already checked, with 7710 surviving mutants
+* 7a34b966a Partial update of local distributor with 25541 mutants already checked, with 7705 surviving mutants
+* 7e754bdb5 Partial update of local distributor with 25368 mutants already checked, with 7648 surviving mutants
+* 2dbe127ce Partial update of local distributor with 25295 mutants already checked, with 7644 surviving mutants
+* 03e2be575 Partial update of local distributor with 25257 mutants already checked, with 7638 surviving mutants
+* 79e166ae3 Partial update of local distributor with 25187 mutants already checked, with 7628 surviving mutants
+* f24dd0420 Partial update of local distributor with 24870 mutants already checked, with 7560 surviving mutants
+* 928284a64 Partial update of local distributor with 24804 mutants already checked, with 7544 surviving mutants
+* e77a7c7c5 Partial update of local distributor with 24617 mutants already checked, with 7498 surviving mutants
+* f50f1683a Added explicit removal of .git/index.lock to prevent lock file issues during git restore operations.
+* ba1891e00 Partial update of local distributor with 24225 mutants already checked, with 7400 surviving mutants
+* 80d70769a Potential solution without using another bash script
+* 349ff083b Starting a third tentative of getting a useful Bash script for Windows that get a list of child PIDs
+* 6a5980509 (fork/probable-original-commits-before-failed-rebases, probable-original-commits-before-failed-rebases) Partial update of local distributor with 23934 mutants already checked, with 7363 surviving mutants
+* a8573497c Changes in launcher and in the poc script
+* e172790e9 Another tentative to get bash script right
+* 18d4160b4 Sample scripts to test delegated execution and killing process
+* d11cc69ac Partial update of local distributor with 23916 mutants already checked, with 7359 surviving mutants
+* 9a8d459f4  Partial update of local distributor with 23899 mutants already checked, with 7350 surviving mutants
+* a565544bb Removed extra echo statements outside of if condition
+* b6f261845 Tentative to get exit behavior right when multiple Python files are modified
+* 4a67f980a Additional changes to fix exit behavior
+* 2a12e6f35 Partial update of local distributor with 23895 mutants already checked, with 7350 surviving mutants
+* 569edc949 Partial update of local distributor with 23883 mutants already checked, with 7349 surviving mutants
+* ee86ec992 Improved loop condition to stop as soon as possible whenever more than one modified Python file happens in source control
+* 922582c88 Additional checks to avoid running mutation testing with more than one modified Python file
+* f618ead26 Fixes on launcher to stop mutation testing entirely if monitor is not able to keep just one Python file modified
+* e109cc1e6 Added colors and units in the echo statements of `mutation_testing/check_status_periodically.sh` that display how many seconds are left to check the progress of mutation testing again
+* d9214322c Fixed condition that return exit code 0 in `mutation_testing/check_status_periodically.sh`
+* 4b103c172 Additional adjustments in check_status_periodically.sh
+* 0312e9b8d Improved printing of next check message for single check mode
+* b772e7f2c Colorized specific console messages
+* b95305a75 Added line breaks for better visualization of both scripts in a single bash session
+* 126790926 Working version of launcher with issues with repeated launching of Cosmic Ray solved
+* 6358d4205 Launcher script with automatic killing of local distributor of Cosmic Ray when it stops
+* 449560ef0 First sketch of a launcher for local distributor in Cosmic Ray for PyCalphad and a monitor that restart the process when stalled
+* 7872ed071 Minor updates in check_status_periodically.sh
+* 0312ea376 Partial update of local distributor with 23803 mutants already checked, with 7328 surviving mutants
+* 63939c1ee Fixing leftover conflict marker after merge
+*   78aca3d37 Merge branch 'develop' into probable-original-commits-before-failed-rebases
+|\  
+* | 01af0b226 Partial update  of local distributor with 18729 mutants already checked, with 5753 surviving mutants
+* | 99dd57a41 Colorized output by highlighting number of mutants already checked and attached a cleaned git st and a diff to show some hint on what is going on during mutation testing
+* | bcbde4f9a Removed Cosmic-Ray reports
+* | 1174e098c Script to monitor status of mutation testing periodically and emit a sound when mutation testing stalls
+* | 5ce44cb4b Partial update of local distributor with 15483 mutants already checked, with 4765 surviving mutants
+* | 939533702 Updated source path to Cosmic Ray to use a dedicated version of Cosmic Ray for PyCalphad
+* | 166339baa Set verbosity of local distributor launcher of Cosmic Ray to be DEBUG
+* | dc4f09d2e Partial update of local distributor with 15433 mutants already checked, with 4748 surviving mutants
+| | * 3f068fb94 (fork/work-in-progress-july-02nd-2026, work-in-progress-july-02nd-2026) Partial update  of local distributor with 18729 mutants already checked, with 5753 surviving mutants
+| | * a46b274da Colorized output by highlighting number of mutants already checked and attached a cleaned git st and a diff to show some hint on what is going on during mutation testing
+| | * 7c44114fc (original-work-in-progress-before-rebases) Removed Cosmic-Ray reports
+| | * a9914eaba Script to monitor status of mutation testing periodically and emit a sound when mutation testing stalls
+| | * 48420adda Partial update of local distributor with 15483 mutants already checked, with 4765 surviving mutants
+| | * 495a54963 Updated source path to Cosmic Ray to use a dedicated version of Cosmic Ray for PyCalphad
+| | * 97a1c2e91 Set verbosity of local distributor launcher of Cosmic Ray to be DEBUG
+| | * 232bf772a Partial update of local distributor with 15433 mutants already checked, with 4748 surviving mutants
+| | * 5c8880b90 Partial update of local distributor with 3574 mutants already checked, with 1101 surviving mutants
+| | * 6d974b601 Partial results of mutation testing - around 6%
+| | * d546bae16 Restarted database for local distributor
+| | * 3e8a2aa2e Short-lived execution running in a single distributor
+| | * 00aa93a59 Converted configuration of `mutation_testing/10_workers/cosmic_ray.toml` to use a single distributor instead of 10 paralell http workers
+| | * 71b588919 Database after ~50% of mutants tests but with several errors in Cosmic Ray workers
+| | * f9fd41d90 Adjusted source of Cosmic-Ray to enable different clones in the same machine without disturbing pycalphad mutation testing
+| | * 0bf9d4aef Restarted / reinitialized database for 10 workers setup
+| | * 3b262542b Increased timeout from 15 seconds (wrong value) to 90 seconds (20% higher than the normal execution of test suite
+| | * c24bdf61c Modified Cosmic Ray configuration for 2 and 10 workers
+| | * 9dfd1df20 Removed extra print statement in conftest that ends up in session output
+| | * bb56e55cf Added condition for missing job ids
+| | * 68fb320db Retrieval of pytest configuration inside main script that runs pytest
+| | * 2fa835019 Added `--job-id` as a parameter to pytest
+| | * a02fed31e Hide pytest ini options from session output
+| | * 0634d1619 Modified verbosity and fixed path to Local_distributor folder in configuration to debug Cosmic Ray in launch.json
+| | * e722125bd Added configuration to save HTML reports for each mutant
+| | * 7192e8fb4 Set exit code in run_pytest_and_capture to correctly classify mutants
+| | * d8f29eb59 Adjusted timeout to match the total length of a typical test execution (75 seconds) and have a small margin to cope with longer loops
+| | * 70ba3d52e Added workspace file (for VS Code) to deal with PyCalphad and Cosmic-Ray in same instance
+| | * 71dc1f89a Adjusting session file name to use the same start time stamp as the one used in report file
+| | * d229ac670 Added a new parameter to be unique for `run_pytest_and_capture.py` and `conftest.py` and be uused as a reference time stamp for file name composition
+| | * 2eec4c63e Parse args from command line and passed them ipsis literis from pytest
+| | * 594ffc32e Added another launch configuration to debug pytest execution via run_pytest_and_capture.py with args
+| | * f07cfa0d8 Fixed formatting of session output
+| | * 7b9c3653a Added function to read ini options from pyproject.toml
+| | * 492b4c4c9 Revert "Modification to add timestamp to all output lines"
+| | * 92d3c7c71 Debug programmatically pytest execution
+| | * f705f1bdc Modification to add timestamp to all output lines
+| | * 09b0cff0f First version of `run_pytest_and_capture.py`
+| | * cbc7ee544 Adjusted all paths and file names to run Cosmic Ray for local distributor and for  2 and 10 workers
+| | * 359f834f9 Renamed all Cosmic Ray files to have same name and the differentiation be the folder
+| | * 167c28b8c Adjusted path to Cosmic Ray configuration and database files
+| | * bb95fc750 Moved configuration files and shell scripts to dedicated folders to help with maintenance and organization
+| | * 154706501 Use cosmic-ray-local-distributor.toml to initialize local distributor (instead of base config)
+| | * 7ad536c7c Added operators to the list of excluded ones based on GitHub issue
+| | * e19a1845f Databases of cosmic-ray execution
+| | * fe8e60384 Mutation results collected using shell script `mutation_testing/cosmic-ray-02-workers-reports.sh`
+| | * 81d4b2655 Mutation test reports for 10 workers - Partial evaluation
+| | * 844b766d8 Added a dedicated TOML configuration to run Cosmic Ray for local distributor
+| | * dd5745744 Modified `justMyCode` and `stopOnEntry` settings for configuration `Debug Cosmic-Ray execution - Local distributor`
+| | * a4d479d58 New launch configuration to debug Cosmic Ray for local distributor
+| | * 5f02ec2a0 Shell script to get report for local distributor
+| | * ba5626d63 Script to launch local distributor
+| | * 0e8ba618b Initialized database for local distributor
+| | * 5a00d6178 Script to initialize database for local distribution
+| | * 4bde23661 Removed configuration norecursedirs
+| | * d2db46593 Added a new task to debug pytest execution without report generation
+| | * c635b1e32 Modified `conftest.py` to consider `pytest` execution without report configuration
+| | * e1c66b050 Fixed number of workers in `mutation_testing/cosmic-ray-02-workers.toml`
+| | * b48513d0e Added script to get a summary of mutation testing for 10 workers and inserted date for equivalent script for 2 workers
+| | * a1c38063c Added URL for port 9005 that was missing for a true 10-worker setup
+| | * 28a3f7e8a Restore justMyCode and stonOnEntry parameters to debug cosmic-ray execution and workers
+| | * c1c35afc3 Updated configurations for 10 paralell workers
+| | * cf449a8de Script to generate summary report of mutations for 02 workers
+| | * bec194804 Adjusted timeout from 30 seconds to 15 seconds
+| | * 5d6829b74 Script to time execution of pytest over entire suite
+| | * 0fe555ac3 Removed hard-coded job id and adjusted report name
+| | * cccc85302 Customization of report name by adding hard-coded job id (generated by cosmic-ray) and time stamp
+| | * 6a2c09a36 Set stopOnEntry to true for launch configurations that debug cosmic-ray execution and worker instance
+| | * eee51e58d Added root `__pycache__` folder from the list of exclusions in `prepare-worker-folders.sh`
+| | * 789906833 Added argument stopOnEntry for all launch configurations in `launch.json`
+| | * e654025b1 Added new configuration to debug pytest execution
+| | * bbfbf56d1 Removed duplicated dependencies among main groupd and dev group
+| | * 7b10cb829 Enabled debugging of third-party code while debugging cosmic-ray executions
+| | * 8d09becbc Added a new configuration to debug Cosmic-Ray http worker
+| | * a59cf692c Temporarily modification of `mutation_testing/cosmic-ray-02-workers.toml` to run just one worker for easier setup for debugging
+| | * 29d21a878 Configuration that adds a timestamp to HTML report file using conftest.py customization
+| | * e6377ab4b Draft configuration to issue a HTML report per test run
+| | * 27f64a249 Adjustments in script to prepare worker folders, removing separate virtual environment creation per worker
+| | * 9fc48aa88 Added a new launch configuration to debug cosmic-ray execution
+| | * e09dc88c9 Added another exclusion to the files copied to worker's folder
+| | * 2c1daef93 Added new task to reinstall cosmic-ray from local sources
+| | * 6893114b3 Reinitialized database for mutation testing using 10 workers
+| | * 165354951 Added configurations to run just 2 workers - for troubleshooting and collaboration with cosmic-ray
+| | * 597079add Script for initialization of database for 10-workers
+| | * c40e9ddda Added script to run 10 workers
+| | * 8a6d31ea4 Renamed shell script from `automation/prepare-mutation-testing.sh` to `mutation_testing/prepare-worker-folders.sh` to better reflect its purpose in setting up worker folders for mutation testing.
+| | * 30c04e017 Renamed configuration file and cosmic-ray database file to enable multiple configurations in the repository
+| | * 932eec9d1 Moved `cosmic-ray` files to a dedicated folder
+| | * 3e12143d7 Partial parallel execution of cosmic-ray with 10 workers
+| | * 1b8513dca Fixed cosmic-ray configuration for 10 workers
+| | * 114788064 Added another folder to exclusion list of folders to be copied to worker's folder
+| | * f5b143852 Added custom script with a defined port for each worker
+| | * 82697ef7c Configuration of 10 workers for mutation testing
+| | * d69074d7c Modified script to generate a arbitrary number of worker's folders
+| | * 427aa2305 Modifications of each worker's folder to create a virtual environment
+| | * 7dc482c2d Modified configuration of `cosmic-ray` to run 2 workers
+| | * d9d42655f New shell script to prepare for mutation testing
+| | * 9e1b99fe8 Modified mutation configuration to adjust for tests folder path change
+| | * 5997cbaa4 Reinitialized `cosmic-ray` database
+| | * b1c7f51b9 Removed excluded modules after tests were extracted from package folder
+| | * 0b870e7e6 Proposal to move tests out of folder pycalphad to keep them separate and make mutation testing easier to configure
+| | * 440659a4c Deleted notebook created to practice using xarray data type
+| | * 2c6ef07a6 Modified `cosmic-ray` to be an editable source
+| | * 3bc456d59 Initialization of baseline for mutation testing and configuration
+| | * eee36ef24 Installed `cosmic-ray` as a dev dependency to run mutation testing
+| | * 8dafe0977 New cells on notebook created to practice xarray
+| | * 3936d2f76 marimo's notebook to play with xarray along video https://www.youtube.com/watch?v=ww4EYv20Ucw
+| | * 8b6c63e90 TODO to add error handling in database.py
+| | * 0dab6c434 Simple code to test debugging functionalities in `pycalphad` repository
+| | * 4302a1a69 `Fe-C` and `Fe-O` notebooks for understanding `pycalphad` internals
+| | * 2c47de8f4 `FeC` and `FeO` databases from `Hallsted, 2025`
+| | * 62cd16b33 Configuration to debug files directly through `pycalphad` source code
+| | * f0e515160 Added configuration to produce HTML reports of `coverage.py` using `pytest-cov` plugin, already installed
+| | * b6ff07ec1 Added some notes about issues selected by `Luís Otávio` and `Dickson Souza` as being interesting to start collaborating with `pycalphad`
+| | * bc03878eb List of open issues to explore
+| | * 06346e9d2 Trying to cross-link Binary Examples to binplot and tdb files explanation documents
+| | * f3e7526cf Fixed sections in 1_BinaryExamples.ipynb that describe plots of Al-Fe and Nb-Re systems
+| | * e0c406ea2 First test of splitting one examples (`1_BinaryExamples.ipynb`)
+| | * ca214501d Indication of potential changes in `Phase_Diagrams/1_BinaryExamples.ipynb`
+| | * 599bff5b7 Reordering sections of example `Phase_Diagrams/1_BinaryExamples.ipynb`
+| | * 528afcdfe Added description of the content covered in Metastability and Reference states section
+| | * 2cf03d806 Added description of the content covered in `3_High_Throughput_Analysis/index.rst` section
+| | * 58f6d55d1 Added description of the content covered in `2_Computing_Properties/index.rst` section
+| | * 27367fba2 Adding a description in `1_Phase_Diagrams/index.rst`
+| |/  
+| | * 162d73daa (fork/partial-results-of-10-workers-in-cosmic-ray, partial-results-of-10-workers-in-cosmic-ray) Removed Cosmic-Ray reports
+| | * 0dd5d1863 Script to monitor status of mutation testing periodically and emit a sound when mutation testing stalls
+| | * 32c3e49a6 Partial update of local distributor with 15483 mutants already checked, with 4765 surviving mutants
+| | * 163988cdb Updated source path to Cosmic Ray to use a dedicated version of Cosmic Ray for PyCalphad
+| | * 3b942284d Set verbosity of local distributor launcher of Cosmic Ray to be DEBUG
+| | * 095c7d60f Partial update of local distributor with 15433 mutants already checked, with 4748 surviving mutants
+| | * 3da2e85aa Partial update of local distributor with 3574 mutants already checked, with 1101 surviving mutants
+| | * 4b880354d Partial results of mutation testing - around 6%
+| | * 13a2cb2fa Restarted database for local distributor
+| | * 91977593e Short-lived execution running in a single distributor
+| | * c4c4f37a3 Converted configuration of `mutation_testing/10_workers/cosmic_ray.toml` to use a single distributor instead of 10 paralell http workers
+| | * 9524d6127 Database after ~50% of mutants tests but with several errors in Cosmic Ray workers
+| | * 65e4985f6 Adjusted source of Cosmic-Ray to enable different clones in the same machine without disturbing pycalphad mutation testing
+| | * 0416e86b0 Restarted / reinitialized database for 10 workers setup
+| | * 21787e0f8 Increased timeout from 15 seconds (wrong value) to 90 seconds (20% higher than the normal execution of test suite
+| | * 14b2a968c Modified Cosmic Ray configuration for 2 and 10 workers
+| | * b384d3f8a (fork/learning-activities-2026, learning-activities-2026) Removed extra print statement in conftest that ends up in session output
+| | * 136a53a80 Added condition for missing job ids
+| | * 6ba4524b3 Retrieval of pytest configuration inside main script that runs pytest
+| | * 0299dd77c Added `--job-id` as a parameter to pytest
+| | * d1ade090b Hide pytest ini options from session output
+| | * 03b63ee93 Modified verbosity and fixed path to Local_distributor folder in configuration to debug Cosmic Ray in launch.json
+| | * 2814bb0ee Added configuration to save HTML reports for each mutant
+| | * 6c0fad2c7 Set exit code in run_pytest_and_capture to correctly classify mutants
+| | * 14e80bdc8 Adjusted timeout to match the total length of a typical test execution (75 seconds) and have a small margin to cope with longer loops
+| | * a0fd51215 Added workspace file (for VS Code) to deal with PyCalphad and Cosmic-Ray in same instance
+| | * f45bb1382 Adjusting session file name to use the same start time stamp as the one used in report file
+| | * 74f0c82c7 Added a new parameter to be unique for `run_pytest_and_capture.py` and `conftest.py` and be uused as a reference time stamp for file name composition
+| | * b12f07e07 Parse args from command line and passed them ipsis literis from pytest
+| | * e52604ae6 Added another launch configuration to debug pytest execution via run_pytest_and_capture.py with args
+| | * cdd4b080e Fixed formatting of session output
+| | * 9813d3598 Added function to read ini options from pyproject.toml
+| | * 1f2bf7628 Revert "Modification to add timestamp to all output lines"
+| | * 632e178c3 Debug programmatically pytest execution
+| | * 2242f6a1e Modification to add timestamp to all output lines
+| | * 29d9fe273 First version of `run_pytest_and_capture.py`
+| | * 6347c9bfc TST: Add test that state variable units survive roundtrip pickle (#688)
+| | * 5f28b504c Build(deps): Bump pypa/cibuildwheel from 4.0.0 to 4.1.0 (#691)
+| | | * 9c0d9f85f (fork/cosmic-ray-configuration, cosmic-ray-configuration) Databases of cosmic-ray execution
+| | | * ace149ca6 Added a dedicated TOML configuration to run Cosmic Ray for local distributor
+| | | * affedead3 Modified `justMyCode` and `stopOnEntry` settings for configuration `Debug Cosmic-Ray execution - Local distributor`
+| | | * 96d9cbfeb New launch configuration to debug Cosmic Ray for local distributor
+| | | * e5a0aa310 Shell script to get report for local distributor
+| | | * 5e54d2493 Script to launch local distributor
+| | | * fd89c5dcd Initialized database for local distributor
+| | | * 2b7d1058b Script to initialize database for local distribution
+| | | * 3b4da9207 Removed configuration norecursedirs
+| | | * 2badf64b3 Added a new task to debug pytest execution without report generation
+| | | * ba1d14f8f Modified `conftest.py` to consider `pytest` execution without report configuration
+| | | * 00b05c963 Fixed number of workers in `mutation_testing/cosmic-ray-02-workers.toml`
+| | | * c460cf90f Added script to get a summary of mutation testing for 10 workers and inserted date for equivalent script for 2 workers
+| | | * 203669112 Added URL for port 9005 that was missing for a true 10-worker setup
+| | | * 62267965c Restore justMyCode and stonOnEntry parameters to debug cosmic-ray execution and workers
+| | | * fd776bf03 Updated configurations for 10 paralell workers
+| | | * 431f5a466 Script to generate summary report of mutations for 02 workers
+| | | * 8d103b3ec Adjusted timeout from 30 seconds to 15 seconds
+| | | * 5b76960c7 Script to time execution of pytest over entire suite
+| | | * a6caa7ca0 Removed hard-coded job id and adjusted report name
+| | | * dc93b01fb Customization of report name by adding hard-coded job id (generated by cosmic-ray) and time stamp
+| | | * b907b59e6 Set stopOnEntry to true for launch configurations that debug cosmic-ray execution and worker instance
+| | | * 0680a386b Added root `__pycache__` folder from the list of exclusions in `prepare-worker-folders.sh`
+| | | * 5a5fd27e7 Added argument stopOnEntry for all launch configurations in `launch.json`
+| | | * dd853da03 Added new configuration to debug pytest execution
+| | | * 6019c7d6c Removed duplicated dependencies among main groupd and dev group
+| | | * b73c82cc7 Enabled debugging of third-party code while debugging cosmic-ray executions
+| | | * a69d362e8 Added a new configuration to debug Cosmic-Ray http worker
+| | | * 3e9d2f3e9 Temporarily modification of `mutation_testing/cosmic-ray-02-workers.toml` to run just one worker for easier setup for debugging
+| | | * 9bc362eb0 Configuration that adds a timestamp to HTML report file using conftest.py customization
+| | | * 3bd09742d Draft configuration to issue a HTML report per test run
+| | | * 7fae83c63 Adjustments in script to prepare worker folders, removing separate virtual environment creation per worker
+| | | * f49be928b Added a new launch configuration to debug cosmic-ray execution
+| | | * 13af84e48 Added another exclusion to the files copied to worker's folder
+| | | * 920624198 Added new task to reinstall cosmic-ray from local sources
+| | | * 88215bdaa Reinitialized database for mutation testing using 10 workers
+| | | * 3970d92ba Added configurations to run just 2 workers - for troubleshooting and collaboration with cosmic-ray
+| | | * 7c614a55d Script for initialization of database for 10-workers
+| | | * 38a972d4d Added script to run 10 workers
+| | | * b40ca082c Renamed shell script from `automation/prepare-mutation-testing.sh` to `mutation_testing/prepare-worker-folders.sh` to better reflect its purpose in setting up worker folders for mutation testing.
+| | | * 40fa790aa Renamed configuration file and cosmic-ray database file to enable multiple configurations in the repository
+| | | * 8eb43f9a7 Moved `cosmic-ray` files to a dedicated folder
+| | | * fc6f17934 Partial parallel execution of cosmic-ray with 10 workers
+| | | * 7185b4431 Fixed cosmic-ray configuration for 10 workers
+| | | * b41372511 Added another folder to exclusion list of folders to be copied to worker's folder
+| | | * b567a4010 Added custom script with a defined port for each worker
+| | | * 1b7727ebc Configuration of 10 workers for mutation testing
+| | | * ea6480423 Modified script to generate a arbitrary number of worker's folders
+| | | * 36e2d83a0 Modifications of each worker's folder to create a virtual environment
+| | | * d8f6fe1eb Modified configuration of `cosmic-ray` to run 2 workers
+| | | * 544eb6a2f New shell script to prepare for mutation testing
+| | | * 8aaf1d26c Modified mutation configuration to adjust for tests folder path change
+| | | * 84cd4214d Reinitialized `cosmic-ray` database
+| | | * 587fd0d7d Removed excluded modules after tests were extracted from package folder
+| | | * 0931b5ce7 Proposal to move tests out of folder pycalphad to keep them separate and make mutation testing easier to configure
+| | | * 729c326fb Deleted notebook created to practice using xarray data type
+| | | * 40ddfd0da Modified `cosmic-ray` to be an editable source
+| | | * f67ce974a Initialization of baseline for mutation testing and configuration
+| | | * 86e0e753c Installed `cosmic-ray` as a dev dependency to run mutation testing
+| | | * 17876fbd9 New cells on notebook created to practice xarray
+| | | * aabdf3ca4 marimo's notebook to play with xarray along video https://www.youtube.com/watch?v=ww4EYv20Ucw
+| | | * 4e0872bb4 TODO to add error handling in database.py
+| | | * 6421d74b9 Simple code to test debugging functionalities in `pycalphad` repository
+| | | * 8c9db21b3 `Fe-C` and `Fe-O` notebooks for understanding `pycalphad` internals
+| | | * fcf2011b9 `FeC` and `FeO` databases from `Hallsted, 2025`
+| | | * b7ee25372 Configuration to debug files directly through `pycalphad` source code
+| | | * a41207520 Added configuration to produce HTML reports of `coverage.py` using `pytest-cov` plugin, already installed
+| | | * 7671aa1a5 (fork/collaboration-opportunities, collaboration-opportunities) Added some notes about issues selected by `Luís Otávio` and `Dickson Souza` as being interesting to start collaborating with `pycalphad`
+| | | * be22a38be List of open issues to explore
+| | | * baff5d6a9 (fork/work-in-progress-issue-674, work-in-progress-issue-674) Trying to cross-link Binary Examples to binplot and tdb files explanation documents
+| | | * db5aad27e Fixed sections in 1_BinaryExamples.ipynb that describe plots of Al-Fe and Nb-Re systems
+| | | * b9383bd82 First test of splitting one examples (`1_BinaryExamples.ipynb`)
+| | | * 64606b55f Indication of potential changes in `Phase_Diagrams/1_BinaryExamples.ipynb`
+| | | * 93cf1d168 Reordering sections of example `Phase_Diagrams/1_BinaryExamples.ipynb`
+| | | * 425641bd9 Added description of the content covered in Metastability and Reference states section
+| | | * cbb3564ac Added description of the content covered in `3_High_Throughput_Analysis/index.rst` section
+| | | * 5d366d7d4 Added description of the content covered in `2_Computing_Properties/index.rst` section
+| | | * d83e291a2 Adding a description in `1_Phase_Diagrams/index.rst`
+| | |/  
+| |/|   
+| | | * 73d49d7c6 (reference-for-comparison) Removed Cosmic-Ray reports
+| | | * f54ed50ee Script to monitor status of mutation testing periodically and emit a sound when mutation testing stalls
+| | | * f59aafa77 Partial update of local distributor with 15483 mutants already checked, with 4765 surviving mutants
+| | | * 4953393c5 Updated source path to Cosmic Ray to use a dedicated version of Cosmic Ray for PyCalphad
+| | | * 97791eda1 Set verbosity of local distributor launcher of Cosmic Ray to be DEBUG
+| | | * 1fc3d6067 Partial update of local distributor with 15433 mutants already checked, with 4748 surviving mutants
+| |_|/  
+|/| |   
+* | | 12e084b31 Partial update of local distributor with 3574 mutants already checked, with 1101 surviving mutants
+* | | 4cdf20f11 Partial results of mutation testing - around 6%
+* | | 2dc388b2f Restarted database for local distributor
+* | | ad70580d4 Short-lived execution running in a single distributor
+* | | 3b9a82c8b Converted configuration of `mutation_testing/10_workers/cosmic_ray.toml` to use a single distributor instead of 10 paralell http workers
+* | | 7e10c80c8 Database after ~50% of mutants tests but with several errors in Cosmic Ray workers
+* | | c18658ba1 Adjusted source of Cosmic-Ray to enable different clones in the same machine without disturbing pycalphad mutation testing
+* | | e47888437 Restarted / reinitialized database for 10 workers setup
+* | | 2f47b18f3 Increased timeout from 15 seconds (wrong value) to 90 seconds (20% higher than the normal execution of test suite
+* | | 122e5abe9 Modified Cosmic Ray configuration for 2 and 10 workers
+* | | 64e6ff47b Removed extra print statement in conftest that ends up in session output
+* | | e923e915e Added condition for missing job ids
+* | | 5de476851 Retrieval of pytest configuration inside main script that runs pytest
+* | | a38e6ec80 Added `--job-id` as a parameter to pytest
+* | | 97b5600cd Hide pytest ini options from session output
+* | | a92fbb53d Modified verbosity and fixed path to Local_distributor folder in configuration to debug Cosmic Ray in launch.json
+* | | 7bf3c7f58 Added configuration to save HTML reports for each mutant
+* | | 88e6b3ca4 Set exit code in run_pytest_and_capture to correctly classify mutants
+* | | 9d598cd49 Adjusted timeout to match the total length of a typical test execution (75 seconds) and have a small margin to cope with longer loops
+* | | 20058efb2 Added workspace file (for VS Code) to deal with PyCalphad and Cosmic-Ray in same instance
+* | | ab1f82910 Adjusting session file name to use the same start time stamp as the one used in report file
+* | | c60b6e69a Added a new parameter to be unique for `run_pytest_and_capture.py` and `conftest.py` and be uused as a reference time stamp for file name composition
+* | | aa509a0c7 Parse args from command line and passed them ipsis literis from pytest
+* | | d1e572b97 Added another launch configuration to debug pytest execution via run_pytest_and_capture.py with args
+* | | 382405346 Fixed formatting of session output
+* | | f043f25c3 Added function to read ini options from pyproject.toml
+* | | 7c83f20f7 Revert "Modification to add timestamp to all output lines"
+* | | 4dbcc425e Debug programmatically pytest execution
+* | | 8d9427e7d Modification to add timestamp to all output lines
+* | | 3b62af84b First version of `run_pytest_and_capture.py`
+* | |   bf9c3b4c1 Merge branch 'develop' into learning-activities-2026
+|\ \ \  
+| |_|/  
+|/| |   
+* | | ba5027b52 Adjusted all paths and file names to run Cosmic Ray for local distributor and for  2 and 10 workers
+* | | e17765f10 Renamed all Cosmic Ray files to have same name and the differentiation be the folder
+* | | 14e28ff78 Adjusted path to Cosmic Ray configuration and database files
+* | | e7a2b11ff Moved configuration files and shell scripts to dedicated folders to help with maintenance and organization
+* | | c99c7d9c4 Use cosmic-ray-local-distributor.toml to initialize local distributor (instead of base config)
+* | | 3d708e68e Added operators to the list of excluded ones based on GitHub issue
+* | |   929ce59bf Merge branch 'partial-results-of-10-workers-in-cosmic-ray' into temporary-merge
+|\ \ \  
+| * | | e4c841cec Databases of cosmic-ray execution
+| * | | 455513596 Mutation results collected using shell script `mutation_testing/cosmic-ray-02-workers-reports.sh`
+| * | | 943c2790a Mutation test reports for 10 workers - Partial evaluation
+* | | | 91f9b4d95 Added a dedicated TOML configuration to run Cosmic Ray for local distributor
+* | | | 087462e6f Modified `justMyCode` and `stopOnEntry` settings for configuration `Debug Cosmic-Ray execution - Local distributor`
+* | | | a53478f17 New launch configuration to debug Cosmic Ray for local distributor
+* | | | f842cc9db Shell script to get report for local distributor
+* | | | 299a9ffd7 Script to launch local distributor
+* | | | 12ad84d34 Initialized database for local distributor
+* | | | 1aa9029fb Script to initialize database for local distribution
+* | | | 0b7fbb43a Removed configuration norecursedirs
+|/ / /  
+* | | c0bd088ab Added a new task to debug pytest execution without report generation
+* | | 9aaff4638 Modified `conftest.py` to consider `pytest` execution without report configuration
+* | | 004e3049a Fixed number of workers in `mutation_testing/cosmic-ray-02-workers.toml`
+* | | cf073fd85 Added script to get a summary of mutation testing for 10 workers and inserted date for equivalent script for 2 workers
+* | | fd280c7aa Added URL for port 9005 that was missing for a true 10-worker setup
+* | | c32f24424 Restore justMyCode and stonOnEntry parameters to debug cosmic-ray execution and workers
+* | | 5ba015810 Updated configurations for 10 paralell workers
+* | | 90aeefcb3 Script to generate summary report of mutations for 02 workers
+* | | b79d3179a Adjusted timeout from 30 seconds to 15 seconds
+* | | 8c69c9e2f Script to time execution of pytest over entire suite
+* | | d23290928 Removed hard-coded job id and adjusted report name
+* | | 6af1e77d9 Customization of report name by adding hard-coded job id (generated by cosmic-ray) and time stamp
+* | | 7ffb8bc54 Set stopOnEntry to true for launch configurations that debug cosmic-ray execution and worker instance
+* | | 0f238919b Added root `__pycache__` folder from the list of exclusions in `prepare-worker-folders.sh`
+* | | a2a0da011 Added argument stopOnEntry for all launch configurations in `launch.json`
+* | | 5104f783e Added new configuration to debug pytest execution
+* | | 5a7b2e4e2 Removed duplicated dependencies among main groupd and dev group
+* | | ac575663a Enabled debugging of third-party code while debugging cosmic-ray executions
+* | | 48a14fced Added a new configuration to debug Cosmic-Ray http worker
+* | | b97bc7f69 Temporarily modification of `mutation_testing/cosmic-ray-02-workers.toml` to run just one worker for easier setup for debugging
+* | | 5235212b3 Configuration that adds a timestamp to HTML report file using conftest.py customization
+* | | 919294797 Draft configuration to issue a HTML report per test run
+* | | d24624866 Adjustments in script to prepare worker folders, removing separate virtual environment creation per worker
+* | | e4a18e4bf Added a new launch configuration to debug cosmic-ray execution
+* | | 32315381c Added another exclusion to the files copied to worker's folder
+* | | 928265d5e Added new task to reinstall cosmic-ray from local sources
+* | | 133b5a0be Reinitialized database for mutation testing using 10 workers
+* | | e329ccd85 Added configurations to run just 2 workers - for troubleshooting and collaboration with cosmic-ray
+* | | 1fb2d6eb3 Script for initialization of database for 10-workers
+* | | 6dc35abcf Added script to run 10 workers
+* | | 6af3ec5e7 Renamed shell script from `automation/prepare-mutation-testing.sh` to `mutation_testing/prepare-worker-folders.sh` to better reflect its purpose in setting up worker folders for mutation testing.
+* | | feced95e2 Renamed configuration file and cosmic-ray database file to enable multiple configurations in the repository
+* | | aa39bff66 Moved `cosmic-ray` files to a dedicated folder
+* | | 1e987caf4 Partial parallel execution of cosmic-ray with 10 workers
+* | | 52afb244e Fixed cosmic-ray configuration for 10 workers
+* | | 28db80f31 Added another folder to exclusion list of folders to be copied to worker's folder
+* | | b76e40f0c Added custom script with a defined port for each worker
+* | | 02ea9eec6 Configuration of 10 workers for mutation testing
+* | | 844b3db1f Modified script to generate a arbitrary number of worker's folders
+* | | a18ba9e65 Modifications of each worker's folder to create a virtual environment
+* | | b56ab81dd Modified configuration of `cosmic-ray` to run 2 workers
+* | | d1601f037 New shell script to prepare for mutation testing
+* | | 625d56b11 Modified mutation configuration to adjust for tests folder path change
+* | | 5a9727683 Reinitialized `cosmic-ray` database
+* | | 23711ff21 Removed excluded modules after tests were extracted from package folder
+* | | 4197a4f95 Proposal to move tests out of folder pycalphad to keep them separate and make mutation testing easier to configure
+* | | b4e75332f Moved shell scripts to a separate folder `automation` to keep repository more organized
+* | | 3b4c7918a Deleted notebook created to practice using xarray data type
+* | | 3ea948c09 Modified `cosmic-ray` to be an editable source
+* | | a88459086 Initialization of baseline for mutation testing and configuration
+* | | c7ac84a67 Installed `cosmic-ray` as a dev dependency to run mutation testing
+* | | 9058a70b4 New cells on notebook created to practice xarray
+* | | 05fe6c925 marimo's notebook to play with xarray along video https://www.youtube.com/watch?v=ww4EYv20Ucw
+* | | f3c71af22 TODO to add error handling in database.py
+* | | 8c57e6e64 Simple code to test debugging functionalities in `pycalphad` repository
+* | | b0db9e185 `Fe-C` and `Fe-O` notebooks for understanding `pycalphad` internals
+* | | cdfd4c20e `FeC` and `FeO` databases from `Hallsted, 2025`
+* | | 67e972900 Configuration to debug files directly through `pycalphad` source code
+* | | d0cbd8738 Added configuration to produce HTML reports of `coverage.py` using `pytest-cov` plugin, already installed
+* | | a5c3344c7 Added some notes about issues selected by `Luís Otávio` and `Dickson Souza` as being interesting to start collaborating with `pycalphad`
+* | | b4b10a127 List of open issues to explore
+* | | 3e253bf27 Trying to cross-link Binary Examples to binplot and tdb files explanation documents
+* | | f33723b4d Fixed sections in 1_BinaryExamples.ipynb that describe plots of Al-Fe and Nb-Re systems
+* | | c9e091bbc First test of splitting one examples (`1_BinaryExamples.ipynb`)
+* | | 118ebf00c Indication of potential changes in `Phase_Diagrams/1_BinaryExamples.ipynb`
+* | | 8b56f7672 Reordering sections of example `Phase_Diagrams/1_BinaryExamples.ipynb`
+* | | b201449b7 Added description of the content covered in Metastability and Reference states section
+* | | dd44241dd Added description of the content covered in `3_High_Throughput_Analysis/index.rst` section
+* | | f2df437f9 Added description of the content covered in `2_Computing_Properties/index.rst` section
+* | | d90e9ae20 Adding a description in `1_Phase_Diagrams/index.rst`
+* | | 5dbee01ff Proposal of a minimal change in GitHub Action `.github/workflows/docs.yaml`to run script `update_all_examples.sh` during website build to avoid stale documentation
+* | | 05b73703f Updated all example notebooks using script `update_all_examples.sh`: cells were re-run automatically in the script, additional metadata update, execution counting update
+* | | 16ade4e0b Updated all example notebooks using script `update_all_examples.sh`: Cleaning up cells's metadata
+* | | 427d2d969 Moved comment of last line in cell of `4_EquilibriumWithOrdering.ipynb` to improve visualization in website
+* | | e6efadb68 Removed extra white space in first code cell of `2_TernaryExamples.ipynb`
+* | | 6dfbac975 Removed folder `5_Advanced_Examples` and moved its content to other folders where examples have more fit
+* | | e6a819e71 Renamed examples from `4_Metastability_Reference_Stages` folder to adjust numbering in sequencial way without skipping numbers
+* | | a84510dc9 Split cell that printed site fractions and plotted Nb-Re Chi mixing enthalpy
+* | | efb3fae6c Assign the return value of last statements in notebook cells to dummy variables (discard variable `_`) to avoid unnecessary outputs
+* | | 8dfd79745 Split textual output from ternary plot to be clearer in Jupyter notebook and also in website
+* | | 756cb044a Improved output of results of molar ratios of linear combination calculated for Al-Cu-Y system
+* | | 4ca980e84 Removed empty line at start of a cell in `1_BinaryExamples.ipynb`
+* | | d275ca65f Added instructions to filter unintended warnings that clutter the documentation of pycalphad website and exposes individual paths of the user that last run the notebook
+* | | c58b9a28d Fixed level of headers in `2_Metastability.ipynb` and `6_LegacyReferenceState.ipynb`
+* | | 3a152c8cf Removed whitespace in first header of `2_Metastability.ipynb`
+* | | a18a28872 Renamed nblink files to match referenced notebooks and updated each index
+* | | eb21b65bc Adjusted indexes to examples with new paths
+* | | ad25f96ac Renamed folders of `examples` and `docs/examples` to match numbering of files in `website`
+* | | ff6e32902 Adding numbering to example files in all folders to match TOC numbers
+* | | 0b6f9ae8d Modified menu definition for examples
+* | | b993f4668 Moved `nblink` files to new locations to better organize the documentation examples.
+* | | 2039711ac Organized notebooks in folders following Brandon's suggestion
+* | | 1fe4380ad Moved all databases in `examples` folder to a sub-folder `databases`
+* | | f34e40595 Update `ONBOARDING.rst` to provide instructions using `uv` instead of `conda`
+* | | db2886c69 New tooling to support working on documentation locally
+* | | 5300c90fc Added `sphinx-autobuild` as a dev dependency to support live-reloading of documentation when working on it locally.
+* | | 2d2a32e76 Added `nb-clean` as a dev dependency to clean unnecessary notebook and cell metadata
+* | | fa3d71995 Added `nbconvert` as a dev dependency
+* | | a097840bf Added `jupyter` as a dev dependency
+* | | e3b85df67 Sorted dependencies and setup tools in ascending order before adding new dependencies
+* | | a944e1eee Updated copyright date and fixed a minor typo in `conf.py`
+o | | 322c08d00 Build(deps): Bump nwtgck/actions-netlify from 3.0 to 4.0 (#686)
+ / /  
+o / 7b0e956dc TST: Add test that state variable units survive roundtrip pickle (#688)
+ /  
+o 144d83d3f (upstream/develop, upstream/HEAD, source/develop, source/HEAD, lofalsetti/develop, lofalsetti/HEAD, fork/develop, fork/HEAD, calphadgroup/develop, calphadgroup/HEAD, develop) Build(deps): Bump actions/checkout from 6 to 7 (#701)

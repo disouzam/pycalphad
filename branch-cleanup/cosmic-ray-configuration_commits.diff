@@ -1,0 +1,921 @@
+commit 9c0d9f85f
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 12:01:27 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:14:43 2026 -0300
+
+    Databases of cosmic-ray execution
+
+:100644 100644 17da2e3bd 7a38ef0fc M	mutation_testing/cosmic-ray-02-workers.sqlite
+:100644 100644 5f6b4862d 3547852f7 M	mutation_testing/cosmic-ray-10-workers.sqlite
+
+commit ace149ca6
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 15:41:40 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:32 2026 -0300
+
+    Added a dedicated TOML configuration to run Cosmic Ray for local distributor
+
+:100644 100644 a0dcfac3b 768d7db81 M	.vscode/launch.json
+:000000 100644 000000000 7a0a77680 A	mutation_testing/cosmic-ray-local-distributor.toml
+:100644 100644 bb75bf6cb de0ca1da2 M	mutation_testing/launch-local-distributor.sh
+
+commit affedead3
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 15:38:12 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:32 2026 -0300
+
+    Modified `justMyCode` and `stopOnEntry` settings for configuration `Debug Cosmic-Ray execution - Local distributor`
+
+:100644 100644 a357be78b a0dcfac3b M	.vscode/launch.json
+
+commit 96d9cbfeb
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 15:37:10 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:32 2026 -0300
+
+    New launch configuration to debug Cosmic Ray for local distributor
+
+:100644 100644 c32bda7c7 a357be78b M	.vscode/launch.json
+
+commit e5a0aa310
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 15:29:24 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:32 2026 -0300
+
+    Shell script to get report for local distributor
+
+:000000 100644 000000000 a72289253 A	mutation_testing/cosmic-ray-local-distributor-reports.sh
+
+commit 5e54d2493
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 15:28:17 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:32 2026 -0300
+
+    Script to launch local distributor
+
+:000000 100644 000000000 bb75bf6cb A	mutation_testing/launch-local-distributor.sh
+
+commit fd89c5dcd
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 15:26:27 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:32 2026 -0300
+
+    Initialized database for local distributor
+
+:000000 100644 000000000 a13ab8d6c A	mutation_testing/cosmic-ray-for-local-distributor.sqlite
+
+commit 2b7d1058b
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 15:26:04 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Script to initialize database for local distribution
+
+:000000 100644 000000000 f550e52e1 A	mutation_testing/initialize-database-for-local-distributor.sh
+
+commit 3b4da9207
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 12:59:28 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Removed configuration norecursedirs
+
+:100644 100644 f4f704a40 5a064bb63 M	pyproject.toml
+
+commit 2badf64b3
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 12:37:32 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Added a new task to debug pytest execution without report generation
+
+:100644 100644 b678da7c7 c32bda7c7 M	.vscode/launch.json
+
+commit ba1d14f8f
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 15 12:36:08 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Modified `conftest.py` to consider `pytest` execution without report configuration
+
+:100644 100644 e6ca71375 309c294e1 M	conftest.py
+
+commit 00b05c963
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 21:18:59 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Fixed number of workers in `mutation_testing/cosmic-ray-02-workers.toml`
+
+:100644 100644 4d5947a04 a8e6eed7e M	mutation_testing/cosmic-ray-02-workers.toml
+
+commit c460cf90f
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 21:18:14 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Added script to get a summary of mutation testing for 10 workers and inserted date for equivalent script for 2 workers
+
+:100644 100644 43900b51d ca792e19a M	mutation_testing/cosmic-ray-02-workers-reports.sh
+:000000 100644 000000000 f58239d91 A	mutation_testing/cosmic-ray-10-workers-reports.sh
+
+commit 203669112
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 21:14:42 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Added URL for port 9005 that was missing for a true 10-worker setup
+
+:100644 100644 8eba330c3 cef741280 M	mutation_testing/cosmic-ray-10-workers.toml
+
+commit 62267965c
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 13:35:39 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Restore justMyCode and stonOnEntry parameters to debug cosmic-ray execution and workers
+
+:100644 100644 f1574f0d4 b678da7c7 M	.vscode/launch.json
+
+commit fd776bf03
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 13:24:47 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Updated configurations for 10 paralell workers
+
+:100644 100644 331802ab8 8eba330c3 M	mutation_testing/cosmic-ray-10-workers.toml
+
+commit 431f5a466
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 13:14:50 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Script to generate summary report of mutations for 02 workers
+
+:000000 100644 000000000 43900b51d A	mutation_testing/cosmic-ray-02-workers-reports.sh
+
+commit 8d103b3ec
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 13:12:12 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Adjusted timeout from 30 seconds to 15 seconds
+
+:100644 100644 b538e4c90 4d5947a04 M	mutation_testing/cosmic-ray-02-workers.toml
+
+commit 5b76960c7
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 13:11:41 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Script to time execution of pytest over entire suite
+
+:000000 100644 000000000 2fda03451 A	mutation_testing/get-baseline-execution-time.sh
+
+commit a6caa7ca0
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 13:07:09 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Removed hard-coded job id and adjusted report name
+
+:100644 100644 eeb98be17 e6ca71375 M	conftest.py
+
+commit dc93b01fb
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 11:11:15 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Customization of report name by adding hard-coded job id (generated by cosmic-ray) and time stamp
+
+:100644 100644 45777e532 eeb98be17 M	conftest.py
+
+commit b907b59e6
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 11:10:21 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Set stopOnEntry to true for launch configurations that debug cosmic-ray execution and worker instance
+
+:100644 100644 62482ebd5 f1574f0d4 M	.vscode/launch.json
+
+commit 0680a386b
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 09:17:34 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Added root `__pycache__` folder from the list of exclusions in `prepare-worker-folders.sh`
+
+:100644 100644 d51f1359e 5044bc6d6 M	mutation_testing/prepare-worker-folders.sh
+
+commit 5a5fd27e7
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 09:16:24 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Added argument stopOnEntry for all launch configurations in `launch.json`
+
+:100644 100644 c687f8e03 62482ebd5 M	.vscode/launch.json
+
+commit dd853da03
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 08:57:12 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Added new configuration to debug pytest execution
+
+:100644 100644 55eebc76c c687f8e03 M	.vscode/launch.json
+
+commit 6019c7d6c
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 08:13:46 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Removed duplicated dependencies among main groupd and dev group
+
+:100644 100644 4b8bbae64 f4f704a40 M	pyproject.toml
+
+commit b73c82cc7
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 14 08:11:32 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Enabled debugging of third-party code while debugging cosmic-ray executions
+
+:100644 100644 be2755919 55eebc76c M	.vscode/launch.json
+
+commit a69d362e8
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Jun 13 12:14:30 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Added a new configuration to debug Cosmic-Ray http worker
+
+:100644 100644 e5ae03b9a be2755919 M	.vscode/launch.json
+
+commit 3e9d2f3e9
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Jun 13 09:41:29 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Temporarily modification of `mutation_testing/cosmic-ray-02-workers.toml` to run just one worker for easier setup for debugging
+
+:100644 100644 055792376 b538e4c90 M	mutation_testing/cosmic-ray-02-workers.toml
+
+commit 9bc362eb0
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Jun 13 03:20:31 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Configuration that adds a timestamp to HTML report file using conftest.py customization
+
+:100644 100644 9ffc46d0d 45777e532 M	conftest.py
+:100644 100644 d7b883f05 055792376 M	mutation_testing/cosmic-ray-02-workers.toml
+
+commit 3bd09742d
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Jun 13 02:21:50 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:31 2026 -0300
+
+    Draft configuration to issue a HTML report per test run
+
+:000000 100644 000000000 9ffc46d0d A	conftest.py
+:000000 100644 000000000 9be9c8df2 A	html1/base.html
+:000000 100644 000000000 b1b9d5e85 A	html1/icons/arrow.svg
+:000000 100644 000000000 5b7ba7105 A	html1/icons/nok.svg
+:000000 100644 000000000 657165047 A	html1/icons/ok.svg
+:000000 100644 000000000 1a9e2236c A	html1/icons/skip.svg
+:000000 100644 000000000 c84115ef0 A	html1/index.html
+:000000 100644 000000000 e3fe2c2e3 A	html1/module.html
+:000000 100644 000000000 192eb9ce4 A	html1/normalize.css
+:000000 100644 000000000 b9bda42e0 A	html1/style.css
+:000000 100644 000000000 c3a4f83ad A	html1/test.html
+:100644 100644 23341527d d7b883f05 M	mutation_testing/cosmic-ray-02-workers.toml
+:100644 100644 7afe3a69b d51f1359e M	mutation_testing/prepare-worker-folders.sh
+:100644 100644 2d58a74df 4b8bbae64 M	pyproject.toml
+
+commit 7fae83c63
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Jun 13 00:13:55 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:30 2026 -0300
+
+    Adjustments in script to prepare worker folders, removing separate virtual environment creation per worker
+
+:100644 100644 7db195883 7afe3a69b M	mutation_testing/prepare-worker-folders.sh
+
+commit f49be928b
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 21:19:45 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:30 2026 -0300
+
+    Added a new launch configuration to debug cosmic-ray execution
+    
+    - And potentially contribute with improvements for cosmic-ray
+
+:100644 100644 84b6fd18c e5ae03b9a M	.vscode/launch.json
+
+commit 13af84e48
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 21:08:42 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:30 2026 -0300
+
+    Added another exclusion to the files copied to worker's folder
+
+:100644 100644 3d54246a7 7db195883 M	mutation_testing/prepare-worker-folders.sh
+
+commit 920624198
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 21:08:21 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:30 2026 -0300
+
+    Added new task to reinstall cosmic-ray from local sources
+
+:100644 100644 156e27f4d e5ddb0036 M	.vscode/tasks.json
+
+commit 88215bdaa
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 19:24:19 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:30 2026 -0300
+
+    Reinitialized database for mutation testing using 10 workers
+
+:100644 100644 0a5ae5c3c 5f6b4862d M	mutation_testing/cosmic-ray-10-workers.sqlite
+
+commit 3970d92ba
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 19:17:45 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:30 2026 -0300
+
+    Added configurations to run just 2 workers - for troubleshooting and collaboration with cosmic-ray
+
+:000000 100644 000000000 17da2e3bd A	mutation_testing/cosmic-ray-02-workers.sqlite
+:000000 100644 000000000 23341527d A	mutation_testing/cosmic-ray-02-workers.toml
+:000000 100644 000000000 9897bd95f A	mutation_testing/initialize-database-for-02-workers.sh
+:000000 100644 000000000 7b9cc2067 A	mutation_testing/launch-02-workers.sh
+
+commit 7c614a55d
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 18:37:38 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:30 2026 -0300
+
+    Script for initialization of database for 10-workers
+
+:000000 100644 000000000 7a0a77680 A	mutation_testing/cosmic-ray-base-config.toml
+:000000 100644 000000000 1b8ec7eb0 A	mutation_testing/initialize-database-for-10-workers.sh
+
+commit 38a972d4d
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 18:24:11 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:29 2026 -0300
+
+    Added script to run 10 workers
+
+:000000 100644 000000000 39165f77a A	mutation_testing/launch-10-workers.sh
+
+commit b40ca082c
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 18:20:43 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:10:23 2026 -0300
+
+    Renamed shell script from `automation/prepare-mutation-testing.sh` to `mutation_testing/prepare-worker-folders.sh` to better reflect its purpose in setting up worker folders for mutation testing.
+
+:000000 100644 000000000 3d54246a7 A	mutation_testing/prepare-worker-folders.sh
+
+commit 40fa790aa
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 18:15:33 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Renamed configuration file and cosmic-ray database file to enable multiple configurations in the repository
+
+:100644 100644 0a5ae5c3c 0a5ae5c3c R100	mutation_testing/mutationdb.sqlite	mutation_testing/cosmic-ray-10-workers.sqlite
+:100644 100644 331802ab8 331802ab8 R100	mutation_testing/mutation-configs.toml	mutation_testing/cosmic-ray-10-workers.toml
+
+commit 8eb43f9a7
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 18:14:28 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Moved `cosmic-ray` files to a dedicated folder
+
+:100644 100644 331802ab8 331802ab8 R100	mutation-configs.toml	mutation_testing/mutation-configs.toml
+:100644 100644 0a5ae5c3c 0a5ae5c3c R100	mutationdb.sqlite	mutation_testing/mutationdb.sqlite
+:000000 100644 000000000 8a5670a03 A	uv.lock
+
+commit fc6f17934
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 18:13:34 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Partial parallel execution of cosmic-ray with 10 workers
+
+:100644 100644 64a42a7b4 0a5ae5c3c M	mutationdb.sqlite
+
+commit 7185b4431
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 18:12:39 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Fixed cosmic-ray configuration for 10 workers
+
+:100644 100644 04562440e 331802ab8 M	mutation-configs.toml
+
+commit b41372511
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 15:16:11 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Added another folder to exclusion list of folders to be copied to worker's folder
+
+:100644 100644 7b04e0ad9 3d54246a7 M	tools/prepare-mutation-testing.sh
+
+commit b567a4010
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 14:34:52 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Added custom script with a defined port for each worker
+
+:100644 100644 5b1de0490 7b04e0ad9 M	tools/prepare-mutation-testing.sh
+
+commit 1b7727ebc
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 14:20:59 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Configuration of 10 workers for mutation testing
+
+:100644 100644 97bd03014 04562440e M	mutation-configs.toml
+
+commit ea6480423
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 14:19:31 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Modified script to generate a arbitrary number of worker's folders
+    
+    Usage: bash automation/prepare-mutation-testing.sh 10
+    This will create folders worker1, worker2, up to worker10 and set up individual environments
+
+:100644 100644 b0438f1b9 5b1de0490 M	tools/prepare-mutation-testing.sh
+
+commit 36e2d83a0
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 14:12:39 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Modifications of each worker's folder to create a virtual environment
+
+:100644 100644 41fb82a69 b0438f1b9 M	tools/prepare-mutation-testing.sh
+
+commit d8f6fe1eb
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 13:54:32 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:29 2026 -0300
+
+    Modified configuration of `cosmic-ray` to run 2 workers
+
+:100644 100644 4db8094e2 97bd03014 M	mutation-configs.toml
+
+commit 544eb6a2f
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 13:54:08 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:08:22 2026 -0300
+
+    New shell script to prepare for mutation testing
+
+:000000 100644 000000000 41fb82a69 A	tools/prepare-mutation-testing.sh
+
+commit 8aaf1d26c
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 10:04:13 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:07:52 2026 -0300
+
+    Modified mutation configuration to adjust for tests folder path change
+
+:100644 100644 2e69741b7 4db8094e2 M	mutation-configs.toml
+
+commit 84cd4214d
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 10:00:22 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:07:52 2026 -0300
+
+    Reinitialized `cosmic-ray` database
+    
+    - Command:
+    cosmic-ray init mutation-configs.toml mutationdb.sqlite
+
+:100644 100644 15aedf804 64a42a7b4 M	mutationdb.sqlite
+
+commit 587fd0d7d
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 09:58:28 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:07:52 2026 -0300
+
+    Removed excluded modules after tests were extracted from package folder
+
+:100644 100644 5d5e426a2 2e69741b7 M	mutation-configs.toml
+
+commit 0931b5ce7
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 09:29:23 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 23:07:52 2026 -0300
+
+    Proposal to move tests out of folder pycalphad to keep them separate and make mutation testing easier to configure
+    
+    - Besides updated imports, other changes were made to accommodate folder changes
+
+:100644 100644 ca198f5af 1d5bc878b M	.vscode/settings.json
+:100644 100644 46bf2ffd0 3d9d9024f M	examples/1_Phase_Diagrams/2_TernaryExamples.ipynb
+:100644 100644 e1b8627e3 26e803cb1 M	examples/3_High_Throughput_Analysis/1_HighThroughputCalculations.ipynb
+:100644 100644 7bd299ecc 2d58a74df M	pyproject.toml
+:100644 100644 6fc640778 77e8e0e35 M	setup.py
+:100644 100644 e69de29bb e69de29bb R100	pycalphad/tests/__init__.py	tests/__init__.py
+:100644 100644 094b4093a 6b2f5f887 R097	pycalphad/tests/databases/2026-Dixon-Na-K-Cl-I.dat	tests/databases/2026-Dixon-Na-K-Cl-I.dat
+:100644 100644 0b6194649 0b6194649 R100	pycalphad/tests/databases/Al-Cu-Y.tdb	tests/databases/Al-Cu-Y.tdb
+:100644 100644 58c2fc0d1 58c2fc0d1 R100	pycalphad/tests/databases/Al-Fe_sundman2009.tdb	tests/databases/Al-Fe_sundman2009.tdb
+:100644 100644 ff077eed7 ff077eed7 R100	pycalphad/tests/databases/Al-Mg_Zhong.tdb	tests/databases/Al-Mg_Zhong.tdb
+:100644 100644 99fdc0180 99fdc0180 R100	pycalphad/tests/databases/AuSn-13Don.tdb	tests/databases/AuSn-13Don.tdb
+:100644 100644 7f1aee528 7f1aee528 R100	pycalphad/tests/databases/COST507.tdb	tests/databases/COST507.tdb
+:100644 100644 6db9b7400 6db9b7400 R100	pycalphad/tests/databases/CoV-20Wan.tdb	tests/databases/CoV-20Wan.tdb
+:100644 100644 b6ae21e2e b6ae21e2e R100	pycalphad/tests/databases/Cr-Fe-Ni_shallow_bcc.tdb	tests/databases/Cr-Fe-Ni_shallow_bcc.tdb
+:100644 100644 b2c583207 b2c583207 R100	pycalphad/tests/databases/CrFeNb_Jacob2016.tdb	tests/databases/CrFeNb_Jacob2016.tdb
+:100644 100644 e52b812bf e52b812bf R100	pycalphad/tests/databases/FeNi_deep_branching.tdb	tests/databases/FeNi_deep_branching.tdb
+:100644 100644 ce92c7ba4 ce92c7ba4 R100	pycalphad/tests/databases/KF-NIF2_switched.dat	tests/databases/KF-NIF2_switched.dat
+:100644 100644 86f315f23 86f315f23 R100	pycalphad/tests/databases/Kaye_Pd-Ru-Tc-Mo.dat	tests/databases/Kaye_Pd-Ru-Tc-Mo.dat
+:100644 100644 1acaa4a5d 1acaa4a5d R100	pycalphad/tests/databases/MQMQA-tern-tests.dat	tests/databases/MQMQA-tern-tests.dat
+:100644 100644 aeb7366eb aeb7366eb R100	pycalphad/tests/databases/Ocadiz-Flores.dat	tests/databases/Ocadiz-Flores.dat
+:100644 100644 1102df283 a55c404e1 R097	pycalphad/tests/databases/Shishin_Fe-Sb-O-S_slag.dat	tests/databases/Shishin_Fe-Sb-O-S_slag.dat
+:100644 100644 ff9985062 ff9985062 R100	pycalphad/tests/databases/Viitala.dat	tests/databases/Viitala.dat
+:100644 100644 e69de29bb e69de29bb R100	pycalphad/tests/databases/__init__.py	tests/databases/__init__.py
+:100644 100644 25c0d4a9e 25c0d4a9e R100	pycalphad/tests/databases/al2o3_nd2o3_zro2.tdb	tests/databases/al2o3_nd2o3_zro2.tdb
+:100644 100644 54befa5c6 54befa5c6 R100	pycalphad/tests/databases/al_parameter.tdb	tests/databases/al_parameter.tdb
+:100644 100644 9a32b28a1 9a32b28a1 R100	pycalphad/tests/databases/alcfe_b2.tdb	tests/databases/alcfe_b2.tdb
+:100644 100644 afe33f97d afe33f97d R100	pycalphad/tests/databases/alcocrni.tdb	tests/databases/alcocrni.tdb
+:100644 100644 9fe051ad7 9fe051ad7 R100	pycalphad/tests/databases/alcrni.tdb	tests/databases/alcrni.tdb
+:100644 100644 8db9b7517 8db9b7517 R100	pycalphad/tests/databases/alfe.tdb	tests/databases/alfe.tdb
+:100644 100644 9bf25a5a4 9bf25a5a4 R100	pycalphad/tests/databases/alfeo.tdb	tests/databases/alfeo.tdb
+:100644 100644 aa792a7bf aa792a7bf R100	pycalphad/tests/databases/alni_dupin_2001.tdb	tests/databases/alni_dupin_2001.tdb
+:100644 100644 e7692e71c e7692e71c R100	pycalphad/tests/databases/alni_tough_chempot.tdb	tests/databases/alni_tough_chempot.tdb
+:100644 100644 4f1961273 4f1961273 R100	pycalphad/tests/databases/alnifcc4sl.tdb	tests/databases/alnifcc4sl.tdb
+:100644 100644 8a3ef2381 8a3ef2381 R100	pycalphad/tests/databases/alnipt.tdb	tests/databases/alnipt.tdb
+:100644 100644 31683b1c7 31683b1c7 R100	pycalphad/tests/databases/alzn_mey.tdb	tests/databases/alzn_mey.tdb
+:100644 100644 65b15f879 65b15f879 R100	pycalphad/tests/databases/cfe_broshe.tdb	tests/databases/cfe_broshe.tdb
+:100644 100644 d8625dc9a d8625dc9a R100	pycalphad/tests/databases/crfe_bcc_magnetic.tdb	tests/databases/crfe_bcc_magnetic.tdb
+:100644 100644 a5f2b7edf a5f2b7edf R100	pycalphad/tests/databases/crtiv_ghosh.tdb	tests/databases/crtiv_ghosh.tdb
+:100644 100644 e6f7ea2fc e6f7ea2fc R100	pycalphad/tests/databases/cumg.tdb	tests/databases/cumg.tdb
+:100644 100644 bf0644919 bf0644919 R100	pycalphad/tests/databases/cumg_parameters.tdb	tests/databases/cumg_parameters.tdb
+:100644 100644 7e2d11d6a 7e2d11d6a R100	pycalphad/tests/databases/cuo.tdb	tests/databases/cuo.tdb
+:100644 100644 4692b3c44 4692b3c44 R100	pycalphad/tests/databases/diffusion.tdb	tests/databases/diffusion.tdb
+:100644 100644 5eae88388 5eae88388 R100	pycalphad/tests/databases/femn.tdb	tests/databases/femn.tdb
+:100644 100644 424049d2f 424049d2f R100	pycalphad/tests/databases/femns.tdb	tests/databases/femns.tdb
+:100644 100644 467f809a0 467f809a0 R100	pycalphad/tests/databases/gibbs_phase_rule.tdb	tests/databases/gibbs_phase_rule.tdb
+:100644 100644 e7491fb3e e7491fb3e R100	pycalphad/tests/databases/issue43.tdb	tests/databases/issue43.tdb
+:100644 100644 bda4b8239 bda4b8239 R100	pycalphad/tests/databases/mc_fecocrnbti.tdb	tests/databases/mc_fecocrnbti.tdb
+:100644 100644 b3fc057cc b3fc057cc R100	pycalphad/tests/databases/nbre_liu.tdb	tests/databases/nbre_liu.tdb
+:100644 100644 7cd5d9e75 7cd5d9e75 R100	pycalphad/tests/databases/parameter_filter_test.tdb	tests/databases/parameter_filter_test.tdb
+:100644 100644 6fe29ca81 6fe29ca81 R100	pycalphad/tests/databases/pbsn.tdb	tests/databases/pbsn.tdb
+:100644 100644 dffa33f2a dffa33f2a R100	pycalphad/tests/databases/rose.tdb	tests/databases/rose.tdb
+:100644 100644 c40479260 c40479260 R100	pycalphad/tests/databases/zrlayalo.tdb	tests/databases/zrlayalo.tdb
+:100644 100644 f8ec382f5 9342d3f8e R092	pycalphad/tests/fixtures.py	tests/fixtures.py
+:100644 100644 f7b949ba8 844f25ab8 R099	pycalphad/tests/test_binary_mapping.py	tests/test_binary_mapping.py
+:100644 100644 cec71551a add38f577 R099	pycalphad/tests/test_calculate.py	tests/test_calculate.py
+:100644 100644 b7d508859 743b6a57b R098	pycalphad/tests/test_codegen.py	tests/test_codegen.py
+:100644 100644 2562d0543 e6ebd2215 R097	pycalphad/tests/test_database.py	tests/test_database.py
+:100644 100644 d1fe2827e f195d8093 R099	pycalphad/tests/test_energy.py	tests/test_energy.py
+:100644 100644 cd62b4dca 72aa5aabc R099	pycalphad/tests/test_equilibrium.py	tests/test_equilibrium.py
+:100644 100644 a49b5ded8 c9e08c82d R099	pycalphad/tests/test_mapping_strategy.py	tests/test_mapping_strategy.py
+:100644 100644 ed9bc0e86 774bd22d7 R098	pycalphad/tests/test_mapping_zpf_checks.py	tests/test_mapping_zpf_checks.py
+:100644 100644 cb1eac6ad fb5ef0ec0 R099	pycalphad/tests/test_model.py	tests/test_model.py
+:100644 100644 a645bc76b 8eb3e9750 R096	pycalphad/tests/test_plot.py	tests/test_plot.py
+:100644 100644 3a8223211 50a2ed212 R099	pycalphad/tests/test_property_framework.py	tests/test_property_framework.py
+:100644 100644 d7a594148 7f6c4ecbb R098	pycalphad/tests/test_utils.py	tests/test_utils.py
+:100644 100644 942bef37c 734a8ecfe R098	pycalphad/tests/test_variables.py	tests/test_variables.py
+:100644 100644 149da8a8a 9fb282a4e R099	pycalphad/tests/test_workspace.py	tests/test_workspace.py
+
+commit 729c326fb
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 09:09:39 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:28 2026 -0300
+
+    Deleted notebook created to practice using xarray data type
+
+:100644 000000 7b41307b9 000000000 D	practicing-xarray.py
+
+commit 40ddfd0da
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Jun 12 09:02:49 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:28 2026 -0300
+
+    Modified `cosmic-ray` to be an editable source
+    
+        - Reference for guidance:
+        https://lonelyneuron.substack.com/p/using-python-uv-with-editable-source
+
+:100644 100644 639304166 7bd299ecc M	pyproject.toml
+
+commit f67ce974a
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Thu Jun 11 19:06:04 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:28 2026 -0300
+
+    Initialization of baseline for mutation testing and configuration
+
+:000000 100644 000000000 5d5e426a2 A	mutation-configs.toml
+:000000 100644 000000000 15aedf804 A	mutationdb.sqlite
+
+commit 86e0e753c
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Thu Jun 11 15:52:27 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:28 2026 -0300
+
+    Installed `cosmic-ray` as a dev dependency to run mutation testing
+
+:100644 100644 d08e0e93d 639304166 M	pyproject.toml
+
+commit 17876fbd9
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri May 1 20:31:05 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:27 2026 -0300
+
+    New cells on notebook created to practice xarray
+
+:100644 100644 6e1ecd8f2 7b41307b9 M	practicing-xarray.py
+
+commit aabdf3ca4
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Thu Apr 30 21:39:13 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:27 2026 -0300
+
+    marimo's notebook to play with xarray along video https://www.youtube.com/watch?v=ww4EYv20Ucw
+
+:000000 100644 000000000 6e1ecd8f2 A	practicing-xarray.py
+
+commit 4e0872bb4
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Mar 29 21:58:00 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:27 2026 -0300
+
+    TODO to add error handling in database.py
+
+:100644 100644 74f623b3b 96f1a146e M	pycalphad/io/database.py
+
+commit 6421d74b9
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Mar 29 13:43:21 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:27 2026 -0300
+
+    Simple code to test debugging functionalities in `pycalphad` repository
+
+:000000 100644 000000000 e8961a0e8 A	examples/simple-code.py
+
+commit 8c9db21b3
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Jun 14 13:28:45 2025 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:27 2026 -0300
+
+    `Fe-C` and `Fe-O` notebooks for understanding `pycalphad` internals
+
+:000000 100644 000000000 1cdcb4a19 A	examples/custom-examples/Fe-C-example.ipynb
+:000000 100644 000000000 c68615234 A	examples/custom-examples/Fe-O-example.ipynb
+
+commit fcf2011b9
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Jun 14 13:19:14 2025 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:27 2026 -0300
+
+    `FeC` and `FeO` databases from `Hallsted, 2025`
+    
+    - The SGTE collection of binary datasets - Bengt Hallstedt - Calphad v.89, June 2025, Article 102833
+    - Moved new databases to a dedicated folder `databases` inside folder `examples`
+
+:000000 100644 000000000 b4b621230 A	examples/databases/FeC-23Jac.tdb
+:000000 100644 000000000 5dd3923e7 A	examples/databases/FeO-23Jia.tdb
+
+commit b7ee25372
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Mar 28 21:37:18 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:27 2026 -0300
+
+    Configuration to debug files directly through `pycalphad` source code
+
+:000000 100644 000000000 84b6fd18c A	.vscode/launch.json
+
+commit a41207520
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sun Jun 15 10:43:01 2025 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:58:27 2026 -0300
+
+    Added configuration to produce HTML reports of `coverage.py` using `pytest-cov` plugin, already installed
+    
+    - Syntax discovered via `Diapolo10` comment on a reddit thread: https://www.reddit.com/r/learnpython/comments/yfxc74/comment/iu6fpdu/
+    - Reference in GitHub: https://github.com/Diapolo10/5G00EV25-3001_server/blob/2aa0a16772467971dd9ce5ef1161ae3ebf7f0f20/pyproject.toml#L140C1-L147C4
+
+:100644 100644 ee9aef802 d08e0e93d M	pyproject.toml
+
+commit 7671aa1a5
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Fri Mar 27 16:37:23 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:50:44 2026 -0300
+
+    Added some notes about issues selected by `Luís Otávio` and `Dickson Souza` as being interesting to start collaborating with `pycalphad`
+    
+    Luís Otávio's selection:
+        - 1st place: Issue [Pseudobinary/ternary plotting and condition support # 438]
+        - 2nd place: Issue [ChemSage DAT support: DAT writing # 413]
+        - 3rd place: Issue [write_tdb function outputs incorrect tdb due to symengine # 420]
+    
+    Dickson Souza's selection:
+        - 1st place: Issue [DOC: regenerate examples and small fixes # 321]
+        - 2nd place: Issue [StateVariable: display_units not preserved through pickle # 557]
+        - 3rd place: Issue [Duplicate Species name error when parsing FactSage DAT into Database # 425]
+    
+    To avoid automatic linking of this commit in issues, the links were removed. The link can be generated by appending the issue number to this base URL: https://github.com/pycalphad/pycalphad/issues/{issue-number}
+
+:100644 100644 b43c086ba b79983040 M	open-issues.md
+
+commit be22a38be
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Mar 7 21:32:45 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:50:43 2026 -0300
+
+    List of open issues to explore
+
+:000000 100644 000000000 8ed58cdd6 A	open-issues.html
+:000000 100644 000000000 b43c086ba A	open-issues.md
+
+commit baff5d6a9
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat Jun 6 16:03:13 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:48:38 2026 -0300
+
+    Trying to cross-link Binary Examples to binplot and tdb files explanation documents
+
+:100644 100644 e84d1572a d46222d21 M	examples/1_Phase_Diagrams/1_BinaryExamples.ipynb
+:100644 100644 b907fbaa1 364d40db9 M	examples/1_Phase_Diagrams/Explanations/binplot_and_tdb_files.ipynb
+
+commit db5aad27e
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Tue Jun 2 22:25:22 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:48:38 2026 -0300
+
+    Fixed sections in 1_BinaryExamples.ipynb that describe plots of Al-Fe and Nb-Re systems
+
+:100644 100644 8fedcbdcd e84d1572a M	examples/1_Phase_Diagrams/1_BinaryExamples.ipynb
+
+commit b9383bd82
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Tue Jun 2 21:02:08 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:48:38 2026 -0300
+
+    First test of splitting one examples (`1_BinaryExamples.ipynb`)
+
+:100644 100644 27903f501 c1c86e778 M	docs/examples/1_Phase_Diagrams/index.rst
+:000000 100644 000000000 2ba617234 A	docs/examples/Phase_Diagrams/Explanations/binplot_and_tdb_files.nblink
+:100644 100644 17a94366e 8fedcbdcd M	examples/1_Phase_Diagrams/1_BinaryExamples.ipynb
+:000000 100644 000000000 b907fbaa1 A	examples/1_Phase_Diagrams/Explanations/binplot_and_tdb_files.ipynb
+
+commit 64606b55f
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 1 23:02:09 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:48:38 2026 -0300
+
+    Indication of potential changes in `Phase_Diagrams/1_BinaryExamples.ipynb`
+
+:100644 100644 e6ebba48e 17a94366e M	examples/1_Phase_Diagrams/1_BinaryExamples.ipynb
+
+commit 93cf1d168
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 1 22:36:47 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:48:38 2026 -0300
+
+    Reordering sections of example `Phase_Diagrams/1_BinaryExamples.ipynb`
+
+:100644 100644 67cde94d9 e6ebba48e M	examples/1_Phase_Diagrams/1_BinaryExamples.ipynb
+
+commit 425641bd9
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 1 22:19:47 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:48:38 2026 -0300
+
+    Added description of the content covered in Metastability and Reference states section
+
+:100644 100644 ea19891ab bf48cd180 M	docs/examples/4_Metastability_Reference_States/index.rst
+
+commit cbb3564ac
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 1 22:18:04 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:48:38 2026 -0300
+
+    Added description of the content covered in `3_High_Throughput_Analysis/index.rst` section
+
+:100644 100644 93e2c5437 fcdafe39d M	docs/examples/3_High_Throughput_Analysis/index.rst
+
+commit 5d366d7d4
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Mon Jun 1 22:16:24 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:48:38 2026 -0300
+
+    Added description of the content covered in `2_Computing_Properties/index.rst` section
+
+:100644 100644 2c5c63c51 4f184398b M	docs/examples/2_Computing_Properties/index.rst
+
+commit d83e291a2
+Author:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+AuthorDate: Sat May 30 15:09:15 2026 -0300
+Commit:     Dickson Souza <36424026+disouzam@users.noreply.github.com>
+CommitDate: Thu Jul 2 22:48:38 2026 -0300
+
+    Adding a description in `1_Phase_Diagrams/index.rst`
+
+:100644 100644 d265d73f4 27903f501 M	docs/examples/1_Phase_Diagrams/index.rst
+
+commit - 144d83d3f
+Author:     dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+AuthorDate: Thu Jun 25 16:55:13 2026 -0600
+Commit:     GitHub <noreply@github.com>
+CommitDate: Thu Jun 25 16:55:13 2026 -0600
+
+    Build(deps): Bump actions/checkout from 6 to 7 (#701)
+
+:100644 100644 72ac2ee43 11eb2fceb M	.github/workflows/deploy.yaml
+:100644 100644 f06fbb71f 5672a28b9 M	.github/workflows/docs.yaml
+:100644 100644 8910edaeb 0e94110f2 M	.github/workflows/test.yaml
