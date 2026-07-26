@@ -103,7 +103,6 @@ packages = [
 markers = [
     "solver: mark for tests that verify the correctness of the solver",
 ]
-norecursedirs = ["pycalphad/_dev"]
 filterwarnings = [
     "error",
     "ignore:The type definition character*:UserWarning",
