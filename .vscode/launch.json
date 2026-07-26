@@ -47,7 +47,7 @@
             "cwd": "${workspaceFolder}/worker1",
         },
         {
-            "name": "Debug pytest execution",
+            "name": "Debug pytest execution with reports",
             "type": "debugpy",
             "request": "launch",
             "module": "pytest",
@@ -56,6 +56,19 @@
                 "--template=html1/index.html",
                 "--report=report.html",
                 "-s"
+            ],
+            "justMyCode": false,
+            "stopOnEntry": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+        },
+        {
+            "name": "Debug pytest execution - No reports",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "tests",
             ],
             "justMyCode": false,
             "stopOnEntry": false,
