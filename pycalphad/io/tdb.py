@@ -961,11 +961,13 @@ def read_tdb(dbf, fd):
     fd : file-like
         File descriptor.
     """
+    breakpoint()
+    # Case in TDB files is not relevant at all since all content is converted to upper case before parsing
     lines = fd.read().upper()
     lines = lines.replace('\t', ' ')
     # Split the string by newlines
     splitlines = lines.split('\n')
-    # Remove comments
+    # Remove comments - Why are not empty lines removed?
     splitlines = [k.split('$', 1)[0] for k in splitlines]
     # Remove everything after command delimiter, but keep the delimiter so we can split later
     splitlines = [k.split('!')[0] + ('!' if len(k.split('!')) > 1 else '') for k in splitlines]
