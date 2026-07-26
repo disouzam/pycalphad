@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from pycalphad import binplot, ternplot, Database, variables as v
-from pycalphad.tests.fixtures import select_database, load_database
+from tests.fixtures import select_database, load_database
 from pycalphad.core.utils import instantiate_models, get_state_variables
 from pycalphad.codegen.phase_record_factory import PhaseRecordFactory
 from pycalphad.core.composition_set import CompositionSet
@@ -18,7 +18,7 @@ from pycalphad.mapping.zpf_equilibrium import find_global_min_point
 from pycalphad.mapping.primitives import Point, Node, Direction, ZPFLine, ZPFState, _get_phase_specific_variable
 from pycalphad.mapping.plotting import get_label
 
-import pycalphad.tests.databases
+import tests.databases
 
 """
 These tests goes through the full binary, ternary, step and isopleth process to check if all the intended phase regions show up

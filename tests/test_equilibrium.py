@@ -14,7 +14,7 @@ from pycalphad.codegen.phase_record_factory import PhaseRecordFactory
 from pycalphad.core.solver import SolverBase, Solver
 from pycalphad.core.utils import get_state_variables, instantiate_models
 import pycalphad.variables as v
-from pycalphad.tests.fixtures import load_database, select_database
+from tests.fixtures import load_database, select_database
 
 warnings.simplefilter("always", UserWarning) # so we can test warnings
 

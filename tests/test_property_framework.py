@@ -4,7 +4,7 @@ from pycalphad.core.composition_set import CompositionSet
 from pycalphad.property_framework import as_property, JanssonDerivative, \
     ModelComputedProperty, T0, IsolatedPhase, DormantPhase, ReferenceState
 import pycalphad.variables as v
-from pycalphad.tests.fixtures import select_database, load_database
+from tests.fixtures import select_database, load_database
 import pytest
 import numpy as np
 import numpy.testing

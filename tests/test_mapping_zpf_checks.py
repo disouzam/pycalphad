@@ -10,14 +10,14 @@ from pycalphad.mapping.starting_points import point_from_equilibrium
 from pycalphad.mapping.primitives import ZPFLine, ZPFState, Direction
 import pycalphad.mapping.zpf_equilibrium as zeq
 import pycalphad.mapping.zpf_checks as zchk
-from pycalphad.tests.fixtures import select_database, load_database
+from tests.fixtures import select_database, load_database
 
 
 """
 Tests for the different checks when stepping a zpf line
 
 Each test should be made to encounter all possible routes of the check functions
-    Some check functions will have to be designed to force a condition (ex. check_change_in_phases and check_global_min 
+    Some check functions will have to be designed to force a condition (ex. check_change_in_phases and check_global_min
     requires forcing a new node to not be found)
 """
 
@@ -192,7 +192,7 @@ def test_check_change_in_phases(load_database):
         assert new_node is not None
         assert len(new_node.stable_composition_sets) == 2
         assert np.isclose(new_node.get_property(v.T), 622.456, rtol=1e-3)
-    
+
     # check_change_in_phases for same phase becoming unstable and new node could not be found -> zpf line failed
     extra_args["do_not_create_node"] = True
     new_node = zchk.check_change_in_phases(zpf_line, step_result, axis_data, **extra_args)
