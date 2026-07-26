@@ -1,27 +1,21 @@
-script-to-get-child-pids                                                           3ca28c412 Fixing installation of Cosmic Ray - potential errors introduced during rebases / merges
-remotes/fork/script-to-get-child-pids                                              3ca28c412 Fixing installation of Cosmic Ray - potential errors introduced during rebases / merges
-remotes/fork/meeting-2026-07-18                                                    d0059ece5 Draft
-probable-original-commits-before-failed-rebases                                    6a5980509 Partial update of local distributor with 23934 mutants already checked, with 7363 surviving mutants
-remotes/fork/probable-original-commits-before-failed-rebases                       6a5980509 Partial update of local distributor with 23934 mutants already checked, with 7363 surviving mutants
-work-in-progress-july-02nd-2026                                                    3f068fb94 Partial update  of local distributor with 18729 mutants already checked, with 5753 surviving mutants
-remotes/fork/work-in-progress-july-02nd-2026                                       3f068fb94 Partial update  of local distributor with 18729 mutants already checked, with 5753 surviving mutants
-original-work-in-progress-before-rebases                                           7c44114fc Removed Cosmic-Ray reports
-partial-results-of-10-workers-in-cosmic-ray                                        162d73daa Removed Cosmic-Ray reports
-remotes/fork/partial-results-of-10-workers-in-cosmic-ray                           162d73daa Removed Cosmic-Ray reports
-learning-activities-2026                                                           b384d3f8a Removed extra print statement in conftest that ends up in session output
-remotes/fork/learning-activities-2026                                              b384d3f8a Removed extra print statement in conftest that ends up in session output
-cosmic-ray-configuration                                                           9c0d9f85f Databases of cosmic-ray execution
-remotes/fork/cosmic-ray-configuration                                              9c0d9f85f Databases of cosmic-ray execution
-collaboration-opportunities                                                        7671aa1a5 Added some notes about issues selected by `Luís Otávio` and `Dickson Souza` as being interesting to start collaborating with `pycalphad`
-remotes/fork/collaboration-opportunities                                           7671aa1a5 Added some notes about issues selected by `Luís Otávio` and `Dickson Souza` as being interesting to start collaborating with `pycalphad`
-work-in-progress-issue-674                                                         baff5d6a9 Trying to cross-link Binary Examples to binplot and tdb files explanation documents
-remotes/fork/work-in-progress-issue-674                                            baff5d6a9 Trying to cross-link Binary Examples to binplot and tdb files explanation documents
-reference-for-comparison                                                           73d49d7c6 Removed Cosmic-Ray reports
-website                                                                            238fb1ca8 trigger ci
-remotes/fork/website                                                               238fb1ca8 trigger ci
-develop                                                                            144d83d3f Build(deps): Bump actions/checkout from 6 to 7 (#701)
+july-2026/cleanup-phase11                                                          0863ee335 [MEETING 18-JULY-2026] Draft
+july-2026/cleanup-phase12                                                          0863ee335 [MEETING 18-JULY-2026] Draft
+remotes/fork/july-2026/cleanup-phase11                                             0863ee335 [MEETING 18-JULY-2026] Draft
+remotes/fork/july-2026/cleanup-phase12                                             0863ee335 [MEETING 18-JULY-2026] Draft
+july-2026/cleanup-phase10                                                          5a56a8bf7 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `script-to-get-child-pids` finished
+july-2026/cleanup-phase9                                                           f6d64f4e5 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `probable-original-commits-before-failed-rebases` finished
+july-2026/cleanup-phase8                                                           39635caa1 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `work-in-progress-july-02nd-2026` finished
+july-2026/cleanup-phase7                                                           0f398d1c5 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `original-work-in-progress-before-rebases` finished
+july-2026/cleanup-phase6                                                           0db100427 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `partial-results-of-10-workers-in-cosmic-ray` finished
+july-2026/cleanup-phase5                                                           aa8e54ae7 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `learning-activities-2026` finished
+july-2026/cleanup-phase4                                                           fc2cebfef [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `cosmic-ray-configuration` finished
+july-2026/cleanup-phase3                                                           474df80bc [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `collaboration-opportunities` finished
+july-2026/cleanup-phase2                                                           2b0fa379c [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `work-in-progress-issue-674` finished
+july-2026/cleanup-phase1                                                           e8958a58e [gone] [FORK-ONLY COMMIT] Add list-of-tags.txt and list-of-tags-and-tag-shas.txt files (52 tags right now in fork repo)
+website                                                                            3ada7f926 Bump website to trigger CI
+remotes/fork/website                                                               3ada7f926 Bump website to trigger CI
+develop                                                                            512114b2b DOC: Add Reference section to documentation (#709)
 remotes/fork/HEAD                                                                  -> fork/develop
-remotes/fork/branch-logs-to-clean-up-my-mess                                       144d83d3f Build(deps): Bump actions/checkout from 6 to 7 (#701)
-remotes/fork/develop                                                               144d83d3f Build(deps): Bump actions/checkout from 6 to 7 (#701)
+remotes/fork/develop                                                               512114b2b DOC: Add Reference section to documentation (#709)
 master                                                                             2d4c744dd REL: 0.11.2
 remotes/fork/master                                                                2d4c744dd REL: 0.11.2
