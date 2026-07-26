@@ -47,6 +47,8 @@ dependencies = [
     "tinydb>=3.8",
     "typing_extensions",
     "xarray>=0.11.2",
+    "marimo>=0.23.14",
+    "jupyter>=1.1.1",
 ]
 dynamic = ["version"]
 
