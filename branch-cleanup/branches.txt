@@ -1,21 +1,210 @@
-july-2026/cleanup-phase11                                                          0863ee335 [MEETING 18-JULY-2026] Draft
-july-2026/cleanup-phase12                                                          0863ee335 [MEETING 18-JULY-2026] Draft
-remotes/fork/july-2026/cleanup-phase11                                             0863ee335 [MEETING 18-JULY-2026] Draft
-remotes/fork/july-2026/cleanup-phase12                                             0863ee335 [MEETING 18-JULY-2026] Draft
-july-2026/cleanup-phase10                                                          5a56a8bf7 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `script-to-get-child-pids` finished
-july-2026/cleanup-phase9                                                           f6d64f4e5 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `probable-original-commits-before-failed-rebases` finished
-july-2026/cleanup-phase8                                                           39635caa1 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `work-in-progress-july-02nd-2026` finished
-july-2026/cleanup-phase7                                                           0f398d1c5 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `original-work-in-progress-before-rebases` finished
-july-2026/cleanup-phase6                                                           0db100427 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `partial-results-of-10-workers-in-cosmic-ray` finished
-july-2026/cleanup-phase5                                                           aa8e54ae7 [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `learning-activities-2026` finished
-july-2026/cleanup-phase4                                                           fc2cebfef [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `cosmic-ray-configuration` finished
-july-2026/cleanup-phase3                                                           474df80bc [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `collaboration-opportunities` finished
-july-2026/cleanup-phase2                                                           2b0fa379c [gone] [FORK-ONLY COMMIT] List of tags updated after analysis of branch `work-in-progress-issue-674` finished
-july-2026/cleanup-phase1                                                           e8958a58e [gone] [FORK-ONLY COMMIT] Add list-of-tags.txt and list-of-tags-and-tag-shas.txt files (52 tags right now in fork repo)
-website                                                                            3ada7f926 Bump website to trigger CI
-remotes/fork/website                                                               3ada7f926 Bump website to trigger CI
-develop                                                                            512114b2b DOC: Add Reference section to documentation (#709)
-remotes/fork/HEAD                                                                  -> fork/develop
-remotes/fork/develop                                                               512114b2b DOC: Add Reference section to documentation (#709)
-master                                                                             2d4c744dd REL: 0.11.2
-remotes/fork/master                                                                2d4c744dd REL: 0.11.2
+* july-2026/cleanup-phase12                                                          2de05472e [FORK-ONLY COMMIT] List of branches after analysis to fix mess caused during several failed rebases
+  remotes/fork/july-2026/cleanup-phase12                                             2de05472e [FORK-ONLY COMMIT] List of branches after analysis to fix mess caused during several failed rebases
+  july-2026/cleanup-phase11                                                          0863ee335 [MEETING 18-JULY-2026] Draft
+  remotes/fork/july-2026/cleanup-phase11                                             0863ee335 [MEETING 18-JULY-2026] Draft
+  remotes/bocklund/charged-phase-minimizer-improvements                              99f1c6fe2 Fix labels for "*" phase name in v.X and v.W
+  website                                                                            3ada7f926 Bump website to trigger CI
+  remotes/calphadgroup/website                                                       3ada7f926 Bump website to trigger CI
+  remotes/fork/website                                                               3ada7f926 Bump website to trigger CI
+  remotes/source/website                                                             3ada7f926 Bump website to trigger CI
+  remotes/upstream/website                                                           3ada7f926 Bump website to trigger CI
+  develop                                                                            512114b2b DOC: Add Reference section to documentation (#709)
+  remotes/calphadgroup/HEAD                                                          -> calphadgroup/develop
+  remotes/calphadgroup/develop                                                       512114b2b DOC: Add Reference section to documentation (#709)
+  remotes/fork/HEAD                                                                  -> fork/develop
+  remotes/fork/develop                                                               512114b2b DOC: Add Reference section to documentation (#709)
+  remotes/source/HEAD                                                                -> source/develop
+  remotes/source/develop                                                             512114b2b DOC: Add Reference section to documentation (#709)
+  remotes/upstream/HEAD                                                              -> upstream/develop
+  remotes/upstream/develop                                                           512114b2b DOC: Add Reference section to documentation (#709)
+  remotes/lofalsetti/HEAD                                                            -> lofalsetti/develop
+  remotes/lofalsetti/develop                                                         144d83d3f Build(deps): Bump actions/checkout from 6 to 7 (#701)
+  remotes/bocklund/ENH-expand-conditions-support                                     6faee0976 Fix documentation of moles
+  remotes/bocklund/AI-attempt-basis                                                  4087e392e AI attempt at define-components.
+  remotes/bocklund/TST-roundtrip-units                                               a2c4a7d9b TST: Add test that state variable units survive roundtrip pickle
+  remotes/bocklund/fix-issue670                                                      33d8e9650 Workaround issue 670
+  master                                                                             2d4c744dd REL: 0.11.2
+  remotes/fork/master                                                                2d4c744dd REL: 0.11.2
+  remotes/source/master                                                              2d4c744dd REL: 0.11.2
+  remotes/upstream/master                                                            2d4c744dd REL: 0.11.2
+  remotes/bocklund/fix-missing-state-variables                                       d57dcb59e `calculate()` raises on condition mismatch
+  remotes/nury12n/custom_mapping_plotting                                            43ec7a58e fix non interactive figure warning
+  remotes/bocklund/enh-mass-variable                                                 421a2aee2 Merge branch 'develop' into enh-mass-variable
+  remotes/nury12n/issue_345                                                          3c53c9679 redo unmatched constituents filtering
+  remotes/bocklund/DOC-add-cookbook-examples                                         56b5e44a7 Merge branch 'develop' into DOC-add-cookbook-examples
+  remotes/nury12n/662_fix                                                            e5439e8bf plotting.py: update some docs, use numpy ptp instead of amax-amin
+  remotes/bocklund/manylinux-image-fix                                               89914d290 fix?
+  remotes/bocklund/mass-tests                                                        e3440e19c wip: tests
+  remotes/nury12n/issue_647                                                          1d90bb85b special case cation-neutral and cation-cation-neutral in ionic liquid model
+  remotes/bocklund/website                                                           fb742d030 DOC: Deploy latest docs to website: 0a316df201c3a5921c82f8c41c2bf9f70e46e3a1
+  remotes/bocklund/HEAD                                                              -> bocklund/develop
+  remotes/bocklund/develop                                                           0a316df20 FIX: global min check on invariant calculations in binary and ternary mapping (#639)
+  remotes/nury12n/issue_638                                                          663599b5a add test for binary case add docstrings to test
+  remotes/bocklund/claude/cython-to-cpp-migration-011CV12bQPucnKMHJ6AXMcCx           28c0ac89e FIX: Implement LAPACK callback pattern for C++ hyperplane
+  remotes/bocklund/claude/python-free-threading-equilibrium-011CV12ic4LFToSnbTnnNcCa 19ae4e964 Add Python free threading support for parallel equilibrium calculations
+  remotes/bocklund/claude/optimize-pycalphad-performance-011CUybrhrt8Yic5C5JCQ98F    860a7f9bb Add comprehensive performance analysis and optimization recommendations
+  remotes/bocklund/claude/fuzz-testing-pycalphad-011CUybbF8P7S98jgHdadKjF            3b4fed64e Fix: Improve error handling for undefined mathematical operations in TDB parser
+  remotes/bocklund/claude/fix-issue-438-011CUxxLy2KKFgXmAHbNdXy3                     978b2b3ce Add comprehensive demonstration of pseudobinary/pseudoternary mapping
+  remotes/bocklund/claude/fix-issue-226-011CUxy2fcRfbkTJ4PdG6TVb                     9e0cbef95 Refactor: Rename 'comps' to 'species' where Species objects are used
+  remotes/bocklund/claude/fix-issue-228-011CUxy1PxK2SDYCGfNYQJbf                     8801c4774 FIX: Allow TDB parser to handle DATABASE_INFO without space before apostrophe
+  remotes/bocklund/claude/fix-issue-438-011CUxxVGHr6tjc2TfdTt3Zf                     19ab5407f FIX: Enable partitioned physical properties in order-disorder models
+  remotes/bocklund/claude/fix-issue-279-011CUxxyxV6KCYfbC3medQ2K                     17d125b0b FIX: Adjust v.X(component)=1.0 conditions for numerical stability (issue #279)
+  remotes/bocklund/claude/fix-issue-290-011CUxxhfnZpYwVqcNuvDrGS                     0b42d74af FIX: Make unpack_condition use closed intervals instead of half-open
+  remotes/bocklund/claude/fix-issue-284-011CUxxjK4BuMRsjLSAV27gg                     2139d98ae FIX: Handle parameters=None in _compute_phase_values (fixes #284)
+  remotes/bocklund/claude/fix-issue-420-011CUxxTdr66twpBPkdqKooj                     5e50a73fd FIX: Preserve exponential functions in TDB roundtrip (issue #420)
+  remotes/bocklund/claude/fix-issue-345-011CUxxUa1Sb3heU5VWfngFH                     101c84a2e Fix order-disorder model phase building/filtering error (Issue #345)
+  remotes/bocklund/claude/fix-issue-452-011CUxxHzeTQ3zPSyj47VRut                     0d269e6f2 Fix symbol replacement ordering in Model.build_phase (issue #452)
+  remotes/bocklund/claude/fix-issue-604-011CUwqzd4G4cu5CXMaCzyZy                     7c3bc80c2 FIX: Enable wildcard expansion in metaproperties (IsolatedPhase, DormantPhase, ReferenceState)
+  remotes/bocklund/claude/implement-never-disorder-model-011CUwrP3CgzeEPH9NSpSsG4    98487271b Implement never disorder model support
+  remotes/bocklund/MAINT-pyproject.toml-setup                                        7c658d7e3 Update development installation process
+  remotes/nury12n/mapping_improvements                                               02d1c1849 add tests for str and repr of Point and Node
+  remotes/bocklund/FIX-charged-solid-phases                                          ac1a694d7 testing
+  remotes/bocklund/python3.14                                                        cfa812610 Attempt test on 3.14
+  remotes/bocklund/fix-626-cov                                                       32dd09b3d omit tests from coverage
+  remotes/bocklund/debugaroo                                                         5f10e20e2 a little verbosity
+  remotes/bocklund/debug-CI-test-failures                                            6cd63e1c9 omit only numpy
+  remotes/nury12n/HEAD                                                               -> nury12n/develop
+  remotes/nury12n/develop                                                            9549d911b Merge branch 'develop' of https://github.com/pycalphad/pycalphad into develop
+  remotes/nury12n/high_order_reciprocal_model                                        4a41e9883 Remove prints
+  remotes/bocklund/windows-pickle-fix                                                299149ad2 More debugging
+  remotes/otis/fix-string-parse-errors                                               e03488176 Copy editing
+  remotes/nury12n/workspace_mapping                                                  a160530d0 remove allow_changing_phases argument
+  remotes/otis/dot_derivatives                                                       a441bcbec Update pycalphad/property_framework/tzero.py
+  remotes/otis/renderer_framework                                                    3553f771f MAINT/TST: DeprecationWarning for shift_reference_state
+  remotes/nury12n/model_debugging                                                    a501c57ca minor comment changes
+  remotes/otis/fix-532                                                               c29dbe50f FIX/BLD: Set fetch-depth to zero to guarantee version tags are picked up from SCM in sdist workflow
+  remotes/otis/bump-workflow-wheels                                                  d8cceb3ab MAINT/BLD: Bump OS versions for wheel build/deploy workflow
+  remotes/bocklund/dot_derivatives                                                   bf8694fe9 WIP: polytope: Try clipping particular solution array
+  remotes/nury12n/map_testing                                                        f1563d49d ternplot x and y plotting
+  remotes/otis/trusted-publisher                                                     d28313a3d try without environment
+  remotes/nury12n/nested_mul_add                                                     650e85e3f simplify Mul expr processing
+  remotes/bocklund/mapping                                                           059fbe043 Use package discovery
+  remotes/otis/bump-symengine-0.11.0                                                 bb6b788cc BLD: Allow symengine 0.9.2 as minimum version for backcompat as wheels for older Pythons aren't being built anymore
+  remotes/otis/add_lincomb_conds                                                     ec82d5144 ENH: Conditions: add basic repr
+  remotes/otis/add_devcontainer                                                      53fe00d1d FIX: devcontainer.json: Add build step
+  remotes/otis/fix-large-branching                                                   35413973d TST/FIX: extrapolate_temperature: Confirm Model extrapolation works as expected
+  remotes/otis/fix-cov                                                               7252cd8a7 FIX: pyproject.toml: Put comment on same line
+  remotes/otis/fix-468                                                               97e917b43 TST: test_equilibrium: Gibbs phase rule compliance (gh-468)
+  remotes/otis/fix-425                                                               ab348c8de FIX: Add database for test
+  remotes/otis/custom_starting                                                       4200fa798 FIX: NoMiscibilityGapSolver: Eliminate metastable compsets
+  remotes/bocklund/fix-minimizer-convergence-improvements                            8fbad6c5e Add some verbose debugging info
+  remotes/otis/modular-solver                                                        4d3910d84 WIP: minimizer: Refactor to `construct_equilibrium_system`
+  remotes/otis/website                                                               94c8732e8 DOC: Deploy latest docs to website: f8e39510ffe282ba01171c79a889f053ce7a2811
+  remotes/otis/HEAD                                                                  -> otis/develop
+  remotes/otis/develop                                                               f8e39510f FIX: Make minimizer state more internally consistent (#410)
+  remotes/otis/fix-pyodide                                                           a4b5be173 FIX: Fall back to lambda backend if LLVM is not enabled in SymEngine
+  remotes/bocklund/2021-11-MQMQA-0.9.x                                               5e9f421ad Handle and edge case parsing endmembers
+  remotes/bocklund/master                                                            0b246ad9c REL: 0.10.0
+  remotes/otis/symengine-0921                                                        2b4917406 TST: test_eq_issue43_chempots_misc_gap: Slightly loosen tolerance on flaky test
+  remotes/otis/ionic-solids                                                          fe590f5e7 FIX/BLD: Temporary workaround for https://github.com/pypa/setuptools/issues/3063
+  remotes/bocklund/QKTO                                                              4e1808fb0 Support variable chemical groups
+  remotes/bocklund/ENH-minimizer-rank-deficient-robustness                           cc3b41e33 Printing updates
+  remotes/bocklund/halton-ionic-solids                                               761faad22 Sample between charge neutral endmembers
+  remotes/bocklund/mapping-line-following                                            b99946981 WIP: minimizer mapping
+  remotes/bocklund/model-protocol                                                    f94a36236 Merge InstantiatableModel into AbstractModel
+  remotes/bocklund/grid-refinement                                                   e0a8dc238 Try to help performance by reducing refined grid size
+  remotes/bocklund/charge_constrains                                                 bccc43fcb update the charge_factor
+  remotes/bocklund/maint-bump-sympy-1.9                                              542c3b433 Drop patch of SymPy Piecewise.eval
+  remotes/bocklund/subsystem-support                                                 39d66ded5 Work around tolerance issues in getting ZPF data
+  remotes/otis/custom-statevars                                                      a931c10af FIX: minimizer: Only compute state variable percent-changes for free state variables
+  remotes/otis/add-metastable                                                        7043f23a7 TST: test_eq_needs_metastable_starting: Solver test case which needs metastable augmentation of the starting point
+  remotes/otis/fix-gibbs-phase-rule                                                  f5b973ab3 minimizer/eqsolver: Ensure all phases are included as either stable or metastable
+  remotes/bocklund/MQMQA-0.9.x                                                       75a138f0f Merge branch 'develop' into MQMQA-0.9.x - gh-357
+  remotes/otis/installation-tool-pr-test                                             1a9d6f083 Merge branch 'installation-tool' into installation-tool-pr-test
+  remotes/otis/installation-tool                                                     280222d97 Merge branch 'installation-tool' of https://github.com/bocklund/pycalphad into installation-tool
+  remotes/otis/new-landing                                                           a2718d9c2 Landing page bump
+  remotes/otis/unify-requirements                                                    af8282554 BLD: Remove develop.py per discussion
+  remotes/bocklund/cibuildwheel-test                                                 1ac6f4a7b TEST DO NOT MERGE DEPLOY
+  remotes/bocklund/FAKEBRANCH                                                        89cf5b702 DOC: Deploy latest docs to website: 25bac9112758f4de14447f29dd9c5ece680912c0
+  remotes/bocklund/BLD-use-setuptools_scm                                            8a73bcb04 Change NumPy pin
+  remotes/otis/improve-database-lazy-parsing                                         996d2c339 WIP: Database: lazy parameter parsing
+  remotes/source/improve-database-lazy-parsing                                       996d2c339 WIP: Database: lazy parameter parsing
+  remotes/upstream/improve-database-lazy-parsing                                     996d2c339 WIP: Database: lazy parameter parsing
+  remotes/otis/improve-database-init                                                 e85debeb7 WIP: improve database init time
+  remotes/source/improve-database-init                                               e85debeb7 WIP: improve database init time
+  remotes/upstream/improve-database-init                                             e85debeb7 WIP: improve database init time
+  remotes/otis/symengine-everywhere                                                  d548bdf04 WIP: Use SymEngine in more of Model and Database
+  remotes/otis/sundman-solver                                                        75c66a0df MAINT: callables: Change comment to allow merge
+  remotes/source/sundman-solver                                                      75c66a0df MAINT: callables: Change comment to allow merge
+  remotes/upstream/sundman-solver                                                    75c66a0df MAINT: callables: Change comment to allow merge
+  remotes/bocklund/setuptools-sundman-solver                                         bd7ae31d5 Try to fix Windows path issue
+  remotes/otis/master                                                                c627e5bee CI: Add deployment script
+  remotes/bocklund/sundman-solver                                                    07d38a94c WIP: allow NP conditions from equilibrium API
+  remotes/bocklund/test-fixtures                                                     d65420af5 Switch to fixtures
+  remotes/bocklund/bjb-sundman-solver                                                8c897efd7 WIP: minimizer: Convergence improvements for multicomponent case with tests passing
+  remotes/otis/sundman-solver-checkpoint                                             48f95dd64 Partial implementation of fixed-phase conditions with end-to-end result array
+  remotes/source/sundman-solver-checkpoint                                           48f95dd64 Partial implementation of fixed-phase conditions with end-to-end result array
+  remotes/upstream/sundman-solver-checkpoint                                         48f95dd64 Partial implementation of fixed-phase conditions with end-to-end result array
+  remotes/otis/sundman-solver-03292021                                               d2e68ca0d Checkpoint for partial implementation of fixed-phase condition
+  remotes/source/sundman-solver-03292021                                             d2e68ca0d Checkpoint for partial implementation of fixed-phase condition
+  remotes/upstream/sundman-solver-03292021                                           d2e68ca0d Checkpoint for partial implementation of fixed-phase condition
+  remotes/bocklund/cs_dat_support_linear                                             003739d86 Bump environment-dev.yml Python dependency to 3.7
+  remotes/otis/cs_dat_support_linear                                                 003739d86 Bump environment-dev.yml Python dependency to 3.7
+  remotes/otis/test-pull-reqs                                                        6c6776a44 Change naming
+  remotes/otis/charge-constraints-2                                                  ebac9124d Try to pin ipopt to get further
+  remotes/otis/bump-symengine-061                                                    428a0672e BLD/FIX: travis.yml: Add tinydb as explicit dependency
+  remotes/otis/temporary-fix                                                         09c6ade54 WIP: Model: redlich_kister_sum: Unwrap Piecewise with only one nonzero branch
+  remotes/otis/sundman-solver-zpf                                                    a5d70be06 FIX: Problem: Special-case for zero-length gradient
+  remotes/source/sundman-solver-zpf                                                  a5d70be06 FIX: Problem: Special-case for zero-length gradient
+  remotes/upstream/sundman-solver-zpf                                                a5d70be06 FIX: Problem: Special-case for zero-length gradient
+  remotes/otis/vectorize-parameters                                                  d7df38283 FIX/TST: calculate: parameters vectorization
+  remotes/otis/lowlevelphaserecord                                                   80683bc66 WIP: LowLevelPhaseRecord: Experiment in using cppclass for nogil objects with their own memory management
+  remotes/source/lowlevelphaserecord                                                 80683bc66 WIP: LowLevelPhaseRecord: Experiment in using cppclass for nogil objects with their own memory management
+  remotes/upstream/lowlevelphaserecord                                               80683bc66 WIP: LowLevelPhaseRecord: Experiment in using cppclass for nogil objects with their own memory management
+  remotes/otis/sundman-solver-issue271                                               16fc950ad WIP: Research into convergence failures related to gh-271
+  remotes/source/sundman-solver-issue271                                             16fc950ad WIP: Research into convergence failures related to gh-271
+  remotes/upstream/sundman-solver-issue271                                           16fc950ad WIP: Research into convergence failures related to gh-271
+  remotes/otis/solvers-nlopt                                                         62ae3c181 WIP: half-working solver
+  remotes/source/solvers-nlopt                                                       62ae3c181 WIP: half-working solver
+  remotes/upstream/solvers-nlopt                                                     62ae3c181 WIP: half-working solver
+  remotes/otis/solvers-scipy                                                         36e86e801 WIP: Alternative solver using SciPy minimize trust-constr
+  remotes/source/solvers-scipy                                                       36e86e801 WIP: Alternative solver using SciPy minimize trust-constr
+  remotes/upstream/solvers-scipy                                                     36e86e801 WIP: Alternative solver using SciPy minimize trust-constr
+  remotes/otis/eqcalculate-dof                                                       00c46dc3f MNT: eqcalculate:  and  kwargs are now required
+  remotes/otis/tdb-writing-fixes                                                     915b233cd Switch to a duplicate checking method that's not run by default (i.e. on insert).
+  remotes/otis/db-perf                                                               a7c9b4f14 MNT: tdb/Database: Rename Database.process_parameter_queue() and make it a public API
+  remotes/otis/pitzer                                                                3765d3548 WIP: Model/tdb: Enable support for keywords and include Pitzer in Model energy calculation
+  remotes/source/pitzer                                                              3765d3548 WIP: Model/tdb: Enable support for keywords and include Pitzer in Model energy calculation
+  remotes/upstream/pitzer                                                            3765d3548 WIP: Model/tdb: Enable support for keywords and include Pitzer in Model energy calculation
+  remotes/otis/zpf-sensitivity                                                       188bcee34 FIX: build_functions: Parameter Jacobian definition
+  remotes/source/zpf-sensitivity                                                     188bcee34 FIX: build_functions: Parameter Jacobian definition
+  remotes/upstream/zpf-sensitivity                                                   188bcee34 FIX: build_functions: Parameter Jacobian definition
+  remotes/otis/cs_dat_support                                                        27a097692 WIP: cs_dat: Switch to addParseAction
+  remotes/otis/quasichemical                                                         8ce1c489f ENH: Model/tdb: Preserve order of components for MIXED binary excess models
+  remotes/source/quasichemical                                                       8ce1c489f ENH: Model/tdb: Preserve order of components for MIXED binary excess models
+  remotes/upstream/quasichemical                                                     8ce1c489f ENH: Model/tdb: Preserve order of components for MIXED binary excess models
+  remotes/otis/lambda-without-usp                                                    f66a21601 BLD: setup.py/meta.yaml: Bump symengine version to 0.5.1
+  remotes/otis/chempot-dof                                                           f431df6ca WIP: Model.moles normalization disabled
+  remotes/bocklund/cifixes                                                           4a806751f Revert "Throwaway: Known CI failure"
+  remotes/otis/mu-param-grad                                                         27cbb7e4a WIP: Problem/PhaseRecord: Switch back to builtin parameters vector instead of user-specified
+  remotes/otis/use-lambda-backend                                                    623e6bd24 WIP: Problem/solver: Use approximate Hessians for chemical potential conditions, for now
+  remotes/bocklund/to_compsets                                                       2744ec7aa WIP: Proof of concept for getting CompositionSet objects
+  remotes/otis/to_compsets                                                           2744ec7aa WIP: Proof of concept for getting CompositionSet objects
+  remotes/bocklund/user-starting-point                                               651af0735 TST: Compute an unstable equilibrium inside a miscibility gap
+  remotes/otis/user-starting-point                                                   651af0735 TST: Compute an unstable equilibrium inside a miscibility gap
+  remotes/bocklund/phase-rec-caching                                                 45146ee9d Cherry pick constraints
+  remotes/bocklund/fix-tdb                                                           4ae72c563 tdb dead variable fixup
+  remotes/bocklund/limit-solution-refinement-v2                                      631fef855 WIP/ENH: Only generate lower triangular (symmetry-independent) elements of Hessian
+  remotes/otis/limit-solution-refinement-v2                                          631fef855 WIP/ENH: Only generate lower triangular (symmetry-independent) elements of Hessian
+  remotes/bocklund/limit-solution-refinement                                         0d4287a7a ENH: solver: Limit solution refinement to the case when dual infeasibility and the constraint length scale are similar in magnitude. This for performance reasons.
+  remotes/otis/limit-solution-refinement                                             0d4287a7a ENH: solver: Limit solution refinement to the case when dual infeasibility and the constraint length scale are similar in magnitude. This for performance reasons.
+  remotes/otis/remove-dataset-from-core                                              4e3d31910 FIX: lower_convex_hull: energy indexing
+  remotes/bocklund/charge-constraints                                                ebeef087b Update outdated comment
+  remotes/otis/charge-constraints                                                    ebeef087b Update outdated comment
+  remotes/bocklund/model-instantiation-perf                                          5cb403884 build_reference_model now private, uses internal _dbe
+  remotes/bocklund/relax-dask-reqs                                                   55a2b0c87 Relax dask requirements to the minimum required for `scheduler=` syntax
+  remotes/bocklund/np-conditions                                                     7445a991c WIP/ENH: Problem: Performance enhancements via profiling
+  remotes/otis/np-conditions                                                         7445a991c WIP/ENH: Problem: Performance enhancements via profiling
+  remotes/bocklund/FIX-model-instantiation                                           2ac0e4a11 Fix test
+  remotes/bocklund/hickel                                                            6f65244d8 WIP: tdb: Experimental Hickel temperature support
+  remotes/otis/hickel                                                                6f65244d8 WIP: tdb: Experimental Hickel temperature support
+  remotes/source/hickel                                                              6f65244d8 WIP: tdb: Experimental Hickel temperature support
+  remotes/upstream/hickel                                                            6f65244d8 WIP: tdb: Experimental Hickel temperature support
+  remotes/otis/parallel-compile                                                      d9268b19f WIP: calculate: Parallel compile support
+  remotes/otis/adv-conditions                                                        4f1b22eea WIP: Constraints/equilibrium: Test of Constraints data flow
+  remotes/otis/fix_tdb_templim                                                       d1a41a583 TST: tdb: Show high-temperature limit comma support
+  remotes/otis/revert-149-fix_tdb_templim                                            66a8bb14c Revert "FIX: tdb: Allow TEMPERATURE_LIMITS and commas in low-temperature limits."
+  remotes/otis/cls_chempotprob                                                       250449049 WIP: FixedChemicalPotentialProblem
+  remotes/otis/compiledmodel                                                         399ec7b5b FIX/WIP: CompiledModel: Order-disorder gradient support
+  remotes/otis/feature_fitting                                                       e8834db06 DOC: Cool result with numba vectorize based on advice from @shoyer
+  remotes/otis/feature_theano                                                        788b7b905 WIP: Last bits of Theano attempts
