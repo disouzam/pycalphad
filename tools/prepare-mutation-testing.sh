@@ -29,5 +29,7 @@ for i in $(seq 1 "$NUM_WORKERS"); do
   git add .
   sed -i 's|\.\./cosmic-ray|../../cosmic-ray|g' pyproject.toml
   SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYCALPHAD=0.11.2 uv sync
+  port=$((9000 + i))
+  echo "uv run cosmic-ray --verbosity INFO http-worker --port $port" > launch-worker-"$i".sh
   popd
 done
