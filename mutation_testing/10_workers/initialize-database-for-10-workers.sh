@@ -2,8 +2,9 @@
 # Initialization
 
 force_argument=$1
-database_path="mutation_testing/cosmic-ray-10-workers.sqlite"
-config_path="mutation_testing/cosmic-ray-base-config.toml"
+directory="mutation_testing/10_workers"
+database_path="${directory}/cosmic-ray-10-workers.sqlite"
+config_path="${directory}/cosmic-ray-base-config.toml"
 
 if [ -n "$force_argument" ] && [ "$force_argument" != "--force" ]; then
     echo "Usage: $0 [--force]"

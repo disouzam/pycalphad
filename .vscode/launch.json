@@ -21,8 +21,8 @@
             "module": "cosmic_ray.cli",
             "args": [
                 "exec",
-                "mutation_testing/cosmic-ray-02-workers.toml",
-                "mutation_testing/cosmic-ray-02-workers.sqlite"
+                "mutation_testing/02_workers/cosmic-ray-02-workers.toml",
+                "mutation_testing/02_workers/cosmic-ray-02-workers.sqlite"
             ],
             "justMyCode": true,
             "stopOnEntry": false,
@@ -53,8 +53,8 @@
             "module": "cosmic_ray.cli",
             "args": [
                 "exec",
-                "mutation_testing/cosmic-ray-local-distributor.toml",
-                "mutation_testing/cosmic-ray-for-local-distributor.sqlite"
+                "mutation_testing/local_distributor/cosmic-ray-local-distributor.toml",
+                "mutation_testing/local_distributor/cosmic-ray-for-local-distributor.sqlite"
             ],
             "justMyCode": false,
             "stopOnEntry": true,
