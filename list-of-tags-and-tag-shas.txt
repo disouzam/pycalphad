@@ -1,0 +1,114 @@
+Tags and its tag SHAs (not commit SHAs):
+
+c339c3e58b9fc8bbea12baf354b236409f33a80f refs/tags/0.1
+f77052b5aac69cdfb42bf17fd90cda626454e94f refs/tags/0.1.1
+f441411e9fec47f258286496119296880c9eabac refs/tags/0.1.1.post1
+0b246ad9c40d0106d00b5087ac0928fd77669718 refs/tags/0.10.0
+ebcfbdb4dadfcce98a40db41c444a19842d8849e refs/tags/0.10.1
+a9306dea0ea1175c0ab18bbcf66274ae27ba27fa refs/tags/0.10.2
+034ba9f2d6b766500488a5e72bcab81811a89835 refs/tags/0.10.3
+a5d051db1d32bc9cc8bfb2494939ca0d81303951 refs/tags/0.10.4.post1
+5dc12fcc7acffc4b8c78e602dbc2011a4d135f25 refs/tags/0.10.5
+a667cd784b09c1989ed281c973a60419b4eff25c refs/tags/0.11.0
+b9edbe109796c13607212c7d18d05a5c64b691d5 refs/tags/0.11.1
+2d4c744ddb890e179542894d070150797e13b325 refs/tags/0.11.2
+04a738a1fb0301f4652ecc5b1eccaf7566d25811 refs/tags/0.2
+78a320f91345bd3e3b7525a4b5f541430cb2a806 refs/tags/0.2.1
+97ce351f83b3e6a6b2f1dfee75adbff3b8510211 refs/tags/0.2.1.post1
+cf462b75a5cff1197809310f1cce585a6cf3b4d4 refs/tags/0.2.2
+c38029e77758ea75913eab0c86dc0aa0048b4980 refs/tags/0.2.3
+d87d90a4fcd5915e37f9d3fd66165204ef1b5180 refs/tags/0.2.3.post1
+0319788bac5b61ce0958beb04ea6c8c500b4ed4d refs/tags/0.2.3.post2
+933eedde52b1189586b398e4e61de022f24b2a5a refs/tags/0.2.4
+b7b5fd295032c02d2c01927dca2e5cb803db0b93 refs/tags/0.2.5
+3eb63eb3ba1e112064f6c1bc7b62794ca3bbd49d refs/tags/0.3
+f5adb203a41e1f27ef038dab4b8305c318196625 refs/tags/0.3.1
+83397e79768b73169a0371c7f0667bde4831debd refs/tags/0.3.2
+bdbc93437611afdc15e28dfca6aed7470ffe99e9 refs/tags/0.3.3
+6659750cd2010d02d9de8e84955a2d3052e9b7e3 refs/tags/0.3.4
+6740b0ced527034cafc547aac03b5aae25ab378e refs/tags/0.3.5
+005f5943878eb6a7587f05da93fd57e23b220d2e refs/tags/0.3.6
+f5b4e69d720d318f07b00eb530d8a28b2648076f refs/tags/0.4
+be38975b57401f114ed6c842a6d3efa175519a09 refs/tags/0.4.1
+76761da25e2fd302a81dc33241216622e82ca733 refs/tags/0.4.2
+91b2e6871937f8e8b08ab4d2b0720be12f21a7b2 refs/tags/0.5
+08677825ac194380afd378d13cb546eb23e20bdd refs/tags/0.5.1
+bb677b521ec36c9846927881351f905221b3e6b7 refs/tags/0.5.2
+961ed768652e360f7631d344171ff3bc93da7190 refs/tags/0.5.2.post1
+153cebf5745de251dd837ce9ccc01d6113d0e8dd refs/tags/0.6
+d04069dbfb6a4b3ee4b335de37d72163d86ec850 refs/tags/0.6.1
+58235964be3ba7377f733e3ad15272078bf83dbe refs/tags/0.7
+3946028e366403c4103f1c8484f065937995b27c refs/tags/0.7.1
+2638b2dfef267e909b5ebc3eeb37164052b48943 refs/tags/0.7.1.post1
+6c76aa320f1ccdf1e2dccba6a4cf1f4846184d65 refs/tags/0.7.1.post2
+645083562ad9698bb79fe0d19e9ce7e46012576f refs/tags/0.8
+b9f041d954c2f69911983ce1d4eb516d29afdb25 refs/tags/0.8.1
+c9dc18e41de267f6e7b7f670b895908376962de7 refs/tags/0.8.1.post1
+4b95cbf5035248561afcc330e2c63a06c2c8f600 refs/tags/0.8.2
+56c7db4a3c9d1016b936b881ea916029360cc738 refs/tags/0.8.3
+bf339e75c9c3c781ab8ca35661570b64361fca8a refs/tags/0.8.4
+622d54eb495061adad4cd3b640608b5955befde2 refs/tags/0.8.5
+94997aba7369b905cd9af3e6abb88aeb4ca05b17 refs/tags/0.9.0
+4461299aa5545c166a61d22f5f7bae79616918da refs/tags/0.9.1
+77f25ebe1685369594256d0ae271e070a4f8964d refs/tags/0.9.2
+d89f6473fa1e31ff736e690ace8c5456767de9ec refs/tags/analyzed-branch/reference-for-comparison
+
+
+Tag messages:
+
+0.1             Initial release
+0.1.1           PyPI release
+0.1.1.post1     0.1.1 with GPG signature
+0.10.0          REL: 0.10.0
+0.10.1          REL: 0.10.1
+0.10.2          REL: 0.10.2
+0.10.3          REL: 0.10.3
+0.10.4.post1    REL: 0.10.4.post1
+0.10.5          REL: 0.10.5
+0.11.0          REL: 0.11.0
+0.11.1          REL: 0.11.1
+    
+    Fix missed changelog udpates
+0.11.2          REL: 0.11.2
+0.2             Version 0.2
+0.2.1           Version 0.2.1
+0.2.1.post1     Version 0.2.1.post1
+0.2.2           Version 0.2.2
+0.2.3           Version 0.2.3
+0.2.3.post1     Version 0.2.3.post1
+0.2.3.post2     Version 0.2.3.post2
+0.2.4           Version 0.2.4
+0.2.5           Version 0.2.5
+0.3             Version 0.3
+0.3.1           Version 0.3.1
+0.3.2           Version 0.3.2
+0.3.3           Version 0.3.3
+0.3.4           Version 0.3.4
+0.3.5           Version 0.3.5
+0.3.6           Version 0.3.6
+0.4             Version 0.4
+0.4.1           Version 0.4.1
+0.4.2           Version 0.4.2
+0.5             Version 0.5
+0.5.1           Version 0.5.1
+0.5.2           Version 0.5.2
+0.5.2.post1     BLD: MANIFEST.in: Fix path to recursive include of Cython files
+0.6             Version 0.6
+0.6.1           DOC: Changes: 0.6.1 changelog
+0.7             Version 0.7
+0.7.1           Version 0.7.1
+0.7.1.post1     Version 0.7.1.post1
+0.7.1.post2     Version 0.7.1.post2
+0.8             Version 0.8
+0.8.1           Version 0.8.1
+0.8.1.post1     Version 0.8.1.post1
+0.8.2           Version 0.8.2
+0.8.3           Version 0.8.3
+0.8.4           Version 0.8.4
+0.8.5           Version 0.8.5
+0.9.0           REL: 0.9.0
+0.9.1           REL: 0.9.1
+0.9.2           REL: 0.9.2
+analyzed-branch/reference-for-comparison Branch `reference-for-comparison` was fully analyzed and its commits were cherry-picked onto the develop branch (at 512114b2bb44c711685c6838668b29fa01fba5eb).
+    
+    This tag serves to preserve commit history for awhile but doesn't need any work from now (2026-07-26).
