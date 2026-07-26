@@ -52,6 +52,7 @@ bf339e75c9c3c781ab8ca35661570b64361fca8a refs/tags/0.8.4
 4461299aa5545c166a61d22f5f7bae79616918da refs/tags/0.9.1
 77f25ebe1685369594256d0ae271e070a4f8964d refs/tags/0.9.2
 650a5cd2a747de877c7eaa79b2a750e9064444ca refs/tags/analyzed-branch/collaboration-opportunities
+0760585f0c07d9f04f9240f1a659106bed81b94e refs/tags/analyzed-branch/cosmic-ray-configuration
 d89f6473fa1e31ff736e690ace8c5456767de9ec refs/tags/analyzed-branch/reference-for-comparison
 5eddd607d73592aaa2539994c30555445718a257 refs/tags/analyzed-branch/work-in-progress-issue-674
 
@@ -112,6 +113,9 @@ Tag messages:
 0.9.1           REL: 0.9.1
 0.9.2           REL: 0.9.2
 analyzed-branch/collaboration-opportunities Branch `collaboration-opportunities` was fully analyzed and its commits were cherry-picked onto the develop branch (at 512114b2bb44c711685c6838668b29fa01fba5eb).
+    
+    This tag serves to preserve commit history for awhile but doesn't need any work from now (2026-07-26).
+analyzed-branch/cosmic-ray-configuration Branch `cosmic-ray-configuration` was fully analyzed and its commits were cherry-picked onto the develop branch (at 512114b2bb44c711685c6838668b29fa01fba5eb).
     
     This tag serves to preserve commit history for awhile but doesn't need any work from now (2026-07-26).
 analyzed-branch/reference-for-comparison Branch `reference-for-comparison` was fully analyzed and its commits were cherry-picked onto the develop branch (at 512114b2bb44c711685c6838668b29fa01fba5eb).
