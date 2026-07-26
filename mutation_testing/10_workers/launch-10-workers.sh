@@ -5,4 +5,5 @@
 # cd worker1 && bash launch-worker-1.sh
 # cd worker2 && bash launch-worker-2.sh and so on...
 # In a separate terminal, run current script to execute the mutation testing:
-uv run cosmic-ray exec mutation_testing/cosmic-ray-10-workers.toml mutation_testing/cosmic-ray-10-workers.sqlite
+directory="mutation_testing/10_workers"
+uv run cosmic-ray exec ${directory}/cosmic-ray-10-workers.toml ${directory}/cosmic-ray-10-workers.sqlite
