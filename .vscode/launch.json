@@ -22,6 +22,7 @@
                 "mutation_testing/cosmic-ray-02-workers.toml",
                 "mutation_testing/cosmic-ray-02-workers.sqlite"
             ],
+            "justMyCode": false,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
         },
@@ -37,6 +38,7 @@
                 "--port",
                 "9001"
             ],
+            "justMyCode": false,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/worker1",
         }
