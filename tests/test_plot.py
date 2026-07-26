@@ -5,7 +5,7 @@ The plot test module verifies that the plotting module produces plots without er
 import matplotlib.pyplot as plt
 plt.switch_backend('Agg')
 from pycalphad import binplot, eqplot, equilibrium
-from pycalphad.tests.fixtures import select_database, load_database
+from tests.fixtures import select_database, load_database
 import pycalphad.variables as v
 from matplotlib.axes import Axes
 

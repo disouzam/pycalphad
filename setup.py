@@ -48,7 +48,7 @@ setup(
     cmdclass={"build_ext": Build},
     package_data={
         'pycalphad.core': ['*.pxd'] + (['*.pyx', '*.c', '*.h', '*.cpp', '*.hpp'] if os.getenv('CYTHON_COVERAGE', False) else []),
-        'pycalphad.tests.databases': ['*'],
+        'tests.databases': ['*'],
     },
     # This include is for the compiler to find the *.h files during the build_ext phase
     # the include must contain a symengine directory with header files

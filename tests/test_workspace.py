@@ -5,7 +5,7 @@ from pycalphad.core.conditions import ConditionError
 from pycalphad.core.composition_set import CompositionSet
 from pycalphad.property_framework import as_property, ComputableProperty, T0, IsolatedPhase, DormantPhase
 from pycalphad.property_framework.units import Q_, unit_conversion_context
-from pycalphad.tests.fixtures import load_database, select_database, ConvergenceFailureSolver
+from tests.fixtures import load_database, select_database, ConvergenceFailureSolver
 import pytest
 from collections import Counter
 
