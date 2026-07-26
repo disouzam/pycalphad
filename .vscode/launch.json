@@ -17,9 +17,28 @@
             "type": "debugpy",
             "request": "launch",
             "module": "cosmic_ray.cli",
-            "args": ["exec", "mutation_testing/cosmic-ray-02-workers.toml", "mutation_testing/cosmic-ray-02-workers.sqlite"],
+            "args": [
+                "exec",
+                "mutation_testing/cosmic-ray-02-workers.toml",
+                "mutation_testing/cosmic-ray-02-workers.sqlite"
+            ],
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
+        },
+        {
+            "name": "Debug Cosmic-Ray worker",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "cosmic_ray.cli",
+            "args": [
+                "--verbosity",
+                "DEBUG",
+                "http-worker",
+                "--port",
+                "9001"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/worker1",
         }
     ]
 }
