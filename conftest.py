@@ -11,11 +11,12 @@ def pytest_configure(config):
     """
     local_config = config
     now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    report_name = local_config.option.report[0]
-    prefix=report_name[:-5]
-    extension = report_name[-5:]
-    report_name_with_time_stamp = f"{prefix}_{now}{extension}"
-    local_config.option.report[0] = report_name_with_time_stamp
+    if len(local_config.option.report) >0:
+        report_name = local_config.option.report[0]
+        prefix=report_name[:-5]
+        extension = report_name[-5:]
+        report_name_with_time_stamp = f"{prefix}_{now}{extension}"
+        local_config.option.report[0] = report_name_with_time_stamp
 
     try:
         import pytest_reporter_html1.plugin as reporter_plugin
