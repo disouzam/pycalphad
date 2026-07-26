@@ -5,4 +5,7 @@ excluded-modules = []
 test-command = "uv run python -m pytest tests"
 
 [cosmic-ray.distributor]
-name = "local"
+name = "http"
+
+[cosmic-ray.distributor.http]
+worker-urls = ["http://localhost:9000", "http://localhost:9001"]
