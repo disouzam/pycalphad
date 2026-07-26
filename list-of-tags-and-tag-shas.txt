@@ -56,6 +56,7 @@ bf339e75c9c3c781ab8ca35661570b64361fca8a refs/tags/0.8.4
 b696d2d4d6a2f55aa6bac113ae234a39ae60dca2 refs/tags/analyzed-branch/learning-activities-2026
 6aed75797cc94c9084a9a87686cd73eba02fbc4c refs/tags/analyzed-branch/original-work-in-progress-before-rebases
 443cfc8d02d20bde9b3f343bb12f363bcff34d35 refs/tags/analyzed-branch/partial-results-of-10-workers-in-cosmic-ray
+3688175983caf84f97471221adc0a5e783a300ec refs/tags/analyzed-branch/probable-original-commits-before-failed-rebases
 d89f6473fa1e31ff736e690ace8c5456767de9ec refs/tags/analyzed-branch/reference-for-comparison
 5eddd607d73592aaa2539994c30555445718a257 refs/tags/analyzed-branch/work-in-progress-issue-674
 03c975393f2aad9c5683c48a60bb4c80e41fbd38 refs/tags/analyzed-branch/work-in-progress-july-02nd-2026
@@ -132,6 +133,10 @@ analyzed-branch/original-work-in-progress-before-rebases Branch `original-work-i
 analyzed-branch/partial-results-of-10-workers-in-cosmic-ray Branch `partial-results-of-10-workers-in-cosmic-ray` was fully analyzed and its commits were cherry-picked onto the develop branch (at 512114b2bb44c711685c6838668b29fa01fba5eb).
     
     This tag serves to preserve commit history for awhile but doesn't need any work from now (2026-07-26).
+analyzed-branch/probable-original-commits-before-failed-rebases Branch `probable-original-commits-before-failed-rebases` was fully analyzed and its commits were cherry-picked onto the develop branch (at 512114b2bb44c711685c6838668b29fa01fba5eb).
+    - This branch was successfully rebased
+    - This tag serves to preserve commit history for awhile but doesn't need any work from now (2026-07-26).
+    .
 analyzed-branch/reference-for-comparison Branch `reference-for-comparison` was fully analyzed and its commits were cherry-picked onto the develop branch (at 512114b2bb44c711685c6838668b29fa01fba5eb).
     
     This tag serves to preserve commit history for awhile but doesn't need any work from now (2026-07-26).
