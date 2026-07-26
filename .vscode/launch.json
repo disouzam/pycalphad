@@ -11,6 +11,15 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "cwd": "${fileDirname}",
+        },
+        {
+            "name": "Debug Cosmic-Ray execution",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "cosmic_ray.cli",
+            "args": ["exec", "mutation_testing/cosmic-ray-02-workers.toml", "mutation_testing/cosmic-ray-02-workers.sqlite"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
         }
     ]
 }
