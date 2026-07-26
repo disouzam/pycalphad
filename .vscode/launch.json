@@ -25,7 +25,7 @@
                 "mutation_testing/cosmic-ray-02-workers.sqlite"
             ],
             "justMyCode": false,
-            "stopOnEntry": false,
+            "stopOnEntry": true,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
         },
@@ -42,7 +42,7 @@
                 "9001"
             ],
             "justMyCode": false,
-            "stopOnEntry": false,
+            "stopOnEntry": true,
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/worker1",
         },
