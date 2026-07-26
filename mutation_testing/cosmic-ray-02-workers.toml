@@ -2,7 +2,7 @@
 module-path = "pycalphad"
 timeout = 30.0
 excluded-modules = []
-test-command = "uv run python -m pytest tests --template=html1/index.html --report=report_$(python -c 'from datetime import datetime; print(datetime.now().strftime("%Y%m%d"))').html"
+test-command = "uv run python -m pytest tests --template=html1/index.html --report=report.html -s"
 
 [cosmic-ray.distributor]
 name = "http"
