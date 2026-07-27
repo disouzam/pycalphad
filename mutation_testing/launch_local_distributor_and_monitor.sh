@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function stop_distributor() {
     local distributor_pid="$1"

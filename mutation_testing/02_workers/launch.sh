@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # From pycalphad root's folder, run this command:
 # bash mutation_testing/prepare-worker-folders.sh 2
 # Then, open 2 terminals and run the custom script in each worker folder:

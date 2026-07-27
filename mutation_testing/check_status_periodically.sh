@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script checks the status of mutation testing at a configurable interval (default: 90 seconds).
 interval_seconds="90"
