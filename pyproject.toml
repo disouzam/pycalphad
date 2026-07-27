@@ -144,3 +144,5 @@ ignore_errors = true # workaround for https://github.com/cython/cython/issues/55
 # '[tool.setuptools.scm]' needs to be the last line because
 # we do an append operation in the deploy.yaml GitHub Actions workflow
 [tool.setuptools_scm]
+# 1. Tell Git to ONLY look at tags starting with 'v' and a number
+git_describe_command = "git describe --tags --long --match '[0-9]*'"
