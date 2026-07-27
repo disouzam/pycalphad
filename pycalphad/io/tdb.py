@@ -961,7 +961,6 @@ def read_tdb(dbf, fd):
     fd : file-like
         File descriptor.
     """
-    breakpoint()
     # Case in TDB files is not relevant at all since all content is converted to upper case before parsing
     lines = fd.read().upper()
     lines = lines.replace('\t', ' ')
