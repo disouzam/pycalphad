@@ -17,5 +17,8 @@
             "url": "https://github.com/pycalphad/pycalphad/pull/<num>",
             "title": "GitHub Pull Requests"
         }
-    ]
+    ],
+    "better-todo-tree.tree.showBadges": true,
+    "better-todo-tree.tree.showCountsInTree": true,
+    "better-todo-tree.tree.scanMode": "open files"
 }
