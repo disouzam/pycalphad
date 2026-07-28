@@ -68,16 +68,13 @@ while [ $python_files_changed -lt 2 ]; do
         echo -e "\n\e[32mLocal distributor PID: ${distributor_pid}\e[0m"
     fi
 
-    # Leave the monitor running locking the thread
-    bash mutation_testing/check_status_periodically.sh "$1" --single-check
-    monitor_pid=$!
-    echo -e "\n\e[32mMonitor PID: ${monitor_pid}\e[0m"
-
     trap 'stop_distributor "${distributor_pid}"' SIGINT SIGTERM EXIT
 
-    wait "${monitor_pid}"
+    echo -e "\nLeave the monitor running locking the thread..."
+    bash mutation_testing/check_status_periodically.sh "$1" --single-check
+
     monitor_rc=$?
-    echo -e "\n\e[33mMonitor ${monitor_pid} return code: ${monitor_rc}\e[0m"
+    echo -e "\n\e[33mMonitor return code: ${monitor_rc}\e[0m"
 
     if [ $monitor_rc -eq 1 ]; then
         stop_distributor "${distributor_pid}"
