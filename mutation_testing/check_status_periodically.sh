@@ -46,7 +46,14 @@ while true; do
         stopped_at=""
         current_interval="$interval_seconds"
     fi
-    echo -e "\n$(git add "*.lock" && git add "*.sqlite" && git add "report*.html" && git add "pytest*.txt" && git add "*.sh" && git st | tail -n10 | grep modified:)\n"
+
+    git add "*.lock"
+    git add "*.sqlite"
+    git add "report*.html"
+    git add "pytest*.txt"
+    git add "*.sh"
+    echo -e "\n$(git st | tail -n10 | grep modified:)\n"
+
     git dw
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
     for ((i=current_interval; i>0; i--)); do
