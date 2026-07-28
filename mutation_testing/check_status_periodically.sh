@@ -47,20 +47,40 @@ while true; do
         current_interval="$interval_seconds"
     fi
 
-    result_lock=$(git add "*.lock")
-    echo -e "Adding lock files to git staging area - Return code: ${result_lock}"
+    result=1
+    while [ $result -ne 0 ]; do
+        git add "*.lock"
+        result=$?
+        echo -e "Adding lock files to git staging area - Return code: " $result
+    done
 
-    result_sqlite=$(git add "*.sqlite")
-    echo -e "Adding sqlite files to git staging area - Return code: ${result_sqlite}"
+    result=1
+    while [ $result -ne 0 ]; do
+        git add "*.sqlite"
+        result=$?
+        echo -e "Adding sqlite files to git staging area - Return code: " $result
+    done
 
-    result_report=$(git add "report*.html")
-    echo -e "Adding report files to git staging area - Return code: ${result_report}"
+    result=1
+    while [ $result -ne 0 ]; do
+        { find . -name "report*.html" | xargs -I {} git add {}; }
+        result=$?
+        echo -e "Adding html files to git staging area - Return code: " $result
+    done
 
-    result_pytest=$(git add "pytest*.txt")
-    echo -e "Adding pytest files to git staging area - Return code: ${result_pytest}"
+    result=1
+    while [ $result -ne 0 ]; do
+        { find . -name "pytest*.txt" | xargs -I {} git add {}; }
+        result=$?
+        echo -e "Adding pytest files to git staging area - Return code: " $result
+    done
 
-    result_sh=$(git add "*.sh")
-    echo -e "Adding shell scripts to git staging area - Return code: ${result_sh}"
+    result=1
+    while [ $result -ne 0 ]; do
+        git add "*.sh"
+        result=$?
+        echo -e "Adding shell scripts to git staging area - Return code: " $result
+    done
 
     echo -e "\n$(git st | tail -n10 | grep modified:)\n"
 
