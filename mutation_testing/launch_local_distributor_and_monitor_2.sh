@@ -34,14 +34,6 @@ function stop_monitor() {
     fi
 }
 
-function cleanup() {
-    local distributor_pid="$1"
-    local monitor_pid="$2"
-    echo -e "\n\e[33mCleaning up...\e[0m"
-    stop_distributor "${distributor_pid}"
-    stop_monitor "${monitor_pid}"
-    exit 1
-}
 
 function get_working_tree_status() {
     local file_extension="$1"
@@ -76,11 +68,12 @@ while [ $python_files_changed -lt 2 ]; do
         echo -e "\n\e[32mLocal distributor PID: ${distributor_pid}\e[0m"
     fi
 
-    bash mutation_testing/check_status_periodically.sh "$1" --single-check &
+    # Leave the monitor running locking the thread
+    bash mutation_testing/check_status_periodically.sh "$1" --single-check
     monitor_pid=$!
     echo -e "\n\e[32mMonitor PID: ${monitor_pid}\e[0m"
 
-    trap 'cleanup "${distributor_pid}" "${monitor_pid}"' SIGINT SIGTERM EXIT
+    trap 'stop_distributor "${distributor_pid}"' SIGINT SIGTERM EXIT
 
     wait "${monitor_pid}"
     monitor_rc=$?
