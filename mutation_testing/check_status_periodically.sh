@@ -47,11 +47,21 @@ while true; do
         current_interval="$interval_seconds"
     fi
 
-    git add "*.lock"
-    git add "*.sqlite"
-    git add "report*.html"
-    git add "pytest*.txt"
-    git add "*.sh"
+    result_lock=$(git add "*.lock")
+    echo -e "Adding lock files to git staging area - Return code: ${result_lock}"
+
+    result_sqlite=$(git add "*.sqlite")
+    echo -e "Adding sqlite files to git staging area - Return code: ${result_sqlite}"
+
+    result_report=$(git add "report*.html")
+    echo -e "Adding report files to git staging area - Return code: ${result_report}"
+
+    result_pytest=$(git add "pytest*.txt")
+    echo -e "Adding pytest files to git staging area - Return code: ${result_pytest}"
+
+    result_sh=$(git add "*.sh")
+    echo -e "Adding shell scripts to git staging area - Return code: ${result_sh}"
+
     echo -e "\n$(git st | tail -n10 | grep modified:)\n"
 
     git dw
