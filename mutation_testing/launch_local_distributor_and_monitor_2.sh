@@ -66,10 +66,9 @@ while [ $python_files_changed -lt 2 ]; do
             echo -e "Restoring git state before starting the distributor - Return code: " $result
         done
 
-        sqlite_status=$(get_working_tree_status sqlite)
         python_status=$(get_working_tree_status py)
 
-        if [ "$sqlite_status" != "" ] || [ "$python_status" != "" ]; then
+        if [ "$python_status" != "" ]; then
             echo -e "\n\e[33mCan't start local distributor. There are uncommitted changes in the working tree.\e[0m"
             exit 4
         fi
