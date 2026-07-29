@@ -14,6 +14,7 @@ function stop_distributor() {
             kill -9 "${distributor_pid}" 2>/dev/null || true
             ps -p "${distributor_pid}"
             result=$?
+            echo -e "Checking if distributor is still running - Return code: " $result
         done
 
         result=1
@@ -24,24 +25,10 @@ function stop_distributor() {
             if [[ $result -ne 0 && -f ".git/index.lock" ]]; then
                 rm -f '.git/index.lock'
             fi
+            echo -e "Restoring git state (inside stop_distributor function) - Return code: " $result
         done
     fi
 }
-
-function stop_monitor() {
-    local monitor_pid="$1"
-    if [ -n "${monitor_pid}" ]; then
-        echo -e "\n\e[33mStopping monitor with PID: ${monitor_pid}...\e[0m"
-        kill -SIGTERM -- "-${monitor_pid}" 2>/dev/null || true
-        sleep 3
-        kill -SIGKILL -- "-${monitor_pid}" 2>/dev/null || true
-        sleep 3
-        kill -9 "${monitor_pid}" 2>/dev/null || true
-        sleep 3
-        wait "${monitor_pid}" 2>/dev/null || true
-    fi
-}
-
 
 function get_working_tree_status() {
     local file_extension="$1"
@@ -50,6 +37,7 @@ function get_working_tree_status() {
     while [ $result -ne 0 ]; do
         status_filtered="<$(git status -uall --renames -s | grep ${file_extension} | head -n 1)>"
         result=$?
+        echo -e "Checking working tree status for ${file_extension} files - Return code: " $result
     done
 
     working_tree_status="${status_filtered:2:1}"
@@ -64,6 +52,7 @@ result=1
 while [ $result -ne 0 ]; do
     python_files_changed=$(git status -uall --renames -s | grep -E '.[[:alpha:]] .*\.py' | wc -l)
     result=$?
+    echo -e "Checking for modified Python files before starting the distributor - Return code: " $result
 done
 
 while [ $python_files_changed -lt 2 ]; do
@@ -75,7 +64,9 @@ while [ $python_files_changed -lt 2 ]; do
         while [ $result -ne 0 ]; do
             git restore .
             result=$?
+            echo -e "Restoring git state before starting the distributor - Return code: " $result
         done
+
         sqlite_status=$(get_working_tree_status sqlite)
         python_status=$(get_working_tree_status py)
 
@@ -108,6 +99,7 @@ while [ $python_files_changed -lt 2 ]; do
         while [ $result -ne 0 ]; do
             git restore .
             result=$?
+            echo -e "Restoring git state - Return code: " $result
         done
 
         echo -e "\n\n\e[31m#######################################################################"
@@ -118,6 +110,7 @@ while [ $python_files_changed -lt 2 ]; do
         while [ $result -ne 0 ]; do
             python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
             result=$?
+            echo -e "Checking for modified Python files - Return code: " $result
         done
 
         if [ $python_files_changed -gt 0 ]; then
@@ -135,12 +128,14 @@ while [ $python_files_changed -lt 2 ]; do
         while [ $result -ne 0 ]; do
             git restore .
             result=$?
+            echo -e "Restoring git state - Return code: " $result
         done
 
         result=1
         while [ $result -ne 0 ]; do
             python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
             result=$?
+            echo -e "Checking for modified Python files - Return code: " $result
         done
 
         if [ $python_files_changed -gt 0 ]; then

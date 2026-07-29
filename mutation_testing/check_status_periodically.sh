@@ -86,12 +86,14 @@ while true; do
     while [ $result -ne 0 ]; do
         echo -e "\n$(git st | tail -n10 | grep modified:)\n"
         result=$?
+        echo -e "Checking for modified files in git working tree - Return code: " $result
     done
 
     result=1
     while [ $result -ne 0 ]; do
         git diff -w --unified=0
         result=$?
+        echo -e "Checking for differences in git working tree - Return code: " $result
     done
 
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
@@ -101,6 +103,7 @@ while true; do
         while [ $result -ne 0 ]; do
             python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
             result=$?
+            echo -e "Checking for modified Python files - Return code: " $result
         done
 
         if [[ "$python_files_changed" -gt 1 ]]; then
