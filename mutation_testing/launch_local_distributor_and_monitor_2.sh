@@ -1,22 +1,30 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 
 function stop_distributor() {
     local distributor_pid="$1"
     if [ -n "${distributor_pid}" ]; then
         echo -e "\n\e[33mStopping local distributor with PID: ${distributor_pid}...\e[0m"
-        kill -SIGTERM -- "-${distributor_pid}" 2>/dev/null || true
-        sleep 3
-        kill -SIGKILL -- "-${distributor_pid}" 2>/dev/null || true
-        sleep 3
-        kill -9 "${distributor_pid}" 2>/dev/null || true
-        sleep 3
-        wait "${distributor_pid}" 2>/dev/null || true
-        git restore .
-        sleep 3
-        git restore .
-        rm -rf '.git/index.lock'
-        git restore .
-        sleep 3
+
+        ps -p "${distributor_pid}"
+        result=$?
+
+        while [ $result -eq 0 ]; do
+            kill -SIGTERM -- "-${distributor_pid}" 2>/dev/null || true
+            kill -SIGKILL -- "-${distributor_pid}" 2>/dev/null || true
+            kill -9 "${distributor_pid}" 2>/dev/null || true
+            ps -p "${distributor_pid}"
+            result=$?
+        done
+
+        result=1
+        while [ $result -ne 0 ]; do
+            git restore .
+            result=$?
+
+            if [[ $result -ne 0 && -f ".git/index.lock" ]]; then
+                rm -f '.git/index.lock'
+            fi
+        done
     fi
 }
 
@@ -37,7 +45,13 @@ function stop_monitor() {
 
 function get_working_tree_status() {
     local file_extension="$1"
-    status_filtered="<$(git status -s | grep ${file_extension} | head -n 1)>"
+
+    result=1
+    while [ $result -ne 0 ]; do
+        status_filtered="<$(git status -uall --renames -s | grep ${file_extension} | head -n 1)>"
+        result=$?
+    done
+
     working_tree_status="${status_filtered:2:1}"
     echo $working_tree_status
 }
@@ -46,13 +60,22 @@ current_pid=$(echo $$)
 echo -e "\n\e[32mCurrent script PID: ${current_pid}\e[0m"
 
 distributor_pid=""
-python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+result=1
+while [ $result -ne 0 ]; do
+    python_files_changed=$(git status -uall --renames -s | grep -E '.[[:alpha:]] .*\.py' | wc -l)
+    result=$?
+done
+
 while [ $python_files_changed -lt 2 ]; do
 
     if [ -n "${distributor_pid}" ]; then
         echo -e "\n\e[33mLocal distributor is already running with PID: ${distributor_pid}.\e[0m"
     else
-        git restore .
+        result=1
+        while [ $result -ne 0 ]; do
+            git restore .
+            result=$?
+        done
         sqlite_status=$(get_working_tree_status sqlite)
         python_status=$(get_working_tree_status py)
 
@@ -80,11 +103,22 @@ while [ $python_files_changed -lt 2 ]; do
         stop_distributor "${distributor_pid}"
         echo -e "Waiting for 5 seconds before restoring the git state...(at entry)"
         sleep 5
-        git restore .
+
+        result=1
+        while [ $result -ne 0 ]; do
+            git restore .
+            result=$?
+        done
+
         echo -e "\n\n\e[31m#######################################################################"
         echo -e "\nMonitor return code 1"
         echo -e "\nMonitor detected no progress. Stopping the local distributor."
-        python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+
+        result=1
+        while [ $result -ne 0 ]; do
+            python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+            result=$?
+        done
 
         if [ $python_files_changed -gt 0 ]; then
             echo -e "\nThere are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
@@ -96,8 +130,18 @@ while [ $python_files_changed -lt 2 ]; do
         printf '\a'
         echo -e "Waiting for 5 seconds before restoring the git state... (in the middle)"
         sleep 5
-        git restore .
-        python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+
+        result=1
+        while [ $result -ne 0 ]; do
+            git restore .
+            result=$?
+        done
+
+        result=1
+        while [ $result -ne 0 ]; do
+            python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+            result=$?
+        done
 
         if [ $python_files_changed -gt 0 ]; then
             echo -e "\n\n\e[31m#######################################################################"
