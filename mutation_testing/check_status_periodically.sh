@@ -56,13 +56,6 @@ while true; do
 
     result=1
     while [ $result -ne 0 ]; do
-        git add "*.sqlite"
-        result=$?
-        echo -e "Adding sqlite files to git staging area - Return code: " $result
-    done
-
-    result=1
-    while [ $result -ne 0 ]; do
         { find . -name "report*.html" | xargs -I {} git add {}; }
         result=$?
         echo -e "Adding html files to git staging area - Return code: " $result
