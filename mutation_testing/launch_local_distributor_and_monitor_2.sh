@@ -37,7 +37,6 @@ function get_working_tree_status() {
     while [ $result -ne 0 ]; do
         status_filtered="<$(git status -uall --renames -s | grep ${file_extension} | head -n 1)>"
         result=$?
-        echo -e "Checking working tree status for ${file_extension} files - Return code: " $result
     done
 
     working_tree_status="${status_filtered:2:1}"
