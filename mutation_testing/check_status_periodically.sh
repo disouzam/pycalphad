@@ -82,12 +82,27 @@ while true; do
         echo -e "Adding shell scripts to git staging area - Return code: " $result
     done
 
-    echo -e "\n$(git st | tail -n10 | grep modified:)\n"
+    result=1
+    while [ $result -ne 0 ]; do
+        echo -e "\n$(git st | tail -n10 | grep modified:)\n"
+        result=$?
+    done
 
-    git dw
+    result=1
+    while [ $result -ne 0 ]; do
+        git diff -w --unified=0
+        result=$?
+    done
+
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
     for ((i=current_interval; i>0; i--)); do
-        python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+
+        result=1
+        while [ $result -ne 0 ]; do
+            python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+            result=$?
+        done
+
         if [[ "$python_files_changed" -gt 1 ]]; then
             echo -e "\n\n\e[31m#######################################################################"
             echo "There are ${python_files_changed} modified Python files. Mutation testing can't proceed. Stopping this launcher"
