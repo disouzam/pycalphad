@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 
 function stop_distributor() {
     local distributor_pid="$1"
@@ -14,18 +14,35 @@ function stop_distributor() {
             kill -9 "${distributor_pid}" 2>/dev/null || true
             ps -p "${distributor_pid}"
             result=$?
-            echo -e "Checking if distributor is still running - Return code: " $result
+            echo -e "\nChecking if distributor is still running - Return code: " $result
+            sleep 5
+        done
+
+        read -r -a uv_process_row <<< "$(ps -f | grep uv | grep -v grep)"
+        uv_pid="${uv_process_row[1]}"
+
+        while [ -n "${uv_pid}" ]; do
+            read -r -a uv_process_row <<< "$(ps -f | grep uv | grep -v grep)"
+            uv_pid="${uv_process_row[1]}"
+            if [ -n "${uv_pid}" ]; then
+                kill -SIGTERM -- "-${uv_pid}" 2>/dev/null || true
+                kill -SIGKILL -- "-${uv_pid}" 2>/dev/null || true
+                kill -9 "${uv_pid}" 2>/dev/null || true
+            fi
+            echo -e "\nWaiting for uv to terminate - PID: ${uv_pid}"
+            sleep 5
         done
 
         result=1
         while [ $result -ne 0 ]; do
-            git restore .
+            git restore "*.py"
             result=$?
 
             if [[ $result -ne 0 && -f ".git/index.lock" ]]; then
                 rm -f '.git/index.lock'
             fi
-            echo -e "Restoring git state (inside stop_distributor function) - Return code: " $result
+            echo -e "\nRestoring git state (inside stop_distributor function) - Return code: " $result
+            sleep 5
         done
     fi
 }
@@ -51,7 +68,7 @@ result=1
 while [ $result -ne 0 ]; do
     python_files_changed=$(git status -uall --renames -s | grep -E '.[[:alpha:]] .*\.py' | wc -l)
     result=$?
-    echo -e "Checking for modified Python files before starting the distributor - Return code: " $result
+    echo -e "\nChecking for modified Python files before starting the distributor - Return code: " $result
 done
 
 while [ $python_files_changed -lt 2 ]; do
@@ -61,9 +78,9 @@ while [ $python_files_changed -lt 2 ]; do
     else
         result=1
         while [ $result -ne 0 ]; do
-            git restore .
+            git restore "*.py"
             result=$?
-            echo -e "Restoring git state before starting the distributor - Return code: " $result
+            echo -e "\nRestoring git state before starting the distributor - Return code: " $result
         done
 
         python_status=$(get_working_tree_status py)
@@ -90,14 +107,14 @@ while [ $python_files_changed -lt 2 ]; do
 
     if [ $monitor_rc -eq 1 ]; then
         stop_distributor "${distributor_pid}"
-        echo -e "Waiting for 5 seconds before restoring the git state...(at entry)"
+        echo -e "\nWaiting for 5 seconds before restoring the git state...(at entry)"
         sleep 5
 
         result=1
         while [ $result -ne 0 ]; do
-            git restore .
+            git restore "*.py"
             result=$?
-            echo -e "Restoring git state - Return code: " $result
+            echo -e "\nRestoring git state - Return code: " $result
         done
 
         echo -e "\n\n\e[31m#######################################################################"
@@ -106,9 +123,9 @@ while [ $python_files_changed -lt 2 ]; do
 
         result=1
         while [ $result -ne 0 ]; do
-            python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+            python_files_changed=$(git status -uall --renames -s | grep -E '.[[:alpha:]] .*\.py' | wc -l)
             result=$?
-            echo -e "Checking for modified Python files - Return code: " $result
+            echo -e "\nChecking for modified Python files - Return code: " $result
         done
 
         if [ $python_files_changed -gt 0 ]; then
@@ -119,21 +136,15 @@ while [ $python_files_changed -lt 2 ]; do
         distributor_pid=""
         trap - SIGINT SIGTERM EXIT
         printf '\a'
-        echo -e "Waiting for 5 seconds before restoring the git state... (in the middle)"
+        echo -e "\nWaiting for 5 seconds before restoring the git state... (in the middle)"
         sleep 5
 
         result=1
-        while [ $result -ne 0 ]; do
-            git restore .
-            result=$?
-            echo -e "Restoring git state - Return code: " $result
-        done
-
-        result=1
-        while [ $result -ne 0 ]; do
-            python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
-            result=$?
-            echo -e "Checking for modified Python files - Return code: " $result
+        while [ $python_files_changed -gt 0 ]; do
+            git restore "*.py"
+            python_files_changed=$(git status -uall --renames -s | grep -E '.[[:alpha:]] .*\.py' | wc -l)
+            echo -e "\nRestoring git state - Modified Python files remaining: " $python_files_changed
+            sleep 5
         done
 
         if [ $python_files_changed -gt 0 ]; then

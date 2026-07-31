@@ -9,7 +9,7 @@ for arg in "$@"; do
     elif [[ "$arg" =~ ^[0-9]+$ ]] && [[ "$arg" -gt 0 ]]; then
         interval_seconds="$arg"
     else
-        echo "Usage: $0 [interval_seconds] [--single-check]"
+        echo -e "\nUsage: $0 [interval_seconds] [--single-check]"
         exit 1
     fi
 done
@@ -38,10 +38,10 @@ while true; do
         printf '\a'
         current_interval=$((current_interval / 2))
         if [[ "$current_interval" -lt 1 ]]; then
-            echo -e "\e[31mInterval has reached the minimum of 1s. Resetting to default interval of ${interval_seconds}s.\e[0m"
+            echo -e "\n\e[31mInterval has reached the minimum of 1s. Resetting to default interval of ${interval_seconds}s.\e[0m"
             current_interval=$interval_seconds
         fi
-        echo -e "\e[31mReducing interval to \e[0m${current_interval}s \e[33m(stopped at: ${stopped_at})\e[0m"
+        echo -e "\n\e[31mReducing interval to \e[0m${current_interval}s \e[33m(stopped at: ${stopped_at})\e[0m"
     else
         stopped_at=""
         current_interval="$interval_seconds"
@@ -51,42 +51,42 @@ while true; do
     while [ $result -ne 0 ]; do
         git add "*.lock"
         result=$?
-        echo -e "Adding lock files to git staging area - Return code: " $result
+        echo -e "\nAdding lock files to git staging area - Return code: " $result
     done
 
     result=1
     while [ $result -ne 0 ]; do
         { find . -name "report*.html" | xargs -I {} git add {}; }
         result=$?
-        echo -e "Adding html files to git staging area - Return code: " $result
+        echo -e "\nAdding html files to git staging area - Return code: " $result
     done
 
     result=1
     while [ $result -ne 0 ]; do
         { find . -name "pytest*.txt" | xargs -I {} git add {}; }
         result=$?
-        echo -e "Adding pytest files to git staging area - Return code: " $result
+        echo -e "\nAdding pytest files to git staging area - Return code: " $result
     done
 
     result=1
     while [ $result -ne 0 ]; do
         git add "*.sh"
         result=$?
-        echo -e "Adding shell scripts to git staging area - Return code: " $result
+        echo -e "\nAdding shell scripts to git staging area - Return code: " $result
     done
 
     result=1
     while [ $result -ne 0 ]; do
-        echo -e "\n$(git st | tail -n10 | grep modified:)\n"
+        echo -e "\n$(git status -uall --renames "*.py" | tail -n10 | grep modified:)\n"
         result=$?
-        echo -e "Checking for modified files in git working tree - Return code: " $result
+        echo -e "\nChecking for modified files in git working tree - Return code: " $result
     done
 
     result=1
     while [ $result -ne 0 ]; do
-        git diff -w --unified=0
+        git diff -w --unified=0 "*.py"
         result=$?
-        echo -e "Checking for differences in git working tree - Return code: " $result
+        echo -e "\nChecking for differences in git working tree - Return code: " $result
     done
 
     echo -e "\nCurrent interval: ${current_interval}s (default: ${interval_seconds}s)"
@@ -94,9 +94,9 @@ while true; do
 
         result=1
         while [ $result -ne 0 ]; do
-            python_files_changed=$(git st | grep -E 'modified:.*\.py' | wc -l)
+            python_files_changed=$(git status -uall --renames "*.py" | grep -E 'modified:.*\.py' | wc -l)
             result=$?
-            echo -e "Checking for modified Python files - Return code: " $result
+            echo -e "\nChecking for modified Python files - Return code: " $result
         done
 
         if [[ "$python_files_changed" -gt 1 ]]; then
@@ -108,9 +108,13 @@ while true; do
         fi
 
         if [[ "$single_check" == "true" && "$prev_complete" != "" ]]; then
-            echo -e "Next check in \e[33m${i}\e[0m seconds... Mutants checked: \e[33m${current_complete}\e[0m / Previous number of mutants checked: \e[33m${prev_complete}\e[0m"
+            if (( i % 5 == 0 || i == current_interval || i == 1 )); then
+                echo -e "\nNext check in \e[33m${i}\e[0m seconds... Mutants checked: \e[33m${current_complete}\e[0m / Previous number of mutants checked: \e[33m${prev_complete}\e[0m"
+            fi
         elif [[ "$single_check" == "true" && "$prev_complete" == "" ]]; then
-            echo -e "Next check in \e[33m${i}\e[0m seconds... Mutants checked: \e[33m${current_complete}\e[0m"
+            if (( i % 5 == 0 || i == current_interval || i == 1 )); then
+                echo -e "\nNext check in \e[33m${i}\e[0m seconds... Mutants checked: \e[33m${current_complete}\e[0m"
+            fi
         else
             printf "\rNext check in %3d seconds..." "$i"
         fi
